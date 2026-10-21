@@ -1,0 +1,15 @@
+:root {
+--rc-red: #e0202a;
+--rc-red-dark: #a50d14;
+--rc-red-deep: #6e070c;
+--rc-black: #0b0b0c;
+--rc-surface: #111113;
+--rc-surface-2: #26262a;
+--rc-border: #2c2c31;
+--rc-white: #ffffff;
+--rc-text-soft: #d4d4d8;
+--rc-text-mute: #a1a1aa;
+--rc-gradient: linear-gradient(160deg, #e0202a 0%, #a50d14 55%, #6e070c 100%);
+
+
+}
