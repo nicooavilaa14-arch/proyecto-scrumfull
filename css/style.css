@@ -16,3 +16,41 @@
 body{
     background-color: var(--rc-surface);
 }
+/* Tarjetas speakers */
+.speaker-card {
+  --bs-card-bg: #000000 !important;
+  background-color: #000000 !important;
+  border: 1px solid var(--rc-border);
+  border-radius: 32px;
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+
+/* Imagen del speaker */
+.speaker-img {
+  border-radius: 24px;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+
+/* Nombre del speaker: 26px y peso 800 */
+.speaker-name {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  min-height: 58px;
+}
+
+/* titulo de charla: 16px y peso 800 (todas iguales) */
+.titulo-charla {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  background-color: var(--rc-surface-2);
+  color: var(--rc-white);
+  border-radius: 8px;
+  display: inline-block;
+  padding: 6px 12px;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
