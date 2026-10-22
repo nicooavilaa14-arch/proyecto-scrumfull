@@ -54,3 +54,14 @@ body{
   transition: background-color 0.2s ease;
   cursor: pointer;
 }
+/* hover para TODAS las tarjetas */
+.speaker-card:hover {
+  border-color: var(--rc-red);
+  transform: translateY(-4px);
+}
+
+/* hover titulo de charla card*/
+.speaker-card:hover .titulo-charla {
+  background-color: var(--rc-red);
+  color: var(--rc-white);
+}
