@@ -65,3 +65,22 @@ body{
   background-color: var(--rc-red);
   color: var(--rc-white);
 }
+/*Horas de la agenda en rojo */
+.horario-agenda {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 18px;
+  color: var(--rc-red);
+  min-width: 65px; /* Mantiene la alineación perfecta de las horas */
+}
+
+/* Títulos de las charlas */
+.titulo-charla-agenda {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* Nombre del speaker debajo de la charla */
+.nombre-mentor-agenda{
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
