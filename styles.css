@@ -1,0 +1,155 @@
+/* --- SECCIÓN SEGUNDO CONTADOR / ENTRADAS --- */
+.tickets-countdown-section {
+  background-color: #0b0f19;
+  display: flex;
+  justify-content: center;
+  padding: 4rem 16px;
+}
+
+.tickets-countdown-section .container {
+  max-width: 1312px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section-tag {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #c00c18; /* Rojo corporativo */
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(32px, 4vw, 56px);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.05;
+  letter-spacing: -1px;
+}
+
+/* Tarjeta principal contenedora */
+.tickets-card {
+  background-color: #0b0f14;
+  border-radius: 32px; /* Esquinas acordes a la guía de tarjetas */
+  padding: 3rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+  margin-top: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Columna izquierda */
+.tickets-info {
+  flex: 1.2;
+}
+
+.early-bird-tag {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #c00c18;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.tickets-heading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.tickets-subtext {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Columna central: Cajas de tiempo */
+.countdown-boxes {
+  display: flex;
+  gap: 1rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.time-box {
+  background-color: #141a23;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px; /* Radio acorde a opciones y contadores */
+  padding: 1.25rem 1rem;
+  min-width: 85px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.time-number {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 38px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+
+.time-label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Columna derecha: Barra de progreso */
+.tickets-progress-container {
+  flex: 1.1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.progress-left-text {
+  color: #ffffff;
+}
+
+.progress-right-text {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.progress-bar-bg {
+  width: 100%;
+  height: 8px;
+  background-color: #1a222d;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #c00c18;
+  border-radius: 999px;
+}
