@@ -234,3 +234,88 @@
    cursor: pointer;
   
 }
+
+
+@media (max-width: 992px) {
+  .hero-section {
+    padding: 24px 16px; /* Ajuste de padding exterior */
+  }
+
+  .ConteinerHero {
+    flex-direction: column; /* Pasa de 2 columnas a 1 columna vertical */
+    padding: 3rem 2rem;
+    gap: 2.5rem;
+    border-radius: 32px; /* Esquinas ligeramente más suaves en pantallas medianas */
+  }
+
+  .hero-text-content {
+    max-width: 100%;
+    text-align: left; /* Mantiene la alineación a la izquierda */
+  }
+
+  .hero-title {
+    /* clamp(40px, 6vw, 88px) especificado en la guía técnica para pantallas chicas */
+    font-size: clamp(38px, 6vw, 64px);
+    line-height: 1.05;
+  }
+
+  .hero-description {
+    max-width: 100%;
+    font-size: 18px; /* Ligera reducción para mejor lectura en móvil */
+  }
+
+  .hero-card-right {
+    width: 100%; /* La tarjeta pasa a ocupar todo el ancho */
+    max-width: 100%;
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* En celulares más pequeños (móviles < 576px) */
+@media (max-width: 576px) {
+  .hero-section {
+    padding: 16px 12px;
+  }
+
+  .ConteinerHero {
+    padding: 2rem 1.25rem; /* Margen interno cómodo para celular */
+    border-radius: 24px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+
+  .hero-title {
+    font-size: clamp(32px, 8vw, 42px);
+  }
+
+  .hero-description {
+    font-size: 16px;
+    margin-bottom: 2rem;
+  }
+
+  /* Botones apilados verticalmente o en ancho completo para fácil clic */
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .btn-comprar,
+  .btn-agenda {
+    width: 100%; /* Botones a todo el ancho en móviles */
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hero-card-right {
+    border-radius: 20px;
+    gap: 1rem;
+  }
+
+  .card-tags {
+    justify-content: flex-start;
+  }
+}
