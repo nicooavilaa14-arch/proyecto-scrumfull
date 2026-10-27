@@ -544,3 +544,310 @@
     font-size: 36px;
   }
 }
+
+/* --- ESTILOS SECCIÓN CHECKOUT --- */
+.checkout-section {
+  background-color: #0b0f19;
+  display: flex;
+  justify-content: center;
+  padding: 4rem 16px;
+}
+
+.checkout-section .container {
+  max-width: 1312px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.checkout-red-card {
+  background: linear-gradient(135deg, #c00c18 0%, #a00610 100%);
+  border-radius: 40px;
+  padding: 3.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.checkout-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.checkout-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.checkout-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+/* Indicador de pasos superior */
+.checkout-steps {
+  display: flex;
+  gap: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0.35rem;
+  border-radius: 999px;
+}
+
+.step-badge {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+}
+
+.step-badge:hover {
+  background-color: #0b0f14;
+  color: #ffffff;
+}
+
+/* Grid principal de dos columnas */
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* Caja blanca izquierda */
+.checkout-left-box {
+  background-color: #ffffff;
+  border-radius: 28px;
+  padding: 2.5rem;
+  color: #0b0f19;
+}
+
+.box-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: #0b0f19;
+}
+
+/* Opciones de tarjetas/entradas */
+.ticket-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.ticket-option {
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #0b0f19;
+  transition: all 0.2s ease;
+}
+
+/* Hover suave cuando se pasa el mouse por opciones no seleccionadas */
+.ticket-option:hover {
+  background-color: #0b0f19;
+  border-color: #0b0f19;
+  color: #ffffff;
+}
+
+/* Color fijo oscuro ÚNICAMENTE cuando la opción está seleccionada (.selected) */
+
+
+.ticket-option-info strong {
+  display: block;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.ticket-option-info small {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.ticket-option.selected .ticket-option-info small {
+  color: #94a3b8;
+}
+
+.ticket-price {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* Selector de cantidad */
+.quantity-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-top: 0.5rem;
+}
+
+.quantity-label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0b0f19;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.qty-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #e2e8f0;
+  background-color: transparent;
+  font-weight: 800;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.qty-btn:hover {
+  background-color: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+#quantity-value {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* Botón Continuar */
+.btn-continuar {
+  width: 100%;
+  background-color: #0b0f19;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 1rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-bottom: 1rem;
+}
+
+.btn-continuar:hover {
+  background-color: #1a222d;
+}
+
+.checkout-disclaimer {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  color: #64748b;
+  text-align: center;
+  margin: 0;
+}
+
+/* Caja oscura derecha (Tu pedido) */
+.checkout-right-box {
+  background-color: #0b0f14;
+  border-radius: 28px;
+  padding: 2.5rem;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.order-tag {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #c00c18;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.order-event-info h4 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+
+.order-event-info p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.order-calculation {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.calc-row {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.order-total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+.order-security-note {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* --- RESPONSIVE CHECKOUT --- */
+@media (max-width: 992px) {
+  .checkout-red-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+}
