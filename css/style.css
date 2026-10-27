@@ -31,6 +31,8 @@ body{
   border-radius: 24px;
   object-fit: cover;
   aspect-ratio: 1 / 1;
+  object-position: center top;
+
 }
 
 /* Nombre del speaker: 26px y peso 800 */
@@ -220,4 +222,49 @@ body{
 
 #errorPaymentModal hr.border-secondary {
   border-color: rgba(255, 255, 255, 0.15) !important;
+}
+@media (max-width: 767.98px) {
+  /* slide de fila de speakers  con desplazamiento horizontal */
+  #speakers .row {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1rem;
+  }
+
+  /* Ocultamos la barra de scroll fea pero permitimos el deslizamiento */
+  #speakers .row::-webkit-scrollbar {
+    height: 6px;
+  }
+  #speakers .row::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+  }
+  #speakers .row::-webkit-scrollbar-thumb {
+    background-color: var(--rc-red, #e53935); /* barra de desplazamiento en rojo! */
+    border-radius: 10px;
+  }
+
+  /* Cada tarjeta ocupa un ancho cómodo y se centra */
+  #speakers .col {
+    flex: 0 0 85%;
+    max-width: 85%;
+    scroll-snap-align: center;
+  }
+}
+@media (max-width: 767.98px) {
+  #speakers h2 {
+    font-size: 32px !important;
+  }
+  #speakers span {
+    font-size: 14px !important;
+  }
+}
+.img-fluid{
+  object-fit: cover !important;
+  /* aspect-ratio: 1 / 1; */
+  object-position: center 20% !important;
 }
