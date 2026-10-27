@@ -190,3 +190,34 @@ body{
   border-color: var(--rc-white) !important;
   cursor: pointer;
 }
+/* ==========================================
+   ESTILOS DE LA SECCIÓN CHECKOUT Y MODAL DE PAGO
+   ========================================== */
+
+/* Tarjetas selectoras de entradas */
+.ticket-card {
+  cursor: pointer;
+  background-color: #f8f9fa;
+  border: 2px solid #dee2e6 !important;
+  transition: all 0.2s ease-in-out;
+}
+
+.ticket-card.selected {
+  border-color: #a81d24 !important;
+  background-color: #fff5f5;
+}
+
+/* Pestañas de métodos de pago */
+.payment-tab.active {
+  background-color: #212529 !important;
+  color: #fff !important;
+}
+
+/* Estilo para los bordes del resumen dentro del modal */
+#errorPaymentModal .modal-content {
+  border: none !important;
+}
+
+#errorPaymentModal hr.border-secondary {
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
