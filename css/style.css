@@ -484,3 +484,82 @@ body{
     height: 320px;
   }
 }
+ESTILOS DEL NAVBAR Y RESPONSIVIDAD */
+.navbar-section {
+    background-color: var(--rc-black);
+    border-bottom: 1px solid var(--rc-border);
+    padding: 12px 0;
+}
+
+.navbar-nav .nav-link {
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--rc-red) !important;
+}
+
+
+/* Botón Comprar Entrada */
+.btn-comprar {
+    background-color: var(--rc-red);
+    font-size: 15px;
+    padding: 10px 24px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-comprar:hover {
+    background-color: var(--rc-red-deep);
+    transform: translateY(-1px);
+}
+
+/* responsive para celulares */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: var(--rc-black);
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 10px;
+        border: 1px solid var(--rc-border);
+    }
+    .active-speaker {
+        border-bottom: none !important;
+    }
+}
+/* inicio footer */
+.footer-section {
+    background-color: var(--rc-black, #0B0B0C);
+    border-top: 1px solid var(--rc-border, #2C2C31);
+}
+
+/* Contenedor circular individual para cada icono de red social */
+.social-icon-btn {
+    width: 36px;
+    height: 36px;
+    background-color: #161619; /* Fondo oscuro tipo pastilla */
+    border: 1px solid var(--rc-border, #2C2C31);
+    border-radius: 50%;
+    color: var(--rc-white, #FFFFFF);
+    transition: all 0.3s ease;
+}
+
+.social-icon-btn:hover {
+    background-color: var(--rc-red, #E53935);
+    border-color: var(--rc-red, #E53935);
+    color: var(--rc-white, #FFFFFF);
+    transform: translateY(-2px);
+}
+
+/* fin footer */
+/* Ajustes para el mapa interactivo en modo oscuro */ 
+.leaflet-container {
+  background-color: #1a1a1a !important;
+  font-family: inherit;
+}
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  background-color: #212529 !important;
+  color: #fff !important;
+}
