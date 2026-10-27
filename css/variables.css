@@ -1,0 +1,27 @@
+:root {
+  /* Rojos */
+  --rojo-rolling: #e0202a;   /* Botones, etiquetas, números, íconos */
+  --rojo-oscuro: #a50d14;    /* Medio del degradado */
+  --rojo-profundo: #6e070c;  /* Final del degradado */
+  /* Degradado principal */
+  --degradado-rojo: linear-gradient(160deg, #e0202a 0%, #a50d14 55%, #6e070c 100%);
+
+  /* Fondos y Superficies */
+  --negro-pagina: #0b0b0c;   /* Fondo del sitio y tarjetas negras */
+  --superficie: #111113;     /* Tarjetas y barra de datos */
+  --gris-fuerte: #26262a;    /* Chips y barras vacías */
+  --blanco: #ffffff;         /* Títulos, tarjeta del checkout */
+
+  /* Bordes y Líneas */
+  --borde-tarjeta: #2c2c31;  /* Bordes y líneas de 1px */
+  --borde-chip: #3a3a40;     /* Bordes de chips y botones */
+  --borde-input: #d4d4d8;    /* Campos del formulario */
+  --linea-menu: #1f1f23;     /* Debajo del menú */
+
+  /* Textos y Aclaraciones */
+  --gris-claro: #d4d4d8;     /* Párrafos sobre fondo oscuro */
+  --gris-medio: #a1a1aa;     /* Textos de apoyo */
+  --rosa-claro: #ffe9ea;     /* Texto sobre el rojo */
+  --gris-sobre-blanco: #52525b; /* Aclaraciones en checkout */
+}
+
