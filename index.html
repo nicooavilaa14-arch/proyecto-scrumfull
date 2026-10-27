@@ -739,119 +739,7 @@
     </div>
   </div>
 </div>
-<!-- SECCIÓN CHECKOUT / FINALIZÁ TU COMPRA -->
-<section id="checkout" class="checkout-section py-5">
-  <div class="container">
-    
-    <!-- Bloque contenedor principal rojo -->
-    <div class="checkout-red-card">
-      
-      <!-- Cabecera del Checkout -->
-      <div class="checkout-header">
-        <div>
-          <span class="checkout-subtitle">COMPRA SEGURA</span>
-          <h2 class="checkout-title">Finalizá tu compra</h2>
-        </div>
-        
-        <!-- Indicador de pasos -->
-        <div class="checkout-steps">
-          <span class="step-badge active">1 Entrada</span>
-          <span class="step-badge">2 Datos</span>
-          <span class="step-badge">3 Pago</span>
-          <span class="step-badge">4 Listo</span>
-        </div>
-      </div>
 
-      <!-- Contenido en dos columnas -->
-      <div class="checkout-grid">
-        
-        <!-- COLUMNA IZQUIERDA: Selector de entradas y cantidad -->
-        <div class="checkout-left-box">
-          <h3 class="box-title">Elegí tu entrada</h3>
-
-          <!-- Opciones de entradas -->
-          <div class="ticket-options">
-            
-            <!-- Opción 1: Early Bird (Seleccionada por defecto) -->
-            <div class="ticket-option selected" data-price="25000">
-              <div class="ticket-option-info">
-                <strong>Early Bird</strong>
-                <small>Presencial · hasta el 31/10</small>
-              </div>
-              <span class="ticket-price">$25.000</span>
-            </div>
-
-            <!-- Opción 2: General -->
-            <div class="ticket-option" data-price="35000">
-              <div class="ticket-option-info">
-                <strong>General</strong>
-                <small>Presencial · desde el 1/11</small>
-              </div>
-              <span class="ticket-price">$35.000</span>
-            </div>
-
-            <!-- Opción 3: Virtual -->
-            <div class="ticket-option" data-price="15000">
-              <div class="ticket-option-info">
-                <strong>Virtual</strong>
-                <small>Transmisión en vivo y grabación</small>
-              </div>
-              <span class="ticket-price">$15.000</span>
-            </div>
-
-          </div>
-
-          <!-- Selector de cantidad -->
-          <div class="quantity-container">
-            <span class="quantity-label">Cantidad</span>
-            <div class="quantity-controls">
-              <button class="qty-btn" id="decrease">-</button>
-              <span id="quantity-value">1</span>
-              <button class="qty-btn" id="increase">+</button>
-            </div>
-          </div>
-
-          <!-- Botón Continuar -->
-          <button class="btn-continuar">Continuar</button>
-
-          <p class="checkout-disclaimer">Pasarela de pago de ejemplo: no se procesan pagos ni se guardan datos.</p>
-        </div>
-
-        <!-- COLUMNA DERECHA: Resumen del pedido -->
-        <div class="checkout-right-box">
-          <span class="order-tag">TU PEDIDO</span>
-          
-          <div class="order-event-info">
-            <h4>Workshop Rolling Code School</h4>
-            <p>Jueves 19/11 · 18.00 hs · Gral. Paz 576</p>
-          </div>
-
-          <div class="order-calculation">
-            <div class="calc-row">
-              <span id="order-item-desc">1 entrada Early Bird</span>
-              <span id="order-base-price">$25.000</span>
-            </div>
-            <div class="calc-row">
-              <span>Cargo por servicio (5%)</span>
-              <span id="order-service-fee">$1.250</span>
-            </div>
-          </div>
-
-          <div class="order-total-row">
-            <span>Total</span>
-            <span id="order-total-price">$26.250</span>
-          </div>
-
-          <div class="order-security-note">
-            <i class="bi bi-lock-fill"></i> Pago protegido. Recibís la entrada por email.
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-</section>
 
 <!-- SECCIÓN SPONSORS Y PARTNERS -->
 <section id="sponsors" class="sponsors-section py-5">
@@ -1159,6 +1047,6 @@
 </section>
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="countdown.js"></script>
+  <script src="./js/countdown.js"></script>
 </body>
 </html>
