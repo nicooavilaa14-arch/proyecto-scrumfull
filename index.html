@@ -616,6 +616,114 @@
     </div>
   </div>
 </section>
+
+<!-- SECCIÓN SUMATE COMO SPONSOR -->
+<section id="sumate-sponsor" class="sponsor-form-section py-5">
+  <div class="container">
+    
+    <!-- Encabezado de la sección -->
+    <div class="sponsor-form-header text-center mb-5">
+      <h2 class="sponsor-form-title">Sumate como Sponsor</h2>
+      <p class="sponsor-form-subtitle">
+        Conectá tu marca con más de 120 talentos IT, programadores junior, semi-seniors y líderes tecnológicos del norte argentino. Completá el formulario y nos contactaremos en menos de 24 horas hábiles.
+      </p>
+    </div>
+
+    <!-- Tarjeta del Formulario -->
+    <div class="sponsor-form-card">
+      <form id="sponsorForm" novalidate>
+        
+        <!-- Fila 1: Nombre y Apellido -->
+        <div class="row g-3 mb-3">
+          <div class="col-md-6">
+            <label for="nombre" class="form-label-custom">NOMBRE <span class="required">*</span></label>
+            <input type="text" class="form-control-custom" id="nombre" placeholder="Ej. Martín" required>
+            <div class="invalid-feedback-custom">Por favor, ingresá tu nombre.</div>
+          </div>
+          <div class="col-md-6">
+            <label for="apellido" class="form-label-custom">APELLIDO <span class="required">*</span></label>
+            <input type="text" class="form-control-custom" id="apellido" placeholder="Ej. González" required>
+            <div class="invalid-feedback-custom">Por favor, ingresá tu apellido.</div>
+          </div>
+        </div>
+
+        <!-- Fila 2: Empresa y Email Corporativo -->
+        <div class="row g-3 mb-3">
+          <div class="col-md-6">
+            <label for="empresa" class="form-label-custom">EMPRESA <span class="required">*</span></label>
+            <input type="text" class="form-control-custom" id="empresa" placeholder="Ej. Acme Technologies" required>
+            <div class="invalid-feedback-custom">Por favor, ingresá el nombre de la empresa.</div>
+          </div>
+          <div class="col-md-6">
+            <label for="email" class="form-label-custom">EMAIL CORPORATIVO <span class="required">*</span></label>
+            <input type="email" class="form-control-custom" id="email" placeholder="martin@acme.com" required>
+            <div class="invalid-feedback-custom">Ingresá un correo corporativo válido.</div>
+          </div>
+        </div>
+
+        <!-- Fila 3: Tipo de Sponsor -->
+        <div class="mb-4">
+          <label for="tipoSponsor" class="form-label-custom">TIPO DE SPONSOR <span class="required">*</span></label>
+          <select class="form-select-custom" id="tipoSponsor" required>
+            <option value="" selected disabled>Seleccioná un nivel de sponsoreo</option>
+            <option value="diamante">Main Partner (Tier Diamante)</option>
+            <option value="oro">Gold Tier (Nivel Oro)</option>
+            <option value="bronce">Bronze Tier (Nivel Bronce)</option>
+          </select>
+          <div class="invalid-feedback-custom">Por favor, seleccioná un tipo de sponsor.</div>
+        </div>
+
+        <!-- Fila 4: Logo de la Empresa (Zona de Drag & Drop y file input) -->
+        <div class="mb-4">
+          <label class="form-label-custom">LOGO DE LA EMPRESA</label>
+          <div class="drop-zone" id="dropZone">
+            <input type="file" id="logoInput" accept=".png, .svg, .jpg, .jpeg, .webp" hidden>
+            
+            <div class="drop-zone-content" id="dropZoneContent">
+              <div class="upload-icon">
+                <i class="bi bi-cloud-arrow-up"></i>
+              </div>
+              <p class="drop-zone-text"><strong>Hacé clic para adjuntar tu logo</strong> o arrastralo aquí</p>
+              <small class="drop-zone-subtext">Archivos aceptados: PNG, SVG, JPG o WEBP (Fondo transparente recomendado, máx. 5MB)</small>
+            </div>
+
+            <!-- Vista previa del archivo cargado -->
+            <div class="file-preview d-none" id="filePreview">
+              <img id="previewImg" src="" alt="Vista previa del logo">
+              <div class="file-info">
+                <span id="fileName">logo.png</span>
+                <button type="button" class="btn-remove-file" id="btnRemoveFile">
+                  <i class="bi bi-x-circle-fill"></i> Quitar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fila 5: Mensaje Opcional -->
+        <div class="mb-4">
+          <label for="mensaje" class="form-label-custom">MENSAJE OPCIONAL</label>
+          <textarea class="form-control-custom textarea-custom" id="mensaje" rows="4" placeholder="Contanos sobre tu empresa y por qué buscás ser Sponsor del evento"></textarea>
+        </div>
+
+        <!-- Botón de Envío -->
+        <button type="submit" class="btn-submit-sponsor">
+          <i class="bi bi-send-fill me-2"></i> Enviar postulación de Sponsor
+        </button>
+
+        <!-- Mensaje de éxito/confirmación -->
+        <div class="alert-success-custom d-none mt-3" id="successAlert">
+          <i class="bi bi-check-circle-fill me-2"></i>
+          ¡Postulación enviada con éxito! Nos contactaremos en menos de 24 horas hábiles.
+        </div>
+
+        <p class="form-disclaimer mt-3">Formulario de ejemplo: no se envía ni se guarda ningún dato.</p>
+
+      </form>
+    </div>
+
+  </div>
+</section>
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="countdown.js"></script>
