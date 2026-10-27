@@ -153,122 +153,140 @@
 </section>
 
 <!-- INICIO AGENDA -->
- <section class="py-5">
-    <div class="container">
-        <div class="row">
-           <div class="col">
-            <!-- titulos -->
-             <div class="mb-4">
-                 <span class="fw-bold text-uppercase d-block mb-1" style="color: var(--rc-red) !important; font-size: 16px; font-weight: 800;">
-                 AGENDA
-                 </span>
-                 <h2 class="text-white lh-1 mb-0" style="font-size: 64px; font-weight: 800;">
-                 jueves 19 de <br> noviembre
-                </h2>
-                <div>
-                    <p class="card-text text-secondary small mt-2 mb-0">diez charlas cortas para salir con un plan claro <br>
-                    al final queda tiempo para preguntas y <br>networking</p>
-                </div>
-             </div>
+<section id="agenda" class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <!-- titulos -->
+        <div class="mb-4">
+          <span class="fw-bold text-uppercase d-block mb-1" style="color: var(--rc-red) !important; font-size: 16px; font-weight: 800;">
+            AGENDA
+          </span>
+          <h2 class="text-white lh-1 mb-0" style="font-size: 64px; font-weight: 800;">
+            jueves 19 de <br> noviembre
+          </h2>
+          <div>
+            <p class="card-text text-secondary small mt-2 mb-0">diez charlas cortas para salir con un plan claro <br>
+            al final queda tiempo para preguntas y <br>networking</p>
+          </div>
         </div>
+      </div>
 
-        <div class="col">
-            <div class=" d-flex flex-column">
+      <div class="col">
+        <div class="d-flex flex-column">
           
-          <!-- Item 1 -->
-          <div class=" d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
+          <!-- Item 1 (Acreditación - Sin modal por no tener speaker) -->
+          <div class="d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
             <span class="horario-agenda fw-bold">18:00</span>
-            <div >
+            <div>
               <h5 class="titulo-charla-agenda text-white mb-0">Acreditación y bienvenida</h5>
             </div>
           </div>
 
-          <!-- Item 2 -->
-          <div class=" d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
+          <!-- Item 2 (Daniela Cardozo -> Modal 9) -->
+          <div class="d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
             <span class="horario-agenda fw-bold">18:20</span>
-            <div >
-              <h5 class="titulo-charla-agenda text-white mb-1">Tu primer día como developer</h5>
+            <div>
+              <h5 class="titulo-charla-agenda mb-1">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#modalSpeaker9" class="text-white text-decoration-none">Tu primer día como developer</a>
+              </h5>
               <p class="nombre-mentor-agenda text-secondary small mb-0">Daniela Cardozo</p>
             </div>
           </div>
 
-          <!-- Item 3 -->
+          <!-- Item 3 (Franco Diaz -> Modal 2) -->
           <div class="d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
             <span class="horario-agenda fw-bold">18:40</span>
             <div>
-              <h5 class=" titulo-charla-agenda mb-1">De cero a tu primer proyecto</h5>
+              <h5 class="titulo-charla-agenda mb-1">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#modalSpeaker2" class="text-white text-decoration-none">De cero a tu primer proyecto</a>
+              </h5>
               <p class="nombre-mentor-agenda text-secondary small mb-0">Franco Diaz</p>
             </div>
           </div>
 
-          <!-- Item 4 -->
-          <div class=" d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
+          <!-- Item 4 (Gaston -> Modal 3) -->
+          <div class="d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
             <span class="horario-agenda fw-bold">19:00</span>
-            <div >
-              <h5 class=" titulo-charla-agenda text-white mb-1">Armá tu portfolio con IA</h5>
-              <p class="nombre-mentor-agenda small mb-0">Gaston</p>
+            <div>
+              <h5 class="titulo-charla-agenda mb-1">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#modalSpeaker3" class="text-white text-decoration-none">Armá tu portfolio con IA</a>
+              </h5>
+              <p class="nombre-mentor-agenda text-secondary small mb-0">Gaston</p>
             </div>
           </div>
 
-          <!-- Item 5 -->
+          <!-- Item 5 (Mauro -> Modal 4) -->
           <div class="d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
             <span class="horario-agenda fw-bold">19:20</span>
-            <div >
-              <h5 class="titulo-charla-agendatext-white mb-1">Git y GitHub sin miedo</h5>
+            <div>
+              <h5 class="titulo-charla-agenda mb-1">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#modalSpeaker4" class="text-white text-decoration-none">Git y GitHub sin miedo</a>
+              </h5>
               <p class="nombre-mentor-agenda text-secondary small mb-0">Mauro</p>
             </div>
           </div>
 
-          <!-- Item 6 -->
+          <!-- Item 6 (Jose Diaz -> Modal 5) -->
           <div class="d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
             <span class="horario-agenda fw-bold">19:40</span>
-            <div >
-              <h5 class="titulo-charla-agenda mb-1">Tu primer backend con Node</h5>
+            <div>
+              <h5 class="titulo-charla-agenda mb-1">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#modalSpeaker5" class="text-white text-decoration-none">Tu primer backend con Node</a>
+              </h5>
               <p class="nombre-mentor-agenda text-secondary small mb-0">Jose Diaz</p>
             </div>
           </div>
 
-          <!-- Item 7 -->
-          <div class=" d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
+          <!-- Item 7 (Tomas Gomez -> Modal 6) -->
+          <div class="d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
             <span class="horario-agenda fw-bold">20:00</span>
-            <div >
-              <h5 class="titulo-charla-agenda text-white mb-1">Preparate para tu primera entrevista</h5>
+            <div>
+              <h5 class="titulo-charla-agenda mb-1">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#modalSpeaker6" class="text-white text-decoration-none">Preparate para tu primera entrevista</a>
+              </h5>
               <p class="nombre-mentor-agenda text-secondary small mb-0">Tomas Gomez</p>
             </div>
           </div>
 
-          <!-- Item 8 -->
-          <div class=" d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
+          <!-- Item 8 (Pablo Basso -> Modal 7) -->
+          <div class="d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
             <span class="horario-agenda fw-bold">20:20</span>
-            <div >
-              <h5 class="titulo-charla-agenda text-white mb-1">Mi primer trabajo en IT</h5>
+            <div>
+              <h5 class="titulo-charla-agenda mb-1">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#modalSpeaker7" class="text-white text-decoration-none">Mi primer trabajo en IT</a>
+              </h5>
               <p class="nombre-mentor-agenda text-secondary small mb-0">Pablo Basso</p>
             </div>
           </div>
 
-          <!-- Item 9 -->
+          <!-- Item 9 (Julian Martin -> Modal 8) -->
           <div class="d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
             <span class="horario-agenda fw-bold">20:40</span>
-            <div >
-              <h5 class="titulo-charla-agenda text-white mb-1">Testing: cómo no romper todo</h5>
+            <div>
+              <h5 class="titulo-charla-agenda mb-1">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#modalSpeaker8" class="text-white text-decoration-none">Testing: cómo no romper todo</a>
+              </h5>
               <p class="nombre-mentor-agenda text-secondary small mb-0">Julian Martin</p>
             </div>
           </div>
 
-          <!-- Item 10 -->
-          <div class=" d-flex gap-4 py-3">
+          <!-- Item 10 (Tomas Escudero -> Modal 1) -->
+          <div class="d-flex gap-4 py-3">
             <span class="horario-agenda fw-bold">21:00</span>
-            <div >
-              <h5 class="titulo-charla-agenda text-white mb-1">Diseño para developers</h5>
+            <div>
+              <h5 class="titulo-charla-agenda mb-1">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#modalSpeaker1" class="text-white text-decoration-none">Diseño para developers</a>
+              </h5>
               <p class="nombre-mentor-agenda text-secondary small mb-0">Tomas Escudero</p>
             </div>
           </div>
 
         </div>
-        </div>
+      </div>
     </div>
-        </div>
- </section>
+  </div>
+</section>
 
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"> </script>
 </body>
