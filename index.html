@@ -3,621 +3,489 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workshop - ¿Por dónde empiezo a programar?</title>
-    
-    <!-- Fuentes y Estilos -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,800;1,300&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
 </head>
 <body>
-
-  <!-- SECCIÓN HERO -->
-  <section class="hero-section">
-    <div class="ConteinerHero">
-      
-      <!-- COLUMNA IZQUIERDA: Títulos y botones principales -->
-      <div class="hero-text-content">
-        <h6 class="hero-subtitle">
-          <span class="workshop-word">WORKSHOP</span> ENTRADAS LIMITADAS
-        </h6>
-        
-        <h1 class="hero-title">
-          ¿POR DÓNDE<br>
-          EMPIEZO A<br>
-          <span class="text-dark-title">PROGRAMAR?</span>
-        </h1>
-        
-        <p class="hero-description">
-          Una tarde con diez speakers de Rolling Code School para ordenar tus primeros pasos: qué aprender, cómo practicar y cómo mostrar lo que sabés.
-        </p>
-        
-        <div class="hero-buttons">
-          <button class="btn-comprar">Comprar entrada</button>
-          <button class="btn-agenda">Ver agenda</button>
-        </div>
-      </div>
-
-      <!-- COLUMNA DERECHA: Tarjeta oscura con la información del evento -->
-      <div class="hero-card-right">
-        <div class="card-info-item">
-          <i class="bi bi-calendar-event info-icon"></i>
-          <div>
-            <span class="info-title">JUE 19/11</span>
-            <span class="info-sub flex-subtitle">18.00 hs</span>
-          </div>
-        </div>
-
-        <div class="card-info-item">
-          <i class="bi bi-geo-alt info-icon"></i>
-          <div>
-            <span class="info-title">Rolling Code School</span>
-            <span class="info-sub">Gral. Paz 576, Entrepiso</span>
-          </div>
-        </div>
-
-        <div class="card-info-item">
-          <i class="bi bi-ticket-perforated info-icon"></i>
-          <div>
-            <span class="info-title">Entradas desde $15.000</span>
-            <span class="info-sub">Early Bird hasta el 31/10</span>
-          </div>
-        </div>
-        
-        <div class="card-tags">
-          <span class="tag">Presencial</span>
-          <span class="tag">Virtual</span>
-          <span class="tag tag-red">Cupos limitados</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SECCIÓN STATS / CONTADOR -->
-  <section class="stats-section py-4">
-    <div class="container">
-      <div class="stats-card">
-        <!-- Ítem 1 -->
-        <div class="stat-item">
-          <span class="stat-number">120</span>
-          <span class="stat-label">lugares presenciales</span>
-        </div>
-        <!-- Ítem 2 -->
-        <div class="stat-item">
-          <span class="stat-number">10</span>
-          <span class="stat-label">charlas de speakers</span>
-        </div>
-        <!-- Ítem 3 -->
-        <div class="stat-item">
-          <span class="stat-number">3 h 40</span>
-          <span class="stat-label">de 18.00 a 21.40 hs</span>
-        </div>
-        <!-- Ítem 4 -->
-        <div class="stat-item">
-          <span class="stat-number">2</span>
-          <span class="stat-label">modalidades: presencial y virtual</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECCIÓN SPEAKERS -->
-  <section id="speakers" class="py-5">
-    <div class="container">
-      
-      <!-- Títulos -->
-      <div class="mb-4">
-        <span class="fw-bold text-uppercase d-block mb-1" style="color: var(--rc-red) !important; font-size: 16px; font-weight: 800;">
-          SPEAKERS
-        </span>
-        <h2 class="text-white mb-0" style="font-size: 64px; font-weight: 800;">
-          Diez charlas, un mismo objetivo
-        </h2>
-      </div>
-
-      <!-- Tarjetas speakers -->
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-3">
-
-        <!-- Speaker 1 -->
-        <div class="col">
-          <div class="card speaker-card h-100 p-3 text-white">
-            <img src="img/speaker-1.jpg" class="card-img-top speaker-img mb-3" alt="Tomas Escudero">
-            <div class="card-body p-0 d-flex flex-column">
-              <h5 class="speaker-name mb-2">Tomas Escudero</h5>
-              <div class="titulo-charla mb-3 text-wrap">Diseño para developers</div>
-              <p class="card-text text-secondary small mb-0">Qué mira un equipo de diseño antes de que escribas código y cómo leer un mockup para construirlo igual.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Speaker 2 -->
-        <div class="col">
-          <div class="card speaker-card h-100 p-3 text-white">
-            <img src="img/speaker-2.jpg" class="card-img-top speaker-img mb-3" alt="Franco Diaz">
-            <div class="card-body p-0 d-flex flex-column">
-              <h5 class="speaker-name mb-2">Franco Diaz</h5>
-              <div class="titulo-charla mb-3 text-wrap">De cero a tu primer proyecto</div>
-              <p class="card-text text-secondary small mb-0">Un recorrido para pasar de mirar tutoriales a terminar una app simple con HTML, JavaScript y React.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Speaker 3 -->
-        <div class="col">
-          <div class="card speaker-card h-100 p-3 text-white">
-            <img src="img/speaker-3.jpg" class="card-img-top speaker-img mb-3" alt="Gaston">
-            <div class="card-body p-0 d-flex flex-column">
-              <h5 class="speaker-name mb-2">Gaston</h5>
-              <div class="titulo-charla mb-3 text-wrap">Armá tu portfolio con IA</div>
-              <p class="card-text text-secondary small mb-0">Cómo usar asistentes de IA para construir y publicar un portfolio que muestre lo que sabés hacer.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Speaker 4 -->
-        <div class="col">
-          <div class="card speaker-card h-100 p-3 text-white">
-            <img src="img/speaker-4.jpg" class="card-img-top speaker-img mb-3" alt="Mauro">
-            <div class="card-body p-0 d-flex flex-column">
-              <h5 class="speaker-name mb-2">Mauro</h5>
-              <div class="titulo-charla mb-3 text-wrap">Git y GitHub sin miedo</div>
-              <p class="card-text text-secondary small mb-0">Los comandos que vas a usar todos los días y cómo trabajar en equipo sin pisar el código de otros.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Speaker 5 -->
-        <div class="col">
-          <div class="card speaker-card h-100 p-3 text-white">
-            <img src="img/speaker-5.jpg" class="card-img-top speaker-img mb-3" alt="Jose Diaz">
-            <div class="card-body p-0 d-flex flex-column">
-              <h5 class="speaker-name mb-2">Jose Diaz</h5>
-              <div class="titulo-charla mb-3 text-wrap">Tu primer backend con Node</div>
-              <p class="card-text text-secondary small mb-0">Cómo se arma una API, qué hace una base de datos y por dónde empezar para conectar todo.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Speaker 6 -->
-        <div class="col">
-          <div class="card speaker-card h-100 p-3 text-white">
-            <img src="img/speaker-6.jpg" class="card-img-top speaker-img mb-3" alt="Tomas Gomez">
-            <div class="card-body p-0 d-flex flex-column">
-              <h5 class="speaker-name mb-2">Tomas Gomez</h5>
-              <div class="titulo-charla mb-3 text-wrap">Preparate para tu primera entrevista</div>
-              <p class="card-text text-secondary small mb-0">Qué preguntan en una entrevista técnica, cómo practicar y cómo contar tus proyectos con claridad.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Speaker 7 -->
-        <div class="col">
-          <div class="card speaker-card h-100 p-3 text-white">
-            <img src="img/speaker-7.jpg" class="card-img-top speaker-img mb-3" alt="Pablo Basso">
-            <div class="card-body p-0 d-flex flex-column">
-              <h5 class="speaker-name mb-2">Pablo Basso</h5>
-              <div class="titulo-charla mb-3 text-wrap">Mi primer trabajo en IT</div>
-              <p class="card-text text-secondary small mb-0">Una charla en primera persona sobre cómo se consigue el primer puesto y qué se aprende en los primeros meses.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Speaker 8 -->
-        <div class="col">
-          <div class="card speaker-card h-100 p-3 text-white">
-            <img src="img/speaker-8.jpg" class="card-img-top speaker-img mb-3" alt="Julian Martin">
-            <div class="card-body p-0 d-flex flex-column">
-              <h5 class="speaker-name mb-2">Julian Martin</h5>
-              <div class="titulo-charla mb-3 text-wrap">Testing: cómo no romper todo</div>
-              <p class="card-text text-secondary small mb-0">Qué is testear, por qué importa y cómo escribir tus primeras pruebas sin complicarte.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Speaker 9 -->
-        <div class="col">
-          <div class="card speaker-card h-100 p-3 text-white">
-            <img src="img/speaker-9.jpg" class="card-img-top speaker-img mb-3" alt="Daniela Cardozo">
-            <div class="card-body p-0 d-flex flex-column">
-              <h5 class="speaker-name mb-2">Daniela Cardozo</h5>
-              <div class="titulo-charla mb-3 text-wrap">Tu primer día como developer</div>
-              <p class="card-text text-secondary small mb-0">Qué esperar de tu primera semana en un equipo, qué herramientas usar y cómo pedir ayuda sin miedo.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Speaker 10 -->
-        <div class="col">
-          <div class="card speaker-card h-100 p-3 text-white">
-            <img src="img/speaker-10.jpg" class="card-img-top speaker-img mb-3" alt="Andres Perlo">
-            <div class="card-body p-0 d-flex flex-column">
-              <h5 class="speaker-name mb-2">Andres Perlo</h5>
-              <div class="titulo-charla mb-3 text-wrap">Tu primera base de datos</div>
-              <p class="card-text text-secondary small mb-0">Qué es una base de datos, para qué sirve y cómo guardar y consultar tus primeros datos.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SECCIÓN AGENDA -->
-  <section class="py-5">
-    <div class="container">
-      <div class="row">
-        
-        <!-- Columna de Títulos de Agenda -->
-        <div class="col-lg-5 mb-4 mb-lg-0">
-          <div class="mb-4">
-            <span class="fw-bold text-uppercase d-block mb-1" style="color: var(--rc-red) !important; font-size: 16px; font-weight: 800;">
-              AGENDA
-            </span>
-            <h2 class="text-white lh-1 mb-0" style="font-size: 64px; font-weight: 800;">
-              jueves 19 de <br> noviembre
-            </h2>
-            <div>
-              <p class="card-text text-secondary small mt-2 mb-0">
-                diez charlas cortas para salir con un plan claro<br>
-                al final queda tiempo para preguntas y networking
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Columna de Itinerario -->
-        <div class="col-lg-7">
-          <div class="d-flex flex-column">
-            
-            <!-- Item 1 -->
-            <div class="d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
-              <span class="horario-agenda fw-bold">18:00</span>
-              <div>
-                <h5 class="titulo-charla-agenda text-white mb-0">Acreditación y bienvenida</h5>
-              </div>
-            </div>
-
-            <!-- Item 2 -->
-            <div class="d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
-              <span class="horario-agenda fw-bold">18:20</span>
-              <div>
-                <h5 class="titulo-charla-agenda text-white mb-1">Tu primer día como developer</h5>
-                <p class="nombre-mentor-agenda text-secondary small mb-0">Daniela Cardozo</p>
-              </div>
-            </div>
-
-            <!-- Item 3 -->
-            <div class="d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
-              <span class="horario-agenda fw-bold">18:40</span>
-              <div>
-                <h5 class="titulo-charla-agenda text-white mb-1">De cero a tu primer proyecto</h5>
-                <p class="nombre-mentor-agenda text-secondary small mb-0">Franco Diaz</p>
-              </div>
-            </div>
-
-            <!-- Item 4 -->
-            <div class="d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
-              <span class="horario-agenda fw-bold">19:00</span>
-              <div>
-                <h5 class="titulo-charla-agenda text-white mb-1">Armá tu portfolio con IA</h5>
-                <p class="nombre-mentor-agenda text-secondary small mb-0">Gaston</p>
-              </div>
-            </div>
-
-            <!-- Item 5 -->
-            <div class="d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
-              <span class="horario-agenda fw-bold">19:20</span>
-              <div>
-                <h5 class="titulo-charla-agenda text-white mb-1">Git y GitHub sin miedo</h5>
-                <p class="nombre-mentor-agenda text-secondary small mb-0">Mauro</p>
-              </div>
-            </div>
-
-            <!-- Item 6 -->
-            <div class="d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
-              <span class="horario-agenda fw-bold">19:40</span>
-              <div>
-                <h5 class="titulo-charla-agenda text-white mb-1">Tu primer backend con Node</h5>
-                <p class="nombre-mentor-agenda text-secondary small mb-0">Jose Diaz</p>
-              </div>
-            </div>
-
-            <!-- Item 7 -->
-            <div class="d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
-              <span class="horario-agenda fw-bold">20:00</span>
-              <div>
-                <h5 class="titulo-charla-agenda text-white mb-1">Preparate para tu primera entrevista</h5>
-                <p class="nombre-mentor-agenda text-secondary small mb-0">Tomas Gomez</p>
-              </div>
-            </div>
-
-            <!-- Item 8 -->
-            <div class="d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
-              <span class="horario-agenda fw-bold">20:20</span>
-              <div>
-                <h5 class="titulo-charla-agenda text-white mb-1">Mi primer trabajo en IT</h5>
-                <p class="nombre-mentor-agenda text-secondary small mb-0">Pablo Basso</p>
-              </div>
-            </div>
-
-            <!-- Item 9 -->
-            <div class="d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
-              <span class="horario-agenda fw-bold">20:40</span>
-              <div>
-                <h5 class="titulo-charla-agenda text-white mb-1">Testing: cómo no romper todo</h5>
-                <p class="nombre-mentor-agenda text-secondary small mb-0">Julian Martin</p>
-              </div>
-            </div>
-
-            <!-- Item 10 -->
-            <div class="d-flex gap-4 py-3">
-              <span class="horario-agenda fw-bold">21:00</span>
-              <div>
-                <h5 class="titulo-charla-agenda text-white mb-1">Diseño para developers</h5>
-                <p class="nombre-mentor-agenda text-secondary small mb-0">Tomas Escudero</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SECCIÓN ENTRADAS / EARLY BIRD (CON CONTADOR) -->
-  <section class="tickets-countdown-section py-5">
-    <div class="container">
-      
-      <div class="mb-4">
-        <span class="section-tag">ENTRADAS</span>
-        <h2 class="section-title">Asegurá tu lugar antes de que suba el precio</h2>
-      </div>
-
-      <div class="tickets-card">
-        
-        <div class="tickets-info">
-          <span class="early-bird-tag">EARLY BIRD</span>
-          <h3 class="tickets-heading">El precio especial termina el 31/10</h3>
-          <p class="tickets-subtext">Después la entrada pasa de $25.000 a $35.000.</p>
-        </div>
-
-        <div class="countdown-boxes">
-          <div class="time-box">
-            <span class="time-number" id="days">00</span>
-            <span class="time-label">DÍAS</span>
-          </div>
-          <div class="time-box">
-            <span class="time-number" id="hours">00</span>
-            <span class="time-label">HORAS</span>
-          </div>
-          <div class="time-box">
-            <span class="time-number" id="minutes">00</span>
-            <span class="time-label">MIN</span>
-          </div>
-        </div>
-
-        <div class="tickets-progress-container">
-          <div class="progress-labels">
-            <span class="progress-left-text">Quedan 38 de 60 Early Bird</span>
-            <span class="progress-right-text">63% vendidas</span>
-          </div>
-          <div class="progress-bar-bg">
-            <div class="progress-bar-fill" style="width: 63%;"></div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SECCIÓN PRECIO DE PAQUETES -->
-  <section class="py-5">
-    <div class="container" style="max-width: 1200px;">
-
-      <div class="row row-cols-1 row-cols-lg-2 g-4 mb-4">
-
-        <!-- Tarjeta 1: Early Bird -->
-        <div class="col">
-          <div class="tarjetas-precios tarjeta-roja h-100 p-4 p-lg-5 d-flex flex-column justify-content-between">
-            <div>
-              <div class="d-flex justify-content-between align-items-center mb-3">
-                <span class="titulos-tarjetas">Early Bird</span>
-                <span class="etiquetas-superiores">Quedan 38</span>
-              </div>
-
-              <div class="d-flex align-items-baseline gap-2 mb-1">
-                <h3 class="precio-tarjetas mb-0">$25.000</h3>
-                <span class="precio-tachado text-decoration-line-through">$35.000</span>
-              </div>
-              <p class="subtitulo-precio mb-4">Presencial · precio especial hasta el 31/10</p>
-
-              <ul class="lista-beneficios list-unstyled mb-4">
-                <li><span class="icono-lista">✓</span> Acceso a las 10 charlas</li>
-                <li><span class="icono-lista">✓</span> Kit de stickers Rolling Code</li>
-                <li><span class="icono-lista">✓</span> Certificado de asistencia</li>
-                <li><span class="icono-lista">✓</span> Coffee break y networking con los speakers</li>
-                <li><span class="icono-lista">✓</span> Grabación de todas las charlas</li>
-              </ul>
-            </div>
-
-            <a href="entradas" class="btn boton-precio w-100 py-3 rounded-pill fw-bold text-center">comprar entrada</a>
-          </div>
-        </div>
-
-        <!-- Tarjeta 2: General -->
-        <div class="col">
-          <div class="tarjetas-precios h-100 p-4 p-lg-5 d-flex flex-column justify-content-between">
-            <div>
-              <div class="d-flex justify-content-between align-items-center mb-3">
-                <span class="titulos-tarjetas">General</span>
-                <span class="etiquetas-superiores etiqueta-border">Desde el 1/11</span>
-              </div>
-
-              <h3 class="precio-tarjetas">$35.000</h3>
-              <p class="subtitulo-precio mb-4">Presencial · precio regular</p>
-
-              <ul class="lista-beneficios list-unstyled mb-4">
-                <li><span class="icono-lista">✓</span> Acceso a las 10 charlas</li>
-                <li><span class="icono-lista">✓</span> Certificado de asistencia</li>
-                <li><span class="icono-lista">✓</span> Coffee break y networking con los speakers</li>
-                <li><span class="icono-lista">✓</span> Grabación de todas las charlas</li>
-              </ul>
-            </div>
-
-            <a href="entradas" class="btn boton-precio w-100 py-3 rounded-pill fw-bold text-center">comprar entrada</a>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Tarjeta horizontal: Virtual -->
-      <div class="row">
-        <div class="col-12">
-          <div class="tarjetas-precios p-4 p-lg-5 d-flex flex-column justify-content-between">
-            <div>
-              <div class="d-flex justify-content-between align-items-center mb-3">
-                <span class="titulos-tarjetas">Virtual</span>
-                <span class="etiquetas-superiores etiqueta-border">Desde donde estés</span>
-              </div>
-
-              <h3 class="precio-tarjetas mb-1">$15.000</h3>
-              <p class="subtitulo-precio mb-4">Transmisión en vivo</p>
-
-              <ul class="lista-beneficios list-unstyled mb-4">
-                <li><span class="icono-lista">✓</span> Transmisión en vivo de las 10 charlas</li>
-                <li><span class="icono-lista">✓</span> Chat para hacer preguntas a los speakers</li>
-                <li><span class="icono-lista">✓</span> Certificado de asistencia</li>
-                <li><span class="icono-lista">✓</span> Grabación disponible por 30 días</li>
-              </ul>
-            </div>
-
-            <a href="entradas" class="btn boton-precio w-100 py-3 rounded-pill fw-bold text-center">comprar entrada</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-<!-- SECCIÓN CHECKOUT / FINALIZÁ TU COMPRA -->
-<section id="checkout" class="checkout-section py-5">
+    <!-- SECCIÓN SPEAKERS -->
+<section id="speakers" class="py-5">
   <div class="container">
-    
-    <!-- Bloque contenedor principal rojo -->
-    <div class="checkout-red-card">
+
+    <!-- titulos -->
+    <div class="mb-4">
+      <span class="fw-bold text-uppercase d-block mb-1" style="color: var(--rc-red) !important; font-size: 16px; font-weight: 800;">
+        SPEAKERS
+      </span>
+      <h2 class="text-white mb-0" style="font-size: 64px; font-weight: 800;">
+        Diez charlas, un mismo objetivo
+      </h2>
+    </div>
+
+    <!-- Tarjetas speakers -->
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-3">
+
+      <!-- Speaker 1 -->
+      <div class="col">
+        <div class="card speaker-card h-100 p-3 text-white">
+          <img src="./img/IMG-20261024-WA0302.jpg" class="card-img-top speaker-img mb-3" alt="Tomas Escudero" style="object-fit: cover; object-position: center; height: 200px;">
+          <div class="card-body p-0 d-flex flex-column">
+            <h5 class="speaker-name mb-2">Tomas Escudero</h5>
+            <div class="titulo-charla mb-3 text-wrap">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#modalSpeaker1" class="text-white text-decoration-none">Diseño para developers</a>
+            </div>
+            <p class="card-text text-secondary small mb-0">Qué mira un equipo de diseño antes de que escribas código y cómo leer un mockup para construirlo igual.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Speaker 2 -->
+      <div class="col">
+        <div class="card speaker-card h-100 p-3 text-white">
+          <img src="./img/IMG-20261023-WA0204.jpg" class="card-img-top speaker-img mb-3" alt="Franco Diaz" style="object-fit: cover; object-position: center; height: 200px;">
+          <div class="card-body p-0 d-flex flex-column">
+            <h5 class="speaker-name mb-2">Franco Diaz</h5>
+            <div class="titulo-charla mb-3 text-wrap">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#modalSpeaker2" class="text-white text-decoration-none">De cero a tu primer proyecto</a>
+            </div>
+            <p class="card-text text-secondary small mb-0">Un recorrido para pasar de mirar tutoriales a terminar una app simple con HTML, JavaScript y React.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Speaker 3 -->
+      <div class="col">
+        <div class="card speaker-card h-100 p-3 text-white">
+          <img src="./img/IMG-20261024-WA0300.jpg" class="card-img-top speaker-img mb-3" alt="Gaston" style="object-fit: cover; object-position: center; height: 200px;">
+          <div class="card-body p-0 d-flex flex-column">
+            <h5 class="speaker-name mb-2">Gaston Roger</h5>
+            <div class="titulo-charla mb-3 text-wrap">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#modalSpeaker3" class="text-white text-decoration-none">Armá tu portfolio con IA</a>
+            </div>
+            <p class="card-text text-secondary small mb-0">Cómo usar asistentes de IA para construir y publicar un portfolio que muestre lo que sabés hacer.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Speaker 4 -->
+      <div class="col">
+        <div class="card speaker-card h-100 p-3 text-white">
+          <img src="./img/IMG-20261026-WA0021.jpg" class="card-img-top speaker-img mb-3" alt="Mauro" style="object-fit: cover; object-position: center; height: 200px;">
+          <div class="card-body p-0 d-flex flex-column">
+            <h5 class="speaker-name mb-2">Mauro Coniglio</h5>
+            <div class="titulo-charla mb-3 text-wrap">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#modalSpeaker4" class="text-white text-decoration-none">Git y GitHub sin miedo</a>
+            </div>
+            <p class="card-text text-secondary small mb-0">Los comandos que vas a usar todos los días y cómo trabajar en equipo sin pisar el código de otros.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Speaker 5 -->
+      <div class="col">
+        <div class="card speaker-card h-100 p-3 text-white">
+          <img src="./img/IMG-20261023-WA0208.jpg" class="card-img-top speaker-img mb-3" alt="Jose Diaz" style="object-fit: cover; object-position: center; height: 200px;">
+          <div class="card-body p-0 d-flex flex-column">
+            <h5 class="speaker-name mb-2">Jose Diaz</h5>
+            <div class="titulo-charla mb-3 text-wrap">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#modalSpeaker5" class="text-white text-decoration-none">Tu primer backend con Node</a>
+            </div>
+            <p class="card-text text-secondary small mb-0">Cómo se arma una API, qué hace una base de datos y por dónde empezar para conectar todo.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Speaker 6 -->
+      <div class="col">
+        <div class="card speaker-card h-100 p-3 text-white">
+          <img src="./img/IMG-20261026-WA0020.jpg" class="card-img-top speaker-img mb-3" alt="Tomas Gomez" style="object-fit: cover; object-position: center; height: 200px;">
+          <div class="card-body p-0 d-flex flex-column">
+            <h5 class="speaker-name mb-2">Tomas Gomez</h5>
+            <div class="titulo-charla mb-3 text-wrap">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#modalSpeaker6" class="text-white text-decoration-none">Preparate para tu primera entrevista</a>
+            </div>
+            <p class="card-text text-secondary small mb-0">Qué preguntan en una entrevista técnica, cómo practicar y cómo contar tus proyectos con claridad.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Speaker 7 -->
+      <div class="col">
+        <div class="card speaker-card h-100 p-3 text-white">
+          <img src="./img/IMG-20261026-WA0022.jpg" class="card-img-top speaker-img mb-3" alt="Pablo Basso" style="object-fit: cover; object-position: center; height: 200px;">
+          <div class="card-body p-0 d-flex flex-column">
+            <h5 class="speaker-name mb-2">Pablo Basso</h5>
+            <div class="titulo-charla mb-3 text-wrap">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#modalSpeaker7" class="text-white text-decoration-none">Mi primer trabajo en IT</a>
+            </div>
+            <p class="card-text text-secondary small mb-0">Una charla en primera persona sobre cómo se consigue el primer puesto y qué se aprende en los primeros meses.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Speaker 8 -->
+      <div class="col">
+        <div class="card speaker-card h-100 p-3 text-white">
+          <img src="./img/IMG-20261024-WA0299.jpg" class="card-img-top speaker-img mb-3" alt="Julian Martin" style="object-fit: cover; object-position: center; height: 200px;">
+          <div class="card-body p-0 d-flex flex-column">
+            <h5 class="speaker-name mb-2">Julian Martin</h5>
+            <div class="titulo-charla mb-3 text-wrap">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#modalSpeaker8" class="text-white text-decoration-none">Testing: cómo no romper todo</a>
+            </div>
+            <p class="card-text text-secondary small mb-0">Qué es testear, por qué importa y cómo escribir tus primeras pruebas sin complicarte.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Speaker 9 -->
+      <div class="col">
+        <div class="card speaker-card h-100 p-3 text-white">
+          <img src="./img/IMG-20261023-WA0206.jpg" class="card-img-top speaker-img mb-3" alt="Daniela Cardozo" style="object-fit: cover; object-position: center; height: 200px;">
+          <div class="card-body p-0 d-flex flex-column">
+            <h5 class="speaker-name mb-2">Daniela Cardozo</h5>
+            <div class="titulo-charla mb-3 text-wrap">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#modalSpeaker9" class="text-white text-decoration-none">Tu primer día como developer</a>
+            </div>
+            <p class="card-text text-secondary small mb-0">Qué esperar de tu primera semana en un equipo, qué herramientas usar y cómo pedir ayuda sin miedo.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Speaker 10 -->
+      <div class="col">
+        <div class="card speaker-card h-100 p-3 text-white">
+          <img src="./img/IMG-20261024-WA0303.jpg" class="card-img-top speaker-img mb-3" alt="Andres Perlo" style="object-fit: cover; object-position: center; height: 200px;">
+          <div class="card-body p-0 d-flex flex-column">
+            <h5 class="speaker-name mb-2">Andres Perlo</h5>
+            <div class="titulo-charla mb-3 text-wrap">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#modalSpeaker10" class="text-white text-decoration-none">Tu primera base de datos</a>
+            </div>
+            <p class="card-text text-secondary small mb-0">Qué es una base de datos, para qué sirve y cómo guardar y consultar tus primeros datos.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div> 
+  
+</section>
+
+
+<!-- MODALES SPEAKERS -->
+
+<!-- Modal Speaker 1 -->
+<div class="modal fade" id="modalSpeaker1" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content text-white border-0 position-relative overflow-hidden" style="background-color: var(--rc-surface, #18181b); border: 1px solid var(--rc-border, #2c2c31) !important; border-radius: 24px;">
+      <!-- Contenedor decorativo para asegurar que el logo/isotipo de fondo se vea completo -->
+      <div class="position-absolute w-100 h-100 pointer-events-none" style="background: url('./img/tu-logo.png') no-repeat bottom right; background-size: 120px; opacity: 0.15; z-index: 0;"></div>
       
-      <!-- Cabecera del Checkout -->
-      <div class="checkout-header">
-        <div>
-          <span class="checkout-subtitle">COMPRA SEGURA</span>
-          <h2 class="checkout-title">Finalizá tu compra</h2>
-        </div>
-        
-        <!-- Indicador de pasos -->
-        <div class="checkout-steps">
-          <span class="step-badge active">1 Entrada</span>
-          <span class="step-badge">2 Datos</span>
-          <span class="step-badge">3 Pago</span>
-          <span class="step-badge">4 Listo</span>
+      <div class="modal-header border-0 pb-0 position-relative" style="z-index: 1;">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 pt-0 position-relative" style="z-index: 1;">
+        <div class="row align-items-center">
+          <div class="col-md-5 mb-3 mb-md-0">
+            <img src="./img/IMG-20261024-WA0302.jpg" class="img-fluid w-100 shadow-sm" alt="Tomas Escudero" style="border-radius: 16px; object-fit: cover; object-position: center; height: 260px;">
+          </div>
+          <div class="col-md-7">
+            <h3 class="fw-bold mb-1">Tomas Escudero</h3>
+            <h5 class="text-white-50 mb-3" style="font-size: 1.1rem;">Diseño para developers</h5>
+            <div class="badge text-white px-3 py-2 rounded-pill mb-3" style="background-color: var(--rc-red, #e53935);">
+              Jueves 19/11 · 18:40 a 19:00 hs · 20 min
+            </div>
+            <p class="text-secondary small mb-4">Qué mira un equipo de diseño antes de que escribas código y cómo leer un mockup para construirlo igual.</p>
+            <div class="d-flex gap-2 flex-wrap">
+              <a href="#agenda" class="btn btn-outline-light rounded-pill px-4 py-2 text-decoration-none" data-bs-dismiss="modal">Ver en la agenda</a>
+              <a href="#compra" class="btn rounded-pill px-4 py-2 text-white text-decoration-none" style="background-color: var(--rc-red, #e53935);" data-bs-dismiss="modal">Comprar entrada</a>
+            </div>
+          </div>
         </div>
       </div>
-
-      <!-- Contenido en dos columnas -->
-      <div class="checkout-grid">
-        
-        <!-- COLUMNA IZQUIERDA: Selector de entradas y cantidad -->
-        <div class="checkout-left-box">
-          <h3 class="box-title">Elegí tu entrada</h3>
-
-          <!-- Opciones de entradas -->
-          <div class="ticket-options">
-            
-            <!-- Opción 1: Early Bird (Seleccionada por defecto) -->
-            <div class="ticket-option selected" data-price="25000">
-              <div class="ticket-option-info">
-                <strong>Early Bird</strong>
-                <small>Presencial · hasta el 31/10</small>
-              </div>
-              <span class="ticket-price">$25.000</span>
-            </div>
-
-            <!-- Opción 2: General -->
-            <div class="ticket-option" data-price="35000">
-              <div class="ticket-option-info">
-                <strong>General</strong>
-                <small>Presencial · desde el 1/11</small>
-              </div>
-              <span class="ticket-price">$35.000</span>
-            </div>
-
-            <!-- Opción 3: Virtual -->
-            <div class="ticket-option" data-price="15000">
-              <div class="ticket-option-info">
-                <strong>Virtual</strong>
-                <small>Transmisión en vivo y grabación</small>
-              </div>
-              <span class="ticket-price">$15.000</span>
-            </div>
-
-          </div>
-
-          <!-- Selector de cantidad -->
-          <div class="quantity-container">
-            <span class="quantity-label">Cantidad</span>
-            <div class="quantity-controls">
-              <button class="qty-btn" id="decrease">-</button>
-              <span id="quantity-value">1</span>
-              <button class="qty-btn" id="increase">+</button>
-            </div>
-          </div>
-
-          <!-- Botón Continuar -->
-          <button class="btn-continuar">Continuar</button>
-
-          <p class="checkout-disclaimer">Pasarela de pago de ejemplo: no se procesan pagos ni se guardan datos.</p>
-        </div>
-
-        <!-- COLUMNA DERECHA: Resumen del pedido -->
-        <div class="checkout-right-box">
-          <span class="order-tag">TU PEDIDO</span>
-          
-          <div class="order-event-info">
-            <h4>Workshop Rolling Code School</h4>
-            <p>Jueves 19/11 · 18.00 hs · Gral. Paz 576</p>
-          </div>
-
-          <div class="order-calculation">
-            <div class="calc-row">
-              <span id="order-item-desc">1 entrada Early Bird</span>
-              <span id="order-base-price">$25.000</span>
-            </div>
-            <div class="calc-row">
-              <span>Cargo por servicio (5%)</span>
-              <span id="order-service-fee">$1.250</span>
-            </div>
-          </div>
-
-          <div class="order-total-row">
-            <span>Total</span>
-            <span id="order-total-price">$26.250</span>
-          </div>
-
-          <div class="order-security-note">
-            <i class="bi bi-lock-fill"></i> Pago protegido. Recibís la entrada por email.
-          </div>
-        </div>
-
-      </div>
-
     </div>
   </div>
-</section>
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="countdown.js"></script>
+</div>
+
+<!-- Modal Speaker 2 -->
+<div class="modal fade" id="modalSpeaker2" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content text-white border-0 position-relative overflow-hidden" style="background-color: var(--rc-surface, #18181b); border: 1px solid var(--rc-border, #2c2c31) !important; border-radius: 24px;">
+      <div class="position-absolute w-100 h-100 pointer-events-none" style="background: url('./img/tu-logo.png') no-repeat bottom right; background-size: 120px; opacity: 0.15; z-index: 0;"></div>
+      <div class="modal-header border-0 pb-0 position-relative" style="z-index: 1;">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 pt-0 position-relative" style="z-index: 1;">
+        <div class="row align-items-center">
+          <div class="col-md-5 mb-3 mb-md-0">
+            <img src="./img/IMG-20261023-WA0204.jpg" class="img-fluid w-100 shadow-sm" alt="Franco Diaz" style="border-radius: 16px; object-fit: cover; object-position: center; height: 260px;">
+          </div>
+          <div class="col-md-7">
+            <h3 class="fw-bold mb-1">Franco Diaz</h3>
+            <h5 class="text-white-50 mb-3" style="font-size: 1.1rem;">De cero a tu primer proyecto</h5>
+            <div class="badge text-white px-3 py-2 rounded-pill mb-3" style="background-color: var(--rc-red, #e53935);">
+              Jueves 19/11 · 18:40 a 19:00 hs · 20 min
+            </div>
+            <p class="text-secondary small mb-4">Un recorrido para pasar de mirar tutoriales a terminar una app simple con HTML, JavaScript y React.</p>
+            <div class="d-flex gap-2 flex-wrap">
+              <a href="#agenda" class="btn btn-outline-light rounded-pill px-4 py-2 text-decoration-none" data-bs-dismiss="modal">Ver en la agenda</a>
+              <a href="#compra" class="btn rounded-pill px-4 py-2 text-white text-decoration-none" style="background-color: var(--rc-red, #e53935);" data-bs-dismiss="modal">Comprar entrada</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Speaker 3 -->
+<div class="modal fade" id="modalSpeaker3" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content text-white border-0 position-relative overflow-hidden" style="background-color: var(--rc-surface, #18181b); border: 1px solid var(--rc-border, #2c2c31) !important; border-radius: 24px;">
+      <div class="position-absolute w-100 h-100 pointer-events-none" style="background: url('./img/tu-logo.png') no-repeat bottom right; background-size: 120px; opacity: 0.15; z-index: 0;"></div>
+      <div class="modal-header border-0 pb-0 position-relative" style="z-index: 1;">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 pt-0 position-relative" style="z-index: 1;">
+        <div class="row align-items-center">
+          <div class="col-md-5 mb-3 mb-md-0">
+            <img src="./img/IMG-20261024-WA0300.jpg" class="img-fluid w-100 shadow-sm" alt="Gaston Roger" style="border-radius: 16px; object-fit: cover; object-position: center; height: 260px;">
+          </div>
+          <div class="col-md-7">
+            <h3 class="fw-bold mb-1">Gaston Roger</h3>
+            <h5 class="text-white-50 mb-3" style="font-size: 1.1rem;">Armá tu portfolio con IA</h5>
+            <div class="badge text-white px-3 py-2 rounded-pill mb-3" style="background-color: var(--rc-red, #e53935);">
+              Jueves 19/11 · 18:40 a 19:00 hs · 20 min
+            </div>
+            <p class="text-secondary small mb-4">Cómo usar asistentes de IA para construir y publicar un portfolio que muestre lo que sabés hacer.</p>
+            <div class="d-flex gap-2 flex-wrap">
+              <a href="#agenda" class="btn btn-outline-light rounded-pill px-4 py-2 text-decoration-none" data-bs-dismiss="modal">Ver en la agenda</a>
+              <a href="#compra" class="btn rounded-pill px-4 py-2 text-white text-decoration-none" style="background-color: var(--rc-red, #e53935);" data-bs-dismiss="modal">Comprar entrada</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Speaker 4 -->
+<div class="modal fade" id="modalSpeaker4" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content text-white border-0 position-relative overflow-hidden" style="background-color: var(--rc-surface, #18181b); border: 1px solid var(--rc-border, #2c2c31) !important; border-radius: 24px;">
+      <div class="position-absolute w-100 h-100 pointer-events-none" style="background: url('./img/tu-logo.png') no-repeat bottom right; background-size: 120px; opacity: 0.15; z-index: 0;"></div>
+      <div class="modal-header border-0 pb-0 position-relative" style="z-index: 1;">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 pt-0 position-relative" style="z-index: 1;">
+        <div class="row align-items-center">
+          <div class="col-md-5 mb-3 mb-md-0">
+            <img src="./img/IMG-20261026-WA0021.jpg" class="img-fluid w-100 shadow-sm" alt="Mauro Coniglio" style="border-radius: 16px; object-fit: cover; object-position: center; height: 260px;">
+          </div>
+          <div class="col-md-7">
+            <h3 class="fw-bold mb-1">Mauro Coniglio</h3>
+            <h5 class="text-white-50 mb-3" style="font-size: 1.1rem;">Git y GitHub sin miedo</h5>
+            <div class="badge text-white px-3 py-2 rounded-pill mb-3" style="background-color: var(--rc-red, #e53935);">
+              Jueves 19/11 · 18:40 a 19:00 hs · 20 min
+            </div>
+            <p class="text-secondary small mb-4">Los comandos que vas a usar todos los días y cómo trabajar en equipo sin pisar el código de otros.</p>
+            <div class="d-flex gap-2 flex-wrap">
+              <a href="#agenda" class="btn btn-outline-light rounded-pill px-4 py-2 text-decoration-none" data-bs-dismiss="modal">Ver en la agenda</a>
+              <a href="#compra" class="btn rounded-pill px-4 py-2 text-white text-decoration-none" style="background-color: var(--rc-red, #e53935);" data-bs-dismiss="modal">Comprar entrada</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Speaker 5 -->
+<div class="modal fade" id="modalSpeaker5" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content text-white border-0 position-relative overflow-hidden" style="background-color: var(--rc-surface, #18181b); border: 1px solid var(--rc-border, #2c2c31) !important; border-radius: 24px;">
+      <div class="position-absolute w-100 h-100 pointer-events-none" style="background: url('./img/tu-logo.png') no-repeat bottom right; background-size: 120px; opacity: 0.15; z-index: 0;"></div>
+      <div class="modal-header border-0 pb-0 position-relative" style="z-index: 1;">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 pt-0 position-relative" style="z-index: 1;">
+        <div class="row align-items-center">
+          <div class="col-md-5 mb-3 mb-md-0">
+            <img src="./img/IMG-20261023-WA0208.jpg" class="img-fluid w-100 shadow-sm" alt="Jose Diaz" style="border-radius: 16px; object-fit: cover; object-position: center; height: 260px;">
+          </div>
+          <div class="col-md-7">
+            <h3 class="fw-bold mb-1">Jose Diaz</h3>
+            <h5 class="text-white-50 mb-3" style="font-size: 1.1rem;">Tu primer backend con Node</h5>
+            <div class="badge text-white px-3 py-2 rounded-pill mb-3" style="background-color: var(--rc-red, #e53935);">
+              Jueves 19/11 · 18:40 a 19:00 hs · 20 min
+            </div>
+            <p class="text-secondary small mb-4">Cómo se arma una API, qué hace una base de datos y por dónde empezar para conectar todo.</p>
+            <div class="d-flex gap-2 flex-wrap">
+              <a href="#agenda" class="btn btn-outline-light rounded-pill px-4 py-2 text-decoration-none" data-bs-dismiss="modal">Ver en la agenda</a>
+              <a href="#compra" class="btn rounded-pill px-4 py-2 text-white text-decoration-none" style="background-color: var(--rc-red, #e53935);" data-bs-dismiss="modal">Comprar entrada</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Speaker 6 -->
+<div class="modal fade" id="modalSpeaker6" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content text-white border-0 position-relative overflow-hidden" style="background-color: var(--rc-surface, #18181b); border: 1px solid var(--rc-border, #2c2c31) !important; border-radius: 24px;">
+      <div class="position-absolute w-100 h-100 pointer-events-none" style="background: url('./img/tu-logo.png') no-repeat bottom right; background-size: 120px; opacity: 0.15; z-index: 0;"></div>
+      <div class="modal-header border-0 pb-0 position-relative" style="z-index: 1;">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 pt-0 position-relative" style="z-index: 1;">
+        <div class="row align-items-center">
+          <div class="col-md-5 mb-3 mb-md-0">
+            <img src="./img/IMG-20261026-WA0020.jpg" class="img-fluid w-100 shadow-sm" alt="Tomas Gomez" style="border-radius: 16px; object-fit: cover; object-position: center; height: 260px;">
+          </div>
+          <div class="col-md-7">
+            <h3 class="fw-bold mb-1">Tomas Gomez</h3>
+            <h5 class="text-white-50 mb-3" style="font-size: 1.1rem;">Preparate para tu primera entrevista</h5>
+            <div class="badge text-white px-3 py-2 rounded-pill mb-3" style="background-color: var(--rc-red, #e53935);">
+              Jueves 19/11 · 18:40 a 19:00 hs · 20 min
+            </div>
+            <p class="text-secondary small mb-4">Qué preguntan en una entrevista técnica, cómo practicar y cómo contar tus proyectos con claridad.</p>
+            <div class="d-flex gap-2 flex-wrap">
+              <a href="#agenda" class="btn btn-outline-light rounded-pill px-4 py-2 text-decoration-none" data-bs-dismiss="modal">Ver en la agenda</a>
+              <a href="#compra" class="btn rounded-pill px-4 py-2 text-white text-decoration-none" style="background-color: var(--rc-red, #e53935);" data-bs-dismiss="modal">Comprar entrada</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Speaker 7 -->
+<div class="modal fade" id="modalSpeaker7" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content text-white border-0 position-relative overflow-hidden" style="background-color: var(--rc-surface, #18181b); border: 1px solid var(--rc-border, #2c2c31) !important; border-radius: 24px;">
+      <div class="position-absolute w-100 h-100 pointer-events-none" style="background: url('./img/tu-logo.png') no-repeat bottom right; background-size: 120px; opacity: 0.15; z-index: 0;"></div>
+      <div class="modal-header border-0 pb-0 position-relative" style="z-index: 1;">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 pt-0 position-relative" style="z-index: 1;">
+        <div class="row align-items-center">
+          <div class="col-md-5 mb-3 mb-md-0">
+            <img src="./img/IMG-20261026-WA0022.jpg" class="img-fluid w-100 shadow-sm" alt="Pablo Basso" style="border-radius: 16px; object-fit: cover; object-position: center; height: 260px;">
+          </div>
+          <div class="col-md-7">
+            <h3 class="fw-bold mb-1">Pablo Basso</h3>
+            <h5 class="text-white-50 mb-3" style="font-size: 1.1rem;">Mi primer trabajo en IT</h5>
+            <div class="badge text-white px-3 py-2 rounded-pill mb-3" style="background-color: var(--rc-red, #e53935);">
+              Jueves 19/11 · 18:40 a 19:00 hs · 20 min
+            </div>
+            <p class="text-secondary small mb-4">Una charla en primera persona sobre cómo se consigue el primer puesto y qué se aprende en los primeros meses.</p>
+            <div class="d-flex gap-2 flex-wrap">
+              <a href="#agenda" class="btn btn-outline-light rounded-pill px-4 py-2 text-decoration-none" data-bs-dismiss="modal">Ver en la agenda</a>
+              <a href="#compra" class="btn rounded-pill px-4 py-2 text-white text-decoration-none" style="background-color: var(--rc-red, #e53935);" data-bs-dismiss="modal">Comprar entrada</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Speaker 8 -->
+<div class="modal fade" id="modalSpeaker8" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content text-white border-0 position-relative overflow-hidden" style="background-color: var(--rc-surface, #18181b); border: 1px solid var(--rc-border, #2c2c31) !important; border-radius: 24px;">
+      <div class="position-absolute w-100 h-100 pointer-events-none" style="background: url('./img/tu-logo.png') no-repeat bottom right; background-size: 120px; opacity: 0.15; z-index: 0;"></div>
+      <div class="modal-header border-0 pb-0 position-relative" style="z-index: 1;">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 pt-0 position-relative" style="z-index: 1;">
+        <div class="row align-items-center">
+          <div class="col-md-5 mb-3 mb-md-0">
+            <img src="./img/IMG-20261024-WA0299.jpg" class="img-fluid w-100 shadow-sm" alt="Julian Martin" style="border-radius: 16px; object-fit: cover; object-position: center; height: 260px;">
+          </div>
+          <div class="col-md-7">
+            <h3 class="fw-bold mb-1">Julian Martin</h3>
+            <h5 class="text-white-50 mb-3" style="font-size: 1.1rem;">Testing: cómo no romper todo</h5>
+            <div class="badge text-white px-3 py-2 rounded-pill mb-3" style="background-color: var(--rc-red, #e53935);">
+              Jueves 19/11 · 18:40 a 19:00 hs · 20 min
+            </div>
+            <p class="text-secondary small mb-4">Qué es testear, por qué importa y cómo escribir tus primeras pruebas sin complicarte.</p>
+            <div class="d-flex gap-2 flex-wrap">
+              <a href="#agenda" class="btn btn-outline-light rounded-pill px-4 py-2 text-decoration-none" data-bs-dismiss="modal">Ver en la agenda</a>
+              <a href="#compra" class="btn rounded-pill px-4 py-2 text-white text-decoration-none" style="background-color: var(--rc-red, #e53935);" data-bs-dismiss="modal">Comprar entrada</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Speaker 9 -->
+<div class="modal fade" id="modalSpeaker9" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content text-white border-0 position-relative overflow-hidden" style="background-color: var(--rc-surface, #18181b); border: 1px solid var(--rc-border, #2c2c31) !important; border-radius: 24px;">
+      <div class="position-absolute w-100 h-100 pointer-events-none" style="background: url('./img/tu-logo.png') no-repeat bottom right; background-size: 120px; opacity: 0.15; z-index: 0;"></div>
+      <div class="modal-header border-0 pb-0 position-relative" style="z-index: 1;">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 pt-0 position-relative" style="z-index: 1;">
+        <div class="row align-items-center">
+          <div class="col-md-5 mb-3 mb-md-0">
+            <img src="./img/IMG-20261023-WA0206.jpg" class="img-fluid w-100 shadow-sm" alt="Daniela Cardozo" style="border-radius: 16px; object-fit: cover; object-position: center; height: 260px;">
+          </div>
+          <div class="col-md-7">
+            <h3 class="fw-bold mb-1">Daniela Cardozo</h3>
+            <h5 class="text-white-50 mb-3" style="font-size: 1.1rem;">Tu primer día como developer</h5>
+            <div class="badge text-white px-3 py-2 rounded-pill mb-3" style="background-color: var(--rc-red, #e53935);">
+              Jueves 19/11 · 18:40 a 19:00 hs · 20 min
+            </div>
+            <p class="text-secondary small mb-4">Qué esperar de tu primera semana en un equipo, qué herramientas usar y cómo pedir ayuda sin miedo.</p>
+            <div class="d-flex gap-2 flex-wrap">
+              <a href="#agenda" class="btn btn-outline-light rounded-pill px-4 py-2 text-decoration-none" data-bs-dismiss="modal">Ver en la agenda</a>
+              <a href="#compra" class="btn rounded-pill px-4 py-2 text-white text-decoration-none" style="background-color: var(--rc-red, #e53935);" data-bs-dismiss="modal">Comprar entrada</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Speaker 10 -->
+<div class="modal fade" id="modalSpeaker10" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content text-white border-0 position-relative overflow-hidden" style="background-color: var(--rc-surface, #18181b); border: 1px solid var(--rc-border, #2c2c31) !important; border-radius: 24px;">
+      <div class="position-absolute w-100 h-100 pointer-events-none" style="background: url('./img/tu-logo.png') no-repeat bottom right; background-size: 120px; opacity: 0.15; z-index: 0;"></div>
+      <div class="modal-header border-0 pb-0 position-relative" style="z-index: 1;">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 pt-0 position-relative" style="z-index: 1;">
+        <div class="row align-items-center">
+          <div class="col-md-5 mb-3 mb-md-0">
+            <img src="./img/IMG-20261024-WA0303.jpg" class="img-fluid w-100 shadow-sm" alt="Andres Perlo" style="border-radius: 16px; object-fit: cover; object-position: center; height: 260px;">
+          </div>
+          <div class="col-md-7">
+            <h3 class="fw-bold mb-1">Andres Perlo</h3>
+            <h5 class="text-white-50 mb-3" style="font-size: 1.1rem;">Tu primera base de datos</h5>
+            <div class="badge text-white px-3 py-2 rounded-pill mb-3" style="background-color: var(--rc-red, #e53935);">
+              Jueves 19/11 · 18:40 a 19:00 hs · 20 min
+            </div>
+            <p class="text-secondary small mb-4">Qué es una base de datos, para qué sirve y cómo guardar y consultar tus primeros datos.</p>
+            <div class="d-flex gap-2 flex-wrap">
+              <a href="#agenda" class="btn btn-outline-light rounded-pill px-4 py-2 text-decoration-none" data-bs-dismiss="modal">Ver en la agenda</a>
+              <a href="#compra" class="btn rounded-pill px-4 py-2 text-white text-decoration-none" style="background-color: var(--rc-red, #e53935);" data-bs-dismiss="modal">Comprar entrada</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"> </script>
 </body>
 </html>
