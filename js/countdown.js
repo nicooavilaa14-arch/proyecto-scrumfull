@@ -252,3 +252,48 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+// --- INICIALIZACIÓN DEL MAPA INTERACTIVO DE ROLLING CODE SCHOOL ---
+document.addEventListener("DOMContentLoaded", function () {
+  // Coordenadas exactas de Gral. Paz 576, San Miguel de Tucumán
+  const lat = -26.836600;
+  const lng = -65.207200;
+
+  // Carga del script de Leaflet dinámicamente si no está cargado
+  if (typeof L !== 'undefined') {
+    initMap(lat, lng);
+  } else {
+    const script = document.createElement('script');
+    script.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
+    script.integrity = "sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=";
+    script.crossOrigin = "";
+    script.onload = () => initMap(lat, lng);
+    document.head.appendChild(script);
+  }
+
+  function initMap(lat, lng) {
+    const mapElement = document.getElementById('map');
+    if (!mapElement) return;
+
+    // Crear el mapa centrado en Rolling Code School
+    const map = L.map('map', {
+      zoomControl: false,
+      attributionControl: false
+    }).setView([lat, lng], 16);
+
+    // Capa de OpenStreetMap directa y sin restricciones de API Key
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19
+    }).addTo(map);
+
+    // Marcador rojo personalizado exacto
+    const redMarkerIcon = L.divIcon({
+      className: 'custom-red-pin',
+      html: '<div style="background-color: #e63946; width: 16px; height: 16px; border-radius: 50%; border: 3px solid #fff; box-shadow: 0 0 15px #e63946;"></div>',
+      iconSize: [16, 16],
+      iconAnchor: [8, 8]
+    });
+
+    L.marker([lat, lng], { icon: redMarkerIcon }).addTo(map)
+      .bindPopup("<b>Rolling Code School</b><br>Gral. Paz 576, Entrepiso");
+  }
+});
