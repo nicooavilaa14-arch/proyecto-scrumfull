@@ -6,10 +6,128 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,800;1,300&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="styles.css" />
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <title>Document</title>
+</head>
+<body>
+  <!-- Seccion Hero -->
+<!-- Seccion Hero -->
+<section class="hero-section">
+  <div class="ConteinerHero">
+    
+    <!-- COLUMNA IZQUIERDA: Títulos y botones principales -->
+    <div class="hero-text-content">
+      <h6 class="hero-subtitle">
+        <span class="workshop-word">WORKSHOP</span> ENTRADAS LIMITADAS
+      </h6>
+      
+      <h1 class="hero-title">
+        ¿POR DÓNDE<br>
+        EMPIEZO A<br>
+        <span class="text-dark-title">PROGRAMAR?</span>
+      </h1>
+      
+      <p class="hero-description">
+        Una tarde con diez speakers de Rolling Code School para ordenar tus primeros pasos: qué aprender, cómo practicar y cómo mostrar lo que sabés.
+      </p>
+      
+      <div class="hero-buttons">
+        <button class="btn-comprar">Comprar entrada</button>
+        <button class="btn-agenda">Ver agenda</button>
+      </div>
+    </div>
+
+    <!-- COLUMNA DERECHA: Tarjeta oscura con la información del evento -->
+    <div class="hero-card-right">
+      <div class="card-info-item">
+        <i class="bi bi-calendar-event info-icon"></i>
+        <div>
+          <span class="info-title">JUE 19/11</span>
+          <span class="info-sub flex-subtitle">18.00 hs</span>
+        </div>
+      </div>
+
+      <div class="card-info-item">
+        <i class="bi bi-geo-alt info-icon"></i>
+        <div>
+          <span class="info-title">Rolling Code School</span>
+          <span class="info-sub">Gral. Paz 576, Entrepiso</span>
+        </div>
+      </div>
+
+      <div class="card-info-item">
+        <i class="bi bi-ticket-perforated info-icon"></i>
+        <div>
+          <span class="info-title">Entradas desde $15.000</span>
+          <span class="info-sub">Early Bird hasta el 31/10</span>
+        </div>
+      </div>
+      
+      <div class="card-tags">
+        <span class="tag">Presencial</span>
+        <span class="tag">Virtual</span>
+        <span class="tag tag-red">Cupos limitados</span>
+      </div>
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 <body>
+<script src="countdown.js"></script>
+  <!-- Segundo contador INTERACTIVO -->
+   <!-- SECCIÓN ENTRADAS / EARLY BIRD -->
+<section class="tickets-countdown-section py-5">
+  <div class="container">
+    
+    <!-- Títulos de la sección -->
+    <div class="mb-4">
+      <span class="section-tag">ENTRADAS</span>
+      <h2 class="section-title">Asegurá tu lugar antes de que suba el precio</h2>
+    </div>
+
+    <!-- Tarjeta principal del contador -->
+    <div class="tickets-card">
+      
+      <!-- Columna izquierda: Información Early Bird -->
+      <div class="tickets-info">
+        <span class="early-bird-tag">EARLY BIRD</span>
+        <h3 class="tickets-heading">El precio especial termina el 31/10</h3>
+        <p class="tickets-subtext">Después la entrada pasa de $25.000 a $35.000.</p>
+      </div>
+
+      <!-- Columna central: Cajas de tiempo (Días, Horas, Min) -->
+ <div class="countdown-boxes">
+  <div class="time-box">
+    <span class="time-number" id="days">00</span>
+    <span class="time-label">DÍAS</span>
+  </div>
+  <div class="time-box">
+    <span class="time-number" id="hours">00</span>
+    <span class="time-label">HORAS</span>
+  </div>
+  <div class="time-box">
+    <span class="time-number" id="minutes">00</span>
+    <span class="time-label">MIN</span>
+  </div>
+</div>
+
+      <!-- Columna derecha: Progreso de ventas -->
+      <div class="tickets-progress-container">
+        <div class="progress-labels">
+          <span class="progress-left-text">Quedan 38 de 60 Early Bird</span>
+          <span class="progress-right-text">63% vendidas</span>
+        </div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" style="width: 63%;"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+   
   <!-- Primer contador -->
    <section class="stats-section py-4">
   <div class="container">
@@ -229,7 +347,7 @@
           <div class="d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
             <span class="horario-agenda fw-bold">18:40</span>
             <div>
-              <h5 class=" titulo-charla-agenda mb-1">De cero a tu primer proyecto</h5>
+              <h5 class=" titulo-charla-agenda text-white mb-1">De cero a tu primer proyecto</h5>
               <p class="nombre-mentor-agenda text-secondary small mb-0">Franco Diaz</p>
             </div>
           </div>
@@ -247,7 +365,7 @@
           <div class="d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
             <span class="horario-agenda fw-bold">19:20</span>
             <div >
-              <h5 class="titulo-charla-agendatext-white mb-1">Git y GitHub sin miedo</h5>
+              <h5 class="titulo-charla-agenda text-white mb-1">Git y GitHub sin miedo</h5>
               <p class="nombre-mentor-agenda text-secondary small mb-0">Mauro</p>
             </div>
           </div>
@@ -256,7 +374,7 @@
           <div class="d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
             <span class="horario-agenda fw-bold">19:40</span>
             <div >
-              <h5 class="titulo-charla-agenda mb-1">Tu primer backend con Node</h5>
+              <h5 class="titulo-charla-agenda text-white mb-1">Tu primer backend con Node</h5>
               <p class="nombre-mentor-agenda text-secondary small mb-0">Jose Diaz</p>
             </div>
           </div>
@@ -302,6 +420,107 @@
     </div>
         </div>
  </section>
+
+ <!--INICIO PRECIO DE PAQUETES -->
+<section   class="py-5">
+  <div class="container" style="max-width: 1200px;">
+
+    <!-- contenedor horizontal de las tarjetas -->
+    <div class="row row-cols-1 row-cols-lg-2  g-4 mb-4">
+
+      <!-- Tarjeta 1 -->
+      <div class="col">
+        <div class="tarjetas-precios tarjeta-roja h-100 p-4 p-lg-5 d-flex flex-column justify-content-between">
+          
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="titulos-tarjetas">Early Bird</span>
+              <span class="etiquetas-superiores">Quedan 38</span>
+            </div>
+
+            <!-- Precios -->
+            <div class="d-flex align-items-baseline gap-2 mb-1">
+              <h3 class="precio-tarjetas mb-0">$25.000</h3>
+              <span class="precio-tachado text-decoration-line-through">$35.000</span>
+            </div>
+            <p class=" subtitulo-precio mb-4">Presencial · precio especial hasta el 31/10</p>
+
+            <!-- Lista de beneficios -->
+            <ul class="lista-beneficios list-unstyled mb-4">
+              <li><span class="icono-lista">✓</span> Acceso a las 10 charlas</li>
+              <li><span class="icono-lista">✓</span> Kit de stickers Rolling Code</li>
+              <li><span class="icono-lista">✓</span> Certificado de asistencia</li>
+              <li><span class="icono-lista">✓</span> Coffee break y networking con los speakers</li>
+              <li><span class="icono-lista">✓</span> Grabación de todas las charlas</li>
+            </ul>
+          
+
+          <!-- Botón de Compra -->
+          <a href="entradas" type="button" class="btn boton-precio w-100 py-3 rounded-pill fw-bold">comprar entrada</a>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2: General -->
+      <div class="col">
+        <div class="tarjetas-precios  h-100 p-4 p-lg-5 d-flex flex-column justify-content-between">
+          
+            <!-- Encabezado -->
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="titulos-tarjetas">General</span>
+              <span class="etiquetas-superiores etiqueta-border">Desde el 1/11</span>
+            </div>
+
+            <!-- Precio -->
+            <h3 class="precio-tarjetas">$35.000</h3>
+            <p class="subtitulo-precio mb-4">Presencial · precio regular</p>
+
+            <!-- Lista de beneficios -->
+            <ul class="lista-beneficios list-unstyled mb-4">
+              <li><span class="icono-lista">✓</span> Acceso a las 10 charlas</li>
+              <li><span class="icono-lista">✓</span> Certificado de asistencia</li>
+              <li><span class="icono-lista" >✓</span> Coffee break y networking con los speakers</li>
+              <li><span class="icono-lista">✓</span> Grabación de todas las charlas</li>
+            </ul>
+          
+
+          <!-- Botón de Compra -->
+          <a href="entradas" type="button" class="btn boton-precio w-100 py-3 rounded-pill fw-bold">comprar entrada</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!--  Tarjeta horizontal -->
+    <div class="row">
+      <div class="col-12">
+        <div class="tarjetas-precios  p-4 p-lg-5 d-flex flex-column justify-content-between">
+          <div>
+            
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="titulos-tarjetas">Virtual</span>
+              <span class="etiquetas-superiores etiqueta-border">Desde donde estés</span>
+            </div>
+
+            <!-- Precio -->
+            <h3 class="precio-tarjetas mb-1">$15.000</h3>
+            <p class="subtitulo-precio mb-4">Transmisión en vivo</p>
+
+            <!-- Lista de beneficios -->
+            <ul class="lista-beneficios list-unstyled mb-4">
+              <li><span class="icono-lista">✓</span> Transmisión en vivo de las 10 charlas</li>
+              <li><span class="icono-lista">✓</span> Chat para hacer preguntas a los speakers</li>
+              <li><span class="icono-lista ">✓</span> Certificado de asistencia</li>
+              <li><span class="icono-lista">✓</span> Grabación disponible por 30 días</li>
+            </ul>
+          </div>
+
+          <!-- Botón de Compra -->
+          <a href="entradas" type="button" class="btn boton-precio w-100 py-3 rounded-pill fw-bold">comprar entrada</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"> </script>
 </body>
