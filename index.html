@@ -687,7 +687,54 @@
 
 </div>
 
+<!-- MODAL DE ERROR DE PAGO -->
+<div class="modal fade" id="errorPaymentModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered px-3" style="max-width: 450px;">
+    <div class="modal-content bg-dark text-white p-3 p-sm-4 rounded-4 border-0 shadow-lg position-relative">
+      
+      <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 m-sm-4" data-bs-dismiss="modal" aria-label="Close"></button>
+      
+      <div class="mb-3">
+        <div class="d-flex align-items-center justify-content-center bg-danger rounded-circle shadow-lg" style="width: 55px; height: 55px; box-shadow: 0 0 20px rgba(230, 57, 70, 0.6) !important;">
+          <span class="fw-bold fs-3 text-white">!</span>
+        </div>
+      </div>
 
+      <h3 class="fw-bold mb-2 fs-4">No pudimos procesar tu pago</h3>
+      <p class="text-white-50 small mb-4">No se hizo ningún cobro. Podés volver a intentarlo:</p>
+
+      <ul class="list-unstyled small mb-4 text-white-50 d-flex flex-column gap-2 gap-sm-3">
+        <li class="d-flex align-items-start gap-2">
+          <span class="text-danger fw-bold">✓</span> Revisá que los datos de la tarjeta estén bien escritos.
+        </li>
+        <li class="d-flex align-items-start gap-2">
+          <span class="text-danger fw-bold">✓</span> Confirmá que la tarjeta tenga saldo o límite disponible.
+        </li>
+        <li class="d-flex align-items-start gap-2">
+          <span class="text-danger fw-bold">✓</span> Probá con otro medio de pago: transferencia o billetera virtual.
+        </li>
+      </ul>
+
+      <div class="bg-black p-3 rounded-3 mb-4 border border-secondary" style="border-color: rgba(255,255,255,0.1) !important;">
+        <div class="text-danger fw-bold small mb-2" style="font-size: 0.7rem; letter-spacing: 1px;">RESUMEN DEL PEDIDO</div>
+        <div class="d-flex justify-content-between small mb-1">
+          <span id="modal-summary-ticket">Entrada Early Bird x 1</span>
+          <span id="modal-summary-subtotal">$25.000</span>
+        </div>
+        <div class="d-flex justify-content-between small mb-2 text-white-50" style="font-size: 0.8rem;">
+          <span>Cargo por servicio (5%)</span>
+          <span id="modal-summary-fee">$1.250</span>
+        </div>
+        <hr class="my-2 border-secondary">
+        <div class="d-flex justify-content-between align-items-center">
+          <span class="fw-bold">Total</span>
+          <span class="fw-bold fs-5 text-white" id="modal-summary-total">$26.250</span>
+        </div>
+      </div>
+
+      <a href="error404.html" class="btn btn-danger w-100 py-3 rounded-pill fw-bold text-white shadow text-decoration-none" id="try-again-btn">
+        Intentar de nuevo
+      </a>
 
     </div>
   </div>
