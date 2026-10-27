@@ -1,3 +1,59 @@
+:root {
+  /* Rojos */
+  --rojo-rolling: #e0202a;  /* Botones, etiquetas, números, íconos */
+  --rojo-oscuro: #a50d14;   /* Medio del degradado */
+  --rojo-profundo: #6e070c; /* Final del degradado */
+  /* Degradado principal */
+  --degradado-rojo: linear-gradient(160deg, #e0202a 0%, #a50d14 55%, #6e070c 100%);
+
+  /* Fondos y Superficies */
+  --negro-pagina: #0b0b0c;  /* Fondo del sitio y tarjetas negras */
+  --superficie: #111113;    /* Tarjetas y barra de datos */
+  --gris-fuerte: #26262a;   /* Chips y barras vacías */
+  --blanco: #ffffff;        /* Títulos, tarjeta del checkout */
+
+  /* Bordes y Líneas */
+  --borde-tarjeta: #2c2c31; /* Bordes y líneas de 1px */
+  --borde-chip: #3a3a40;    /* Bordes de chips y botones */
+  --borde-input: #d4d4d8;   /* Campos del formulario */
+  --linea-menu: #1f1f23;    /* Debajo del menú */
+
+  /* Textos y Aclaraciones */
+  --gris-claro: #d4d4d8;    /* Párrafos sobre fondo oscuro */
+  --gris-medio: #a1a1aa;    /* Textos de apoyo */
+  --rosa-claro: #ffe9ea;    /* Texto sobre el rojo */
+  --gris-sobre-blanco: #52525b; /* Aclaraciones en checkout */
+}
+
+
+.hero-section {
+  background-color: #0b0f19;
+  display: flex;
+  justify-content: center;
+  padding: 48px 24px;
+}
+
+.ConteinerHero {
+  max-width: 1312px; /* Bloque rojo · 1312 px */
+  width: 100%;
+  background: linear-gradient(135deg, #c00c18 0%, #a00610 100%);
+  border-radius: 40px; /* Esquinas bloques rojos: radio 40 px */
+  padding: 5rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.hero-text-content {
+  flex: 1;
+  max-width: 620px;
+}
+
+/* --- ETIQUETA (WORKSHOP ENTRADAS LIMITADAS) --- */
+/* Tamaño: 16 px | Peso: 800 | MAYÚSCULAS + 3 px de espaciado */
+.hero-subtitle {
 /* --- SECCIÓN SEGUNDO CONTADOR / ENTRADAS --- */
 .tickets-countdown-section {
   background-color: #0b0f19;
@@ -18,6 +74,264 @@
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 3px;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+/* Light itálica · 300 solo en la palabra "WORKSHOP" */
+.workshop-word {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* --- TÍTULO PRINCIPAL (H1) --- */
+/* Tamaño: clamp(40px, 5.5vw, 88px) | Peso: 800 | Interlineado: 1.02 | Letras: -1.5px */
+.hero-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(40px, 5.5vw, 88px);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -1.5px;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title .text-dark-title {
+  color: #0b0b0b; /* Color oscuro para la última línea */
+}
+
+/* --- PÁRRAFO DEL BLOQUE PRINCIPAL --- */
+/* Tamaño: 20 px | Peso: 400 | Interlineado: 1.55 */
+.hero-description {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 520px;
+  margin-bottom: 2.5rem;
+}
+
+/* --- BOTONES --- */
+/* Forma de píldora: radio 999px | Alto mínimo: 52px | Texto: 18px, peso 800 */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+
+.btn-comprar:hover {
+  background-color: #1a1a1a;
+  border-color: #1a1a1a;
+}
+
+
+
+.btn-comprar {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  padding: 0.75rem 2.25rem;
+  min-height: 52px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-comprar:hover {
+  background-color: #1a1a1a;
+  border-color: #1a1a1a;
+}
+
+.btn-agenda {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  padding: 0.75rem 2.25rem;
+  min-height: 52px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-agenda:hover {
+   background-color: #1a1a1a;
+  border-color: #1a1a1a;
+}
+
+/* --- TARJETA DERECHA --- */
+/* Esquinas de tarjeta: radio 32 px */
+.hero-card-right {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #0b0f14;
+  border-radius: 32px;
+  padding: 2.5rem 2.25rem;
+  width: 400px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding-bottom: 1.15rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-info-item:nth-child(3) {
+  border-bottom: none;
+}
+
+.info-icon {
+  color: #c00c18;
+  font-size: 1.6rem;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.info-title {
+  display: block;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1.15rem;
+  line-height: 1.2;
+}
+
+.flex-subtitle {
+  font-size: 1.5rem !important;
+  font-weight: 300 !important;
+}
+
+/* Texto chico y aclaraciones: 14 px, peso 400 */
+.info-sub {
+  display: block;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 2px;
+}
+
+/* --- CHIPS / ETIQUETAS --- */
+.card-tags {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+
+.tag {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  padding: 0.35rem 0.85rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tag:hover {
+  background-color: #e61c24;
+  color: #ffffff;
+  border: none;
+   cursor: pointer;
+  
+}
+
+
+@media (max-width: 992px) {
+  .hero-section {
+    padding: 24px 16px; /* Ajuste de padding exterior */
+  }
+
+  .ConteinerHero {
+    flex-direction: column; /* Pasa de 2 columnas a 1 columna vertical */
+    padding: 3rem 2rem;
+    gap: 2.5rem;
+    border-radius: 32px; /* Esquinas ligeramente más suaves en pantallas medianas */
+  }
+
+  .hero-text-content {
+    max-width: 100%;
+    text-align: left; /* Mantiene la alineación a la izquierda */
+  }
+
+  .hero-title {
+    /* clamp(40px, 6vw, 88px) especificado en la guía técnica para pantallas chicas */
+    font-size: clamp(38px, 6vw, 64px);
+    line-height: 1.05;
+  }
+
+  .hero-description {
+    max-width: 100%;
+    font-size: 18px; /* Ligera reducción para mejor lectura en móvil */
+  }
+
+  .hero-card-right {
+    width: 100%; /* La tarjeta pasa a ocupar todo el ancho */
+    max-width: 100%;
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* En celulares más pequeños (móviles < 576px) */
+@media (max-width: 576px) {
+  .hero-section {
+    padding: 16px 12px;
+  }
+
+  .ConteinerHero {
+    padding: 2rem 1.25rem; /* Margen interno cómodo para celular */
+    border-radius: 24px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+
+  .hero-title {
+    font-size: clamp(32px, 8vw, 42px);
+  }
+
+  .hero-description {
+    font-size: 16px;
+    margin-bottom: 2rem;
+  }
+
+  /* Botones apilados verticalmente o en ancho completo para fácil clic */
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .btn-comprar,
+  .btn-agenda {
+    width: 100%; /* Botones a todo el ancho en móviles */
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hero-card-right {
+    border-radius: 20px;
+    gap: 1rem;
+  }
+
+  .card-tags {
+    justify-content: flex-start;
   color: #c00c18; /* Rojo corporativo */
   display: block;
   margin-bottom: 0.5rem;
