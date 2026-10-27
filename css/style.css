@@ -268,3 +268,219 @@ body{
   /* aspect-ratio: 1 / 1; */
   object-position: center 20% !important;
 }
+
+/* --- ESTILOS SECCIÓN CÓMO LLEGAR --- */
+.location-section {
+  background-color: #0b0f19;
+  padding: 6rem 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.location-section .container {
+  max-width: 1312px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.location-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #c00c18;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.location-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+
+.location-address-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.location-address-box p {
+  font-size: 14px;
+  margin-top: 0.2rem;
+}
+
+/* Badges informativos pequeños */
+.location-badges {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.info-badge {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1.25rem;
+  border-radius: 999px;
+}
+
+/* Botones de la sección */
+.location-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+}
+
+.btn-bing-maps {
+  background-color: #c00c18;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.85rem 2rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-bing-maps:hover {
+  background-color: #a00610;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.btn-comprar-map {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  padding: 0.85rem 2rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-comprar-map:hover {
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+
+/* Tarjeta del Mapa simulado (Derecha) */
+.map-container-card {
+  background-color: #0b0f14;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 32px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Fondo de grilla estilo radar/mapa tech */
+.map-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Pin central con pulso rojo */
+.map-pin-marker {
+  position: relative;
+  z-index: 2;
+  color: #c00c18;
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-20px);
+}
+
+.pin-pulse {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-color: rgba(192, 12, 24, 0.25);
+  border-radius: 50%;
+  animation: pulsePin 2s infinite;
+}
+
+@keyframes pulsePin {
+  0% {
+    transform: scale(0.6);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+/* Tarjeta flotante inferior dentro del mapa */
+.map-floating-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: rgba(11, 15, 20, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+}
+
+.map-badge-info strong {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  color: #ffffff;
+  display: block;
+}
+
+.map-badge-info small {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.map-coords {
+  font-family: 'Plus Jakarta Sans', monospace;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 600;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+  .map-container-card {
+    height: 320px;
+  }
+}
