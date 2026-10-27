@@ -3,525 +3,509 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop - ¿Por dónde empiezo a programar?</title>
+    
+    <!-- Fuentes y Estilos -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,800;1,300&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
-     <link rel="stylesheet" href="styles.css" />
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
-    <title>Document</title>
-</head>
-<body>
-  <!-- Seccion Hero -->
-<!-- Seccion Hero -->
-<section class="hero-section">
-  <div class="ConteinerHero">
-    
-    <!-- COLUMNA IZQUIERDA: Títulos y botones principales -->
-    <div class="hero-text-content">
-      <h6 class="hero-subtitle">
-        <span class="workshop-word">WORKSHOP</span> ENTRADAS LIMITADAS
-      </h6>
-      
-      <h1 class="hero-title">
-        ¿POR DÓNDE<br>
-        EMPIEZO A<br>
-        <span class="text-dark-title">PROGRAMAR?</span>
-      </h1>
-      
-      <p class="hero-description">
-        Una tarde con diez speakers de Rolling Code School para ordenar tus primeros pasos: qué aprender, cómo practicar y cómo mostrar lo que sabés.
-      </p>
-      
-      <div class="hero-buttons">
-        <button class="btn-comprar">Comprar entrada</button>
-        <button class="btn-agenda">Ver agenda</button>
-      </div>
-    </div>
-
-    <!-- COLUMNA DERECHA: Tarjeta oscura con la información del evento -->
-    <div class="hero-card-right">
-      <div class="card-info-item">
-        <i class="bi bi-calendar-event info-icon"></i>
-        <div>
-          <span class="info-title">JUE 19/11</span>
-          <span class="info-sub flex-subtitle">18.00 hs</span>
-        </div>
-      </div>
-
-      <div class="card-info-item">
-        <i class="bi bi-geo-alt info-icon"></i>
-        <div>
-          <span class="info-title">Rolling Code School</span>
-          <span class="info-sub">Gral. Paz 576, Entrepiso</span>
-        </div>
-      </div>
-
-      <div class="card-info-item">
-        <i class="bi bi-ticket-perforated info-icon"></i>
-        <div>
-          <span class="info-title">Entradas desde $15.000</span>
-          <span class="info-sub">Early Bird hasta el 31/10</span>
-        </div>
-      </div>
-      
-      <div class="card-tags">
-        <span class="tag">Presencial</span>
-        <span class="tag">Virtual</span>
-        <span class="tag tag-red">Cupos limitados</span>
-      </div>
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
 </head>
 <body>
-<script src="countdown.js"></script>
-  <!-- Segundo contador INTERACTIVO -->
-   <!-- SECCIÓN ENTRADAS / EARLY BIRD -->
-<section class="tickets-countdown-section py-5">
-  <div class="container">
-    
-    <!-- Títulos de la sección -->
-    <div class="mb-4">
-      <span class="section-tag">ENTRADAS</span>
-      <h2 class="section-title">Asegurá tu lugar antes de que suba el precio</h2>
-    </div>
 
-    <!-- Tarjeta principal del contador -->
-    <div class="tickets-card">
+  <!-- SECCIÓN HERO -->
+  <section class="hero-section">
+    <div class="ConteinerHero">
       
-      <!-- Columna izquierda: Información Early Bird -->
-      <div class="tickets-info">
-        <span class="early-bird-tag">EARLY BIRD</span>
-        <h3 class="tickets-heading">El precio especial termina el 31/10</h3>
-        <p class="tickets-subtext">Después la entrada pasa de $25.000 a $35.000.</p>
-      </div>
-
-      <!-- Columna central: Cajas de tiempo (Días, Horas, Min) -->
- <div class="countdown-boxes">
-  <div class="time-box">
-    <span class="time-number" id="days">00</span>
-    <span class="time-label">DÍAS</span>
-  </div>
-  <div class="time-box">
-    <span class="time-number" id="hours">00</span>
-    <span class="time-label">HORAS</span>
-  </div>
-  <div class="time-box">
-    <span class="time-number" id="minutes">00</span>
-    <span class="time-label">MIN</span>
-  </div>
-</div>
-
-      <!-- Columna derecha: Progreso de ventas -->
-      <div class="tickets-progress-container">
-        <div class="progress-labels">
-          <span class="progress-left-text">Quedan 38 de 60 Early Bird</span>
-          <span class="progress-right-text">63% vendidas</span>
-        </div>
-        <div class="progress-bar-bg">
-          <div class="progress-bar-fill" style="width: 63%;"></div>
+      <!-- COLUMNA IZQUIERDA: Títulos y botones principales -->
+      <div class="hero-text-content">
+        <h6 class="hero-subtitle">
+          <span class="workshop-word">WORKSHOP</span> ENTRADAS LIMITADAS
+        </h6>
+        
+        <h1 class="hero-title">
+          ¿POR DÓNDE<br>
+          EMPIEZO A<br>
+          <span class="text-dark-title">PROGRAMAR?</span>
+        </h1>
+        
+        <p class="hero-description">
+          Una tarde con diez speakers de Rolling Code School para ordenar tus primeros pasos: qué aprender, cómo practicar y cómo mostrar lo que sabés.
+        </p>
+        
+        <div class="hero-buttons">
+          <button class="btn-comprar">Comprar entrada</button>
+          <button class="btn-agenda">Ver agenda</button>
         </div>
       </div>
 
-    </div>
-
-  </div>
-</section>
-   
-  <!-- Primer contador -->
-   <section class="stats-section py-4">
-  <div class="container">
-    <div class="stats-card">
-      
-      <!-- Ítem 1 -->
-      <div class="stat-item">
-        <span class="stat-number">120</span>
-        <span class="stat-label">lugares presenciales</span>
-      </div>
-
-      <!-- Ítem 2 -->
-      <div class="stat-item">
-        <span class="stat-number">10</span>
-        <span class="stat-label">charlas de speakers</span>
-      </div>
-
-      <!-- Ítem 3 -->
-      <div class="stat-item">
-        <span class="stat-number">3 h 40</span>
-        <span class="stat-label">de 18.00 a 21.40 hs</span>
-      </div>
-
-      <!-- Ítem 4 -->
-      <div class="stat-item">
-        <span class="stat-number">2</span>
-        <span class="stat-label">modalidades: presencial y virtual</span>
-      </div>
-
-    </div>
-  </div>
-</section>
-    <!-- SECCIÓN SPEAKERS -->
-<section id="speakers" class="py-5">
-  <div class="container">
-    
-    <!-- titulos -->
-    <div class="mb-4">
-      <span class="fw-bold text-uppercase d-block mb-1" style="color: var(--rc-red) !important; font-size: 16px; font-weight: 800;">
-        SPEAKERS
-      </span>
-      <h2 class="text-white mb-0" style="font-size: 64px; font-weight: 800;">
-        Diez charlas, un mismo objetivo
-      </h2>
-    </div>
-
-    <!-- Tarjetas speakers -->
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-3">
-
-      <!-- Speaker 1 -->
-      <div class="col">
-        <div class="card speaker-card h-100 p-3 text-white">
-          <img src="img/speaker-1.jpg" class="card-img-top speaker-img mb-3" alt="Tomas Escudero">
-          <div class="card-body p-0 d-flex flex-column">
-            <h5 class="speaker-name mb-2">Tomas Escudero</h5>
-            <div class="titulo-charla mb-3 text-wrap">Diseño para developers</div>
-            <p class="card-text text-secondary small mb-0">Qué mira un equipo de diseño antes de que escribas código y cómo leer un mockup para construirlo igual.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Speaker 2 -->
-      <div class="col">
-        <div class="card speaker-card h-100 p-3 text-white">
-          <img src="img/speaker-2.jpg" class="card-img-top speaker-img mb-3" alt="Franco Diaz">
-          <div class="card-body p-0 d-flex flex-column">
-            <h5 class="speaker-name mb-2">Franco Diaz</h5>
-            <div class="titulo-charla mb-3 text-wrap">De cero a tu primer proyecto</div>
-            <p class="card-text text-secondary small mb-0">Un recorrido para pasar de mirar tutoriales a terminar una app simple con HTML, JavaScript y React.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Speaker 3 -->
-      <div class="col">
-        <div class="card speaker-card h-100 p-3 text-white">
-          <img src="img/speaker-3.jpg" class="card-img-top speaker-img mb-3" alt="Gaston">
-          <div class="card-body p-0 d-flex flex-column">
-            <h5 class="speaker-name mb-2">Gaston</h5>
-            <div class="titulo-charla mb-3 text-wrap">Armá tu portfolio con IA</div>
-            <p class="card-text text-secondary small mb-0">Cómo usar asistentes de IA para construir y publicar un portfolio que muestre lo que sabés hacer.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Speaker 4 -->
-      <div class="col">
-        <div class="card speaker-card h-100 p-3 text-white">
-          <img src="img/speaker-4.jpg" class="card-img-top speaker-img mb-3" alt="Mauro">
-          <div class="card-body p-0 d-flex flex-column">
-            <h5 class="speaker-name mb-2">Mauro</h5>
-            <div class="titulo-charla mb-3 text-wrap">Git y GitHub sin miedo</div>
-            <p class="card-text text-secondary small mb-0">Los comandos que vas a usar todos los días y cómo trabajar en equipo sin pisar el código de otros.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Speaker 5 -->
-      <div class="col">
-        <div class="card speaker-card h-100 p-3 text-white">
-          <img src="img/speaker-5.jpg" class="card-img-top speaker-img mb-3" alt="Jose Diaz">
-          <div class="card-body p-0 d-flex flex-column">
-            <h5 class="speaker-name mb-2">Jose Diaz</h5>
-            <div class="titulo-charla mb-3 text-wrap">Tu primer backend con Node</div>
-            <p class="card-text text-secondary small mb-0">Cómo se arma una API, qué hace una base de datos y por dónde empezar para conectar todo.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Speaker 6 -->
-      <div class="col">
-        <div class="card speaker-card h-100 p-3 text-white">
-          <img src="img/speaker-6.jpg" class="card-img-top speaker-img mb-3" alt="Tomas Gomez">
-          <div class="card-body p-0 d-flex flex-column">
-            <h5 class="speaker-name mb-2">Tomas Gomez</h5>
-            <div class="titulo-charla mb-3 text-wrap">Preparate para tu primera entrevista</div>
-            <p class="card-text text-secondary small mb-0">Qué preguntan en una entrevista técnica, cómo practicar y cómo contar tus proyectos con claridad.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Speaker 7 -->
-      <div class="col">
-        <div class="card speaker-card h-100 p-3 text-white">
-          <img src="img/speaker-7.jpg" class="card-img-top speaker-img mb-3" alt="Pablo Basso">
-          <div class="card-body p-0 d-flex flex-column">
-            <h5 class="speaker-name mb-2">Pablo Basso</h5>
-            <div class="titulo-charla mb-3 text-wrap">Mi primer trabajo en IT</div>
-            <p class="card-text text-secondary small mb-0">Una charla en primera persona sobre cómo se consigue el primer puesto y qué se aprende en los primeros meses.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Speaker 8 -->
-      <div class="col">
-        <div class="card speaker-card h-100 p-3 text-white">
-          <img src="img/speaker-8.jpg" class="card-img-top speaker-img mb-3" alt="Julian Martin">
-          <div class="card-body p-0 d-flex flex-column">
-            <h5 class="speaker-name mb-2">Julian Martin</h5>
-            <div class="titulo-charla mb-3 text-wrap">Testing: cómo no romper todo</div>
-            <p class="card-text text-secondary small mb-0">Qué es testear, por qué importa y cómo escribir tus primeras pruebas sin complicarte.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Speaker 9 -->
-      <div class="col">
-        <div class="card speaker-card h-100 p-3 text-white">
-          <img src="img/speaker-9.jpg" class="card-img-top speaker-img mb-3" alt="Daniela Cardozo">
-          <div class="card-body p-0 d-flex flex-column">
-            <h5 class="speaker-name mb-2">Daniela Cardozo</h5>
-            <div class="titulo-charla mb-3 text-wrap">Tu primer día como developer</div>
-            <p class="card-text text-secondary small mb-0">Qué esperar de tu primera semana en un equipo, qué herramientas usar y cómo pedir ayuda sin miedo.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Speaker 10 -->
-      <div class="col">
-        <div class="card speaker-card h-100 p-3 text-white">
-          <img src="img/speaker-10.jpg" class="card-img-top speaker-img mb-3" alt="Andres Perlo">
-          <div class="card-body p-0 d-flex flex-column">
-            <h5 class="speaker-name mb-2">Andres Perlo</h5>
-            <div class="titulo-charla mb-3 text-wrap">Tu primera base de datos</div>
-            <p class="card-text text-secondary small mb-0">Qué es una base de datos, para qué sirve y cómo guardar y consultar tus primeros datos.</p>
-          </div>
-        </div>
-      </div>
-
-    </div> <!-- /row -->
-  </div> <!-- /container -->
-
-
-</section>
-
-<!-- INICIO AGENDA -->
- <section class="py-5">
-    <div class="container">
-        <div class="row">
-           <div class="col">
-            <!-- titulos -->
-             <div class="mb-4">
-                 <span class="fw-bold text-uppercase d-block mb-1" style="color: var(--rc-red) !important; font-size: 16px; font-weight: 800;">
-                 AGENDA
-                 </span>
-                 <h2 class="text-white lh-1 mb-0" style="font-size: 64px; font-weight: 800;">
-                 jueves 19 de <br> noviembre
-                </h2>
-                <div>
-                    <p class="card-text text-secondary small mt-2 mb-0">diez charlas cortas para salir con un plan claro <br>
-                    al final queda tiempo para preguntas y <br>networking</p>
-                </div>
-             </div>
-        </div>
-
-        <div class="col">
-            <div class=" d-flex flex-column">
-          
-          <!-- Item 1 -->
-          <div class=" d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
-            <span class="horario-agenda fw-bold">18:00</span>
-            <div >
-              <h5 class="titulo-charla-agenda text-white mb-0">Acreditación y bienvenida</h5>
-            </div>
-          </div>
-
-          <!-- Item 2 -->
-          <div class=" d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
-            <span class="horario-agenda fw-bold">18:20</span>
-            <div >
-              <h5 class="titulo-charla-agenda text-white mb-1">Tu primer día como developer</h5>
-              <p class="nombre-mentor-agenda text-secondary small mb-0">Daniela Cardozo</p>
-            </div>
-          </div>
-
-          <!-- Item 3 -->
-          <div class="d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
-            <span class="horario-agenda fw-bold">18:40</span>
-            <div>
-              <h5 class=" titulo-charla-agenda text-white mb-1">De cero a tu primer proyecto</h5>
-              <p class="nombre-mentor-agenda text-secondary small mb-0">Franco Diaz</p>
-            </div>
-          </div>
-
-          <!-- Item 4 -->
-          <div class=" d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
-            <span class="horario-agenda fw-bold">19:00</span>
-            <div >
-              <h5 class=" titulo-charla-agenda text-white mb-1">Armá tu portfolio con IA</h5>
-              <p class="nombre-mentor-agenda small mb-0">Gaston</p>
-            </div>
-          </div>
-
-          <!-- Item 5 -->
-          <div class="d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
-            <span class="horario-agenda fw-bold">19:20</span>
-            <div >
-              <h5 class="titulo-charla-agenda text-white mb-1">Git y GitHub sin miedo</h5>
-              <p class="nombre-mentor-agenda text-secondary small mb-0">Mauro</p>
-            </div>
-          </div>
-
-          <!-- Item 6 -->
-          <div class="d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
-            <span class="horario-agenda fw-bold">19:40</span>
-            <div >
-              <h5 class="titulo-charla-agenda text-white mb-1">Tu primer backend con Node</h5>
-              <p class="nombre-mentor-agenda text-secondary small mb-0">Jose Diaz</p>
-            </div>
-          </div>
-
-          <!-- Item 7 -->
-          <div class=" d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
-            <span class="horario-agenda fw-bold">20:00</span>
-            <div >
-              <h5 class="titulo-charla-agenda text-white mb-1">Preparate para tu primera entrevista</h5>
-              <p class="nombre-mentor-agenda text-secondary small mb-0">Tomas Gomez</p>
-            </div>
-          </div>
-
-          <!-- Item 8 -->
-          <div class=" d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
-            <span class="horario-agenda fw-bold">20:20</span>
-            <div >
-              <h5 class="titulo-charla-agenda text-white mb-1">Mi primer trabajo en IT</h5>
-              <p class="nombre-mentor-agenda text-secondary small mb-0">Pablo Basso</p>
-            </div>
-          </div>
-
-          <!-- Item 9 -->
-          <div class="d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
-            <span class="horario-agenda fw-bold">20:40</span>
-            <div >
-              <h5 class="titulo-charla-agenda text-white mb-1">Testing: cómo no romper todo</h5>
-              <p class="nombre-mentor-agenda text-secondary small mb-0">Julian Martin</p>
-            </div>
-          </div>
-
-          <!-- Item 10 -->
-          <div class=" d-flex gap-4 py-3">
-            <span class="horario-agenda fw-bold">21:00</span>
-            <div >
-              <h5 class="titulo-charla-agenda text-white mb-1">Diseño para developers</h5>
-              <p class="nombre-mentor-agenda text-secondary small mb-0">Tomas Escudero</p>
-            </div>
-          </div>
-
-        </div>
-        </div>
-    </div>
-        </div>
- </section>
-
- <!--INICIO PRECIO DE PAQUETES -->
-<section   class="py-5">
-  <div class="container" style="max-width: 1200px;">
-
-    <!-- contenedor horizontal de las tarjetas -->
-    <div class="row row-cols-1 row-cols-lg-2  g-4 mb-4">
-
-      <!-- Tarjeta 1 -->
-      <div class="col">
-        <div class="tarjetas-precios tarjeta-roja h-100 p-4 p-lg-5 d-flex flex-column justify-content-between">
-          
-            <div class="d-flex justify-content-between align-items-center mb-3">
-              <span class="titulos-tarjetas">Early Bird</span>
-              <span class="etiquetas-superiores">Quedan 38</span>
-            </div>
-
-            <!-- Precios -->
-            <div class="d-flex align-items-baseline gap-2 mb-1">
-              <h3 class="precio-tarjetas mb-0">$25.000</h3>
-              <span class="precio-tachado text-decoration-line-through">$35.000</span>
-            </div>
-            <p class=" subtitulo-precio mb-4">Presencial · precio especial hasta el 31/10</p>
-
-            <!-- Lista de beneficios -->
-            <ul class="lista-beneficios list-unstyled mb-4">
-              <li><span class="icono-lista">✓</span> Acceso a las 10 charlas</li>
-              <li><span class="icono-lista">✓</span> Kit de stickers Rolling Code</li>
-              <li><span class="icono-lista">✓</span> Certificado de asistencia</li>
-              <li><span class="icono-lista">✓</span> Coffee break y networking con los speakers</li>
-              <li><span class="icono-lista">✓</span> Grabación de todas las charlas</li>
-            </ul>
-          
-
-          <!-- Botón de Compra -->
-          <a href="entradas" type="button" class="btn boton-precio w-100 py-3 rounded-pill fw-bold">comprar entrada</a>
-        </div>
-      </div>
-
-      <!-- Tarjeta 2: General -->
-      <div class="col">
-        <div class="tarjetas-precios  h-100 p-4 p-lg-5 d-flex flex-column justify-content-between">
-          
-            <!-- Encabezado -->
-            <div class="d-flex justify-content-between align-items-center mb-3">
-              <span class="titulos-tarjetas">General</span>
-              <span class="etiquetas-superiores etiqueta-border">Desde el 1/11</span>
-            </div>
-
-            <!-- Precio -->
-            <h3 class="precio-tarjetas">$35.000</h3>
-            <p class="subtitulo-precio mb-4">Presencial · precio regular</p>
-
-            <!-- Lista de beneficios -->
-            <ul class="lista-beneficios list-unstyled mb-4">
-              <li><span class="icono-lista">✓</span> Acceso a las 10 charlas</li>
-              <li><span class="icono-lista">✓</span> Certificado de asistencia</li>
-              <li><span class="icono-lista" >✓</span> Coffee break y networking con los speakers</li>
-              <li><span class="icono-lista">✓</span> Grabación de todas las charlas</li>
-            </ul>
-          
-
-          <!-- Botón de Compra -->
-          <a href="entradas" type="button" class="btn boton-precio w-100 py-3 rounded-pill fw-bold">comprar entrada</a>
-        </div>
-      </div>
-
-    </div>
-
-    <!--  Tarjeta horizontal -->
-    <div class="row">
-      <div class="col-12">
-        <div class="tarjetas-precios  p-4 p-lg-5 d-flex flex-column justify-content-between">
+      <!-- COLUMNA DERECHA: Tarjeta oscura con la información del evento -->
+      <div class="hero-card-right">
+        <div class="card-info-item">
+          <i class="bi bi-calendar-event info-icon"></i>
           <div>
-            
-            <div class="d-flex justify-content-between align-items-center mb-3">
-              <span class="titulos-tarjetas">Virtual</span>
-              <span class="etiquetas-superiores etiqueta-border">Desde donde estés</span>
-            </div>
-
-            <!-- Precio -->
-            <h3 class="precio-tarjetas mb-1">$15.000</h3>
-            <p class="subtitulo-precio mb-4">Transmisión en vivo</p>
-
-            <!-- Lista de beneficios -->
-            <ul class="lista-beneficios list-unstyled mb-4">
-              <li><span class="icono-lista">✓</span> Transmisión en vivo de las 10 charlas</li>
-              <li><span class="icono-lista">✓</span> Chat para hacer preguntas a los speakers</li>
-              <li><span class="icono-lista ">✓</span> Certificado de asistencia</li>
-              <li><span class="icono-lista">✓</span> Grabación disponible por 30 días</li>
-            </ul>
+            <span class="info-title">JUE 19/11</span>
+            <span class="info-sub flex-subtitle">18.00 hs</span>
           </div>
+        </div>
 
-          <!-- Botón de Compra -->
-          <a href="entradas" type="button" class="btn boton-precio w-100 py-3 rounded-pill fw-bold">comprar entrada</a>
+        <div class="card-info-item">
+          <i class="bi bi-geo-alt info-icon"></i>
+          <div>
+            <span class="info-title">Rolling Code School</span>
+            <span class="info-sub">Gral. Paz 576, Entrepiso</span>
+          </div>
+        </div>
+
+        <div class="card-info-item">
+          <i class="bi bi-ticket-perforated info-icon"></i>
+          <div>
+            <span class="info-title">Entradas desde $15.000</span>
+            <span class="info-sub">Early Bird hasta el 31/10</span>
+          </div>
+        </div>
+        
+        <div class="card-tags">
+          <span class="tag">Presencial</span>
+          <span class="tag">Virtual</span>
+          <span class="tag tag-red">Cupos limitados</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECCIÓN STATS / CONTADOR -->
+  <section class="stats-section py-4">
+    <div class="container">
+      <div class="stats-card">
+        <!-- Ítem 1 -->
+        <div class="stat-item">
+          <span class="stat-number">120</span>
+          <span class="stat-label">lugares presenciales</span>
+        </div>
+        <!-- Ítem 2 -->
+        <div class="stat-item">
+          <span class="stat-number">10</span>
+          <span class="stat-label">charlas de speakers</span>
+        </div>
+        <!-- Ítem 3 -->
+        <div class="stat-item">
+          <span class="stat-number">3 h 40</span>
+          <span class="stat-label">de 18.00 a 21.40 hs</span>
+        </div>
+        <!-- Ítem 4 -->
+        <div class="stat-item">
+          <span class="stat-number">2</span>
+          <span class="stat-label">modalidades: presencial y virtual</span>
         </div>
       </div>
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- SECCIÓN SPEAKERS -->
+  <section id="speakers" class="py-5">
+    <div class="container">
+      
+      <!-- Títulos -->
+      <div class="mb-4">
+        <span class="fw-bold text-uppercase d-block mb-1" style="color: var(--rc-red) !important; font-size: 16px; font-weight: 800;">
+          SPEAKERS
+        </span>
+        <h2 class="text-white mb-0" style="font-size: 64px; font-weight: 800;">
+          Diez charlas, un mismo objetivo
+        </h2>
+      </div>
 
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"> </script>
+      <!-- Tarjetas speakers -->
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-3">
+
+        <!-- Speaker 1 -->
+        <div class="col">
+          <div class="card speaker-card h-100 p-3 text-white">
+            <img src="img/speaker-1.jpg" class="card-img-top speaker-img mb-3" alt="Tomas Escudero">
+            <div class="card-body p-0 d-flex flex-column">
+              <h5 class="speaker-name mb-2">Tomas Escudero</h5>
+              <div class="titulo-charla mb-3 text-wrap">Diseño para developers</div>
+              <p class="card-text text-secondary small mb-0">Qué mira un equipo de diseño antes de que escribas código y cómo leer un mockup para construirlo igual.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 2 -->
+        <div class="col">
+          <div class="card speaker-card h-100 p-3 text-white">
+            <img src="img/speaker-2.jpg" class="card-img-top speaker-img mb-3" alt="Franco Diaz">
+            <div class="card-body p-0 d-flex flex-column">
+              <h5 class="speaker-name mb-2">Franco Diaz</h5>
+              <div class="titulo-charla mb-3 text-wrap">De cero a tu primer proyecto</div>
+              <p class="card-text text-secondary small mb-0">Un recorrido para pasar de mirar tutoriales a terminar una app simple con HTML, JavaScript y React.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 3 -->
+        <div class="col">
+          <div class="card speaker-card h-100 p-3 text-white">
+            <img src="img/speaker-3.jpg" class="card-img-top speaker-img mb-3" alt="Gaston">
+            <div class="card-body p-0 d-flex flex-column">
+              <h5 class="speaker-name mb-2">Gaston</h5>
+              <div class="titulo-charla mb-3 text-wrap">Armá tu portfolio con IA</div>
+              <p class="card-text text-secondary small mb-0">Cómo usar asistentes de IA para construir y publicar un portfolio que muestre lo que sabés hacer.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 4 -->
+        <div class="col">
+          <div class="card speaker-card h-100 p-3 text-white">
+            <img src="img/speaker-4.jpg" class="card-img-top speaker-img mb-3" alt="Mauro">
+            <div class="card-body p-0 d-flex flex-column">
+              <h5 class="speaker-name mb-2">Mauro</h5>
+              <div class="titulo-charla mb-3 text-wrap">Git y GitHub sin miedo</div>
+              <p class="card-text text-secondary small mb-0">Los comandos que vas a usar todos los días y cómo trabajar en equipo sin pisar el código de otros.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 5 -->
+        <div class="col">
+          <div class="card speaker-card h-100 p-3 text-white">
+            <img src="img/speaker-5.jpg" class="card-img-top speaker-img mb-3" alt="Jose Diaz">
+            <div class="card-body p-0 d-flex flex-column">
+              <h5 class="speaker-name mb-2">Jose Diaz</h5>
+              <div class="titulo-charla mb-3 text-wrap">Tu primer backend con Node</div>
+              <p class="card-text text-secondary small mb-0">Cómo se arma una API, qué hace una base de datos y por dónde empezar para conectar todo.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 6 -->
+        <div class="col">
+          <div class="card speaker-card h-100 p-3 text-white">
+            <img src="img/speaker-6.jpg" class="card-img-top speaker-img mb-3" alt="Tomas Gomez">
+            <div class="card-body p-0 d-flex flex-column">
+              <h5 class="speaker-name mb-2">Tomas Gomez</h5>
+              <div class="titulo-charla mb-3 text-wrap">Preparate para tu primera entrevista</div>
+              <p class="card-text text-secondary small mb-0">Qué preguntan en una entrevista técnica, cómo practicar y cómo contar tus proyectos con claridad.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 7 -->
+        <div class="col">
+          <div class="card speaker-card h-100 p-3 text-white">
+            <img src="img/speaker-7.jpg" class="card-img-top speaker-img mb-3" alt="Pablo Basso">
+            <div class="card-body p-0 d-flex flex-column">
+              <h5 class="speaker-name mb-2">Pablo Basso</h5>
+              <div class="titulo-charla mb-3 text-wrap">Mi primer trabajo en IT</div>
+              <p class="card-text text-secondary small mb-0">Una charla en primera persona sobre cómo se consigue el primer puesto y qué se aprende en los primeros meses.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 8 -->
+        <div class="col">
+          <div class="card speaker-card h-100 p-3 text-white">
+            <img src="img/speaker-8.jpg" class="card-img-top speaker-img mb-3" alt="Julian Martin">
+            <div class="card-body p-0 d-flex flex-column">
+              <h5 class="speaker-name mb-2">Julian Martin</h5>
+              <div class="titulo-charla mb-3 text-wrap">Testing: cómo no romper todo</div>
+              <p class="card-text text-secondary small mb-0">Qué is testear, por qué importa y cómo escribir tus primeras pruebas sin complicarte.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 9 -->
+        <div class="col">
+          <div class="card speaker-card h-100 p-3 text-white">
+            <img src="img/speaker-9.jpg" class="card-img-top speaker-img mb-3" alt="Daniela Cardozo">
+            <div class="card-body p-0 d-flex flex-column">
+              <h5 class="speaker-name mb-2">Daniela Cardozo</h5>
+              <div class="titulo-charla mb-3 text-wrap">Tu primer día como developer</div>
+              <p class="card-text text-secondary small mb-0">Qué esperar de tu primera semana en un equipo, qué herramientas usar y cómo pedir ayuda sin miedo.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 10 -->
+        <div class="col">
+          <div class="card speaker-card h-100 p-3 text-white">
+            <img src="img/speaker-10.jpg" class="card-img-top speaker-img mb-3" alt="Andres Perlo">
+            <div class="card-body p-0 d-flex flex-column">
+              <h5 class="speaker-name mb-2">Andres Perlo</h5>
+              <div class="titulo-charla mb-3 text-wrap">Tu primera base de datos</div>
+              <p class="card-text text-secondary small mb-0">Qué es una base de datos, para qué sirve y cómo guardar y consultar tus primeros datos.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN AGENDA -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row">
+        
+        <!-- Columna de Títulos de Agenda -->
+        <div class="col-lg-5 mb-4 mb-lg-0">
+          <div class="mb-4">
+            <span class="fw-bold text-uppercase d-block mb-1" style="color: var(--rc-red) !important; font-size: 16px; font-weight: 800;">
+              AGENDA
+            </span>
+            <h2 class="text-white lh-1 mb-0" style="font-size: 64px; font-weight: 800;">
+              jueves 19 de <br> noviembre
+            </h2>
+            <div>
+              <p class="card-text text-secondary small mt-2 mb-0">
+                diez charlas cortas para salir con un plan claro<br>
+                al final queda tiempo para preguntas y networking
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna de Itinerario -->
+        <div class="col-lg-7">
+          <div class="d-flex flex-column">
+            
+            <!-- Item 1 -->
+            <div class="d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
+              <span class="horario-agenda fw-bold">18:00</span>
+              <div>
+                <h5 class="titulo-charla-agenda text-white mb-0">Acreditación y bienvenida</h5>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
+              <span class="horario-agenda fw-bold">18:20</span>
+              <div>
+                <h5 class="titulo-charla-agenda text-white mb-1">Tu primer día como developer</h5>
+                <p class="nombre-mentor-agenda text-secondary small mb-0">Daniela Cardozo</p>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
+              <span class="horario-agenda fw-bold">18:40</span>
+              <div>
+                <h5 class="titulo-charla-agenda text-white mb-1">De cero a tu primer proyecto</h5>
+                <p class="nombre-mentor-agenda text-secondary small mb-0">Franco Diaz</p>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
+              <span class="horario-agenda fw-bold">19:00</span>
+              <div>
+                <h5 class="titulo-charla-agenda text-white mb-1">Armá tu portfolio con IA</h5>
+                <p class="nombre-mentor-agenda text-secondary small mb-0">Gaston</p>
+              </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
+              <span class="horario-agenda fw-bold">19:20</span>
+              <div>
+                <h5 class="titulo-charla-agenda text-white mb-1">Git y GitHub sin miedo</h5>
+                <p class="nombre-mentor-agenda text-secondary small mb-0">Mauro</p>
+              </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
+              <span class="horario-agenda fw-bold">19:40</span>
+              <div>
+                <h5 class="titulo-charla-agenda text-white mb-1">Tu primer backend con Node</h5>
+                <p class="nombre-mentor-agenda text-secondary small mb-0">Jose Diaz</p>
+              </div>
+            </div>
+
+            <!-- Item 7 -->
+            <div class="d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
+              <span class="horario-agenda fw-bold">20:00</span>
+              <div>
+                <h5 class="titulo-charla-agenda text-white mb-1">Preparate para tu primera entrevista</h5>
+                <p class="nombre-mentor-agenda text-secondary small mb-0">Tomas Gomez</p>
+              </div>
+            </div>
+
+            <!-- Item 8 -->
+            <div class="d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
+              <span class="horario-agenda fw-bold">20:20</span>
+              <div>
+                <h5 class="titulo-charla-agenda text-white mb-1">Mi primer trabajo en IT</h5>
+                <p class="nombre-mentor-agenda text-secondary small mb-0">Pablo Basso</p>
+              </div>
+            </div>
+
+            <!-- Item 9 -->
+            <div class="d-flex gap-4 py-3 border-bottom border-secondary border-opacity-25">
+              <span class="horario-agenda fw-bold">20:40</span>
+              <div>
+                <h5 class="titulo-charla-agenda text-white mb-1">Testing: cómo no romper todo</h5>
+                <p class="nombre-mentor-agenda text-secondary small mb-0">Julian Martin</p>
+              </div>
+            </div>
+
+            <!-- Item 10 -->
+            <div class="d-flex gap-4 py-3">
+              <span class="horario-agenda fw-bold">21:00</span>
+              <div>
+                <h5 class="titulo-charla-agenda text-white mb-1">Diseño para developers</h5>
+                <p class="nombre-mentor-agenda text-secondary small mb-0">Tomas Escudero</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN ENTRADAS / EARLY BIRD (CON CONTADOR) -->
+  <section class="tickets-countdown-section py-5">
+    <div class="container">
+      
+      <div class="mb-4">
+        <span class="section-tag">ENTRADAS</span>
+        <h2 class="section-title">Asegurá tu lugar antes de que suba el precio</h2>
+      </div>
+
+      <div class="tickets-card">
+        
+        <div class="tickets-info">
+          <span class="early-bird-tag">EARLY BIRD</span>
+          <h3 class="tickets-heading">El precio especial termina el 31/10</h3>
+          <p class="tickets-subtext">Después la entrada pasa de $25.000 a $35.000.</p>
+        </div>
+
+        <div class="countdown-boxes">
+          <div class="time-box">
+            <span class="time-number" id="days">00</span>
+            <span class="time-label">DÍAS</span>
+          </div>
+          <div class="time-box">
+            <span class="time-number" id="hours">00</span>
+            <span class="time-label">HORAS</span>
+          </div>
+          <div class="time-box">
+            <span class="time-number" id="minutes">00</span>
+            <span class="time-label">MIN</span>
+          </div>
+        </div>
+
+        <div class="tickets-progress-container">
+          <div class="progress-labels">
+            <span class="progress-left-text">Quedan 38 de 60 Early Bird</span>
+            <span class="progress-right-text">63% vendidas</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" style="width: 63%;"></div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECCIÓN PRECIO DE PAQUETES -->
+  <section class="py-5">
+    <div class="container" style="max-width: 1200px;">
+
+      <div class="row row-cols-1 row-cols-lg-2 g-4 mb-4">
+
+        <!-- Tarjeta 1: Early Bird -->
+        <div class="col">
+          <div class="tarjetas-precios tarjeta-roja h-100 p-4 p-lg-5 d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="titulos-tarjetas">Early Bird</span>
+                <span class="etiquetas-superiores">Quedan 38</span>
+              </div>
+
+              <div class="d-flex align-items-baseline gap-2 mb-1">
+                <h3 class="precio-tarjetas mb-0">$25.000</h3>
+                <span class="precio-tachado text-decoration-line-through">$35.000</span>
+              </div>
+              <p class="subtitulo-precio mb-4">Presencial · precio especial hasta el 31/10</p>
+
+              <ul class="lista-beneficios list-unstyled mb-4">
+                <li><span class="icono-lista">✓</span> Acceso a las 10 charlas</li>
+                <li><span class="icono-lista">✓</span> Kit de stickers Rolling Code</li>
+                <li><span class="icono-lista">✓</span> Certificado de asistencia</li>
+                <li><span class="icono-lista">✓</span> Coffee break y networking con los speakers</li>
+                <li><span class="icono-lista">✓</span> Grabación de todas las charlas</li>
+              </ul>
+            </div>
+
+            <a href="entradas" class="btn boton-precio w-100 py-3 rounded-pill fw-bold text-center">comprar entrada</a>
+          </div>
+        </div>
+
+        <!-- Tarjeta 2: General -->
+        <div class="col">
+          <div class="tarjetas-precios h-100 p-4 p-lg-5 d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="titulos-tarjetas">General</span>
+                <span class="etiquetas-superiores etiqueta-border">Desde el 1/11</span>
+              </div>
+
+              <h3 class="precio-tarjetas">$35.000</h3>
+              <p class="subtitulo-precio mb-4">Presencial · precio regular</p>
+
+              <ul class="lista-beneficios list-unstyled mb-4">
+                <li><span class="icono-lista">✓</span> Acceso a las 10 charlas</li>
+                <li><span class="icono-lista">✓</span> Certificado de asistencia</li>
+                <li><span class="icono-lista">✓</span> Coffee break y networking con los speakers</li>
+                <li><span class="icono-lista">✓</span> Grabación de todas las charlas</li>
+              </ul>
+            </div>
+
+            <a href="entradas" class="btn boton-precio w-100 py-3 rounded-pill fw-bold text-center">comprar entrada</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Tarjeta horizontal: Virtual -->
+      <div class="row">
+        <div class="col-12">
+          <div class="tarjetas-precios p-4 p-lg-5 d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="titulos-tarjetas">Virtual</span>
+                <span class="etiquetas-superiores etiqueta-border">Desde donde estés</span>
+              </div>
+
+              <h3 class="precio-tarjetas mb-1">$15.000</h3>
+              <p class="subtitulo-precio mb-4">Transmisión en vivo</p>
+
+              <ul class="lista-beneficios list-unstyled mb-4">
+                <li><span class="icono-lista">✓</span> Transmisión en vivo de las 10 charlas</li>
+                <li><span class="icono-lista">✓</span> Chat para hacer preguntas a los speakers</li>
+                <li><span class="icono-lista">✓</span> Certificado de asistencia</li>
+                <li><span class="icono-lista">✓</span> Grabación disponible por 30 días</li>
+              </ul>
+            </div>
+
+            <a href="entradas" class="btn boton-precio w-100 py-3 rounded-pill fw-bold text-center">comprar entrada</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="countdown.js"></script>
 </body>
 </html>

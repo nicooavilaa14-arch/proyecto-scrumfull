@@ -1,31 +1,31 @@
 :root {
   /* Rojos */
-  --rojo-rolling: #e0202a;  /* Botones, etiquetas, números, íconos */
-  --rojo-oscuro: #a50d14;   /* Medio del degradado */
-  --rojo-profundo: #6e070c; /* Final del degradado */
+  --rojo-rolling: #e0202a;   /* Botones, etiquetas, números, íconos */
+  --rojo-oscuro: #a50d14;    /* Medio del degradado */
+  --rojo-profundo: #6e070c;  /* Final del degradado */
   /* Degradado principal */
   --degradado-rojo: linear-gradient(160deg, #e0202a 0%, #a50d14 55%, #6e070c 100%);
 
   /* Fondos y Superficies */
-  --negro-pagina: #0b0b0c;  /* Fondo del sitio y tarjetas negras */
-  --superficie: #111113;    /* Tarjetas y barra de datos */
-  --gris-fuerte: #26262a;   /* Chips y barras vacías */
-  --blanco: #ffffff;        /* Títulos, tarjeta del checkout */
+  --negro-pagina: #0b0b0c;   /* Fondo del sitio y tarjetas negras */
+  --superficie: #111113;     /* Tarjetas y barra de datos */
+  --gris-fuerte: #26262a;    /* Chips y barras vacías */
+  --blanco: #ffffff;         /* Títulos, tarjeta del checkout */
 
   /* Bordes y Líneas */
-  --borde-tarjeta: #2c2c31; /* Bordes y líneas de 1px */
-  --borde-chip: #3a3a40;    /* Bordes de chips y botones */
-  --borde-input: #d4d4d8;   /* Campos del formulario */
-  --linea-menu: #1f1f23;    /* Debajo del menú */
+  --borde-tarjeta: #2c2c31;  /* Bordes y líneas de 1px */
+  --borde-chip: #3a3a40;     /* Bordes de chips y botones */
+  --borde-input: #d4d4d8;    /* Campos del formulario */
+  --linea-menu: #1f1f23;     /* Debajo del menú */
 
   /* Textos y Aclaraciones */
-  --gris-claro: #d4d4d8;    /* Párrafos sobre fondo oscuro */
-  --gris-medio: #a1a1aa;    /* Textos de apoyo */
-  --rosa-claro: #ffe9ea;    /* Texto sobre el rojo */
+  --gris-claro: #d4d4d8;     /* Párrafos sobre fondo oscuro */
+  --gris-medio: #a1a1aa;     /* Textos de apoyo */
+  --rosa-claro: #ffe9ea;     /* Texto sobre el rojo */
   --gris-sobre-blanco: #52525b; /* Aclaraciones en checkout */
 }
 
-
+/* --- SECCIÓN HERO --- */
 .hero-section {
   background-color: #0b0f19;
   display: flex;
@@ -34,10 +34,10 @@
 }
 
 .ConteinerHero {
-  max-width: 1312px; /* Bloque rojo · 1312 px */
+  max-width: 1312px;
   width: 100%;
   background: linear-gradient(135deg, #c00c18 0%, #a00610 100%);
-  border-radius: 40px; /* Esquinas bloques rojos: radio 40 px */
+  border-radius: 40px;
   padding: 5rem 4rem;
   display: flex;
   justify-content: space-between;
@@ -51,23 +51,8 @@
   max-width: 620px;
 }
 
-/* --- ETIQUETA (WORKSHOP ENTRADAS LIMITADAS) --- */
-/* Tamaño: 16 px | Peso: 800 | MAYÚSCULAS + 3 px de espaciado */
-/* --- SECCIÓN SEGUNDO CONTADOR / ENTRADAS --- */
-.tickets-countdown-section {
-  background-color: #0b0f19;
-  display: flex;
-  justify-content: center;
-  padding: 4rem 16px;
-}
-
-.tickets-countdown-section .container {
-  max-width: 1312px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.section-tag {
+/* --- ETIQUETA HERO --- */
+.hero-subtitle {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 16px;
   font-weight: 800;
@@ -85,7 +70,6 @@
 }
 
 /* --- TÍTULO PRINCIPAL (H1) --- */
-/* Tamaño: clamp(40px, 5.5vw, 88px) | Peso: 800 | Interlineado: 1.02 | Letras: -1.5px */
 .hero-title {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(40px, 5.5vw, 88px);
@@ -97,11 +81,10 @@
 }
 
 .hero-title .text-dark-title {
-  color: #0b0b0b; /* Color oscuro para la última línea */
+  color: #0b0b0b;
 }
 
 /* --- PÁRRAFO DEL BLOQUE PRINCIPAL --- */
-/* Tamaño: 20 px | Peso: 400 | Interlineado: 1.55 */
 .hero-description {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 20px;
@@ -112,20 +95,11 @@
   margin-bottom: 2.5rem;
 }
 
-/* --- BOTONES --- */
-/* Forma de píldora: radio 999px | Alto mínimo: 52px | Texto: 18px, peso 800 */
+/* --- BOTONES HERO --- */
 .hero-buttons {
   display: flex;
   gap: 1rem;
 }
-
-
-.btn-comprar:hover {
-  background-color: #1a1a1a;
-  border-color: #1a1a1a;
-}
-
-
 
 .btn-comprar {
   font-family: 'Plus Jakarta Sans', sans-serif;
@@ -161,12 +135,11 @@
 }
 
 .btn-agenda:hover {
-   background-color: #1a1a1a;
+  background-color: #1a1a1a;
   border-color: #1a1a1a;
 }
 
-/* --- TARJETA DERECHA --- */
-/* Esquinas de tarjeta: radio 32 px */
+/* --- TARJETA DERECHA (HERO) --- */
 .hero-card-right {
   font-family: 'Plus Jakarta Sans', sans-serif;
   background-color: #0b0f14;
@@ -212,7 +185,6 @@
   font-weight: 300 !important;
 }
 
-/* Texto chico y aclaraciones: 14 px, peso 400 */
 .info-sub {
   display: block;
   color: rgba(255, 255, 255, 0.65);
@@ -230,7 +202,6 @@
   flex-wrap: wrap;
 }
 
-
 .tag {
   background-color: rgba(255, 255, 255, 0.08);
   color: #ffffff;
@@ -239,99 +210,83 @@
   font-size: 0.75rem;
   font-weight: 600;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.2s ease;
 }
 
 .tag:hover {
   background-color: #e61c24;
   color: #ffffff;
   border: none;
-   cursor: pointer;
-  
+  cursor: pointer;
 }
 
-
-@media (max-width: 992px) {
-  .hero-section {
-    padding: 24px 16px; /* Ajuste de padding exterior */
-  }
-
-  .ConteinerHero {
-    flex-direction: column; /* Pasa de 2 columnas a 1 columna vertical */
-    padding: 3rem 2rem;
-    gap: 2.5rem;
-    border-radius: 32px; /* Esquinas ligeramente más suaves en pantallas medianas */
-  }
-
-  .hero-text-content {
-    max-width: 100%;
-    text-align: left; /* Mantiene la alineación a la izquierda */
-  }
-
-  .hero-title {
-    /* clamp(40px, 6vw, 88px) especificado en la guía técnica para pantallas chicas */
-    font-size: clamp(38px, 6vw, 64px);
-    line-height: 1.05;
-  }
-
-  .hero-description {
-    max-width: 100%;
-    font-size: 18px; /* Ligera reducción para mejor lectura en móvil */
-  }
-
-  .hero-card-right {
-    width: 100%; /* La tarjeta pasa a ocupar todo el ancho */
-    max-width: 100%;
-    padding: 2rem 1.5rem;
-  }
+/* --- SECCIÓN STATS / CONTADOR DE LUGARES --- */
+.stats-section {
+  background-color: #0b0f19;
+  display: flex;
+  justify-content: center;
+  padding: 0 16px;
+  cursor: auto;
 }
 
-/* En celulares más pequeños (móviles < 576px) */
-@media (max-width: 576px) {
-  .hero-section {
-    padding: 16px 12px;
-  }
-
-  .ConteinerHero {
-    padding: 2rem 1.25rem; /* Margen interno cómodo para celular */
-    border-radius: 24px;
-  }
-
-  .hero-subtitle {
-    font-size: 14px;
-    letter-spacing: 2px;
-  }
-
-  .hero-title {
-    font-size: clamp(32px, 8vw, 42px);
-  }
-
-  .hero-description {
-    font-size: 16px;
-    margin-bottom: 2rem;
-  }
+.stats-card {
+  background-color: #0b0f14;
+  border-radius: 28px;
+  padding: 2.5rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 1312px;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
-  /* Botones apilados verticalmente o en ancho completo para fácil clic */
-  .hero-buttons {
-    flex-direction: column;
-    width: 100%;
-    gap: 0.75rem;
-  }
 
-  .btn-comprar,
-  .btn-agenda {
-    width: 100%; /* Botones a todo el ancho en móviles */
-    text-align: center;
-    justify-content: center;
-  }
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
-  .hero-card-right {
-    border-radius: 20px;
-    gap: 1rem;
-  }
+.stat-number {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 52px;
+  font-weight: 800;
+  color: #c00c18;
+  line-height: 1.1;
+  margin-bottom: 0.35rem;
+}
 
-  .card-tags {
-    justify-content: flex-start;
-  color: #c00c18; /* Rojo corporativo */
+.stat-label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+/* --- SECCIÓN SEGUNDO CONTADOR / ENTRADAS --- */
+.tickets-countdown-section {
+  background-color: #0b0f19;
+  display: flex;
+  justify-content: center;
+  padding: 4rem 16px;
+}
+
+.tickets-countdown-section .container {
+  max-width: 1312px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section-tag {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #c00c18;
   display: block;
   margin-bottom: 0.5rem;
 }
@@ -345,10 +300,9 @@
   letter-spacing: -1px;
 }
 
-/* Tarjeta principal contenedora */
 .tickets-card {
   background-color: #0b0f14;
-  border-radius: 32px; /* Esquinas acordes a la guía de tarjetas */
+  border-radius: 32px;
   padding: 3rem 2.5rem;
   display: flex;
   justify-content: space-between;
@@ -359,7 +313,6 @@
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Columna izquierda */
 .tickets-info {
   flex: 1.2;
 }
@@ -392,7 +345,6 @@
   margin: 0;
 }
 
-/* Columna central: Cajas de tiempo */
 .countdown-boxes {
   display: flex;
   gap: 1rem;
@@ -403,7 +355,7 @@
 .time-box {
   background-color: #141a23;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 18px; /* Radio acorde a opciones y contadores */
+  border-radius: 18px;
   padding: 1.25rem 1rem;
   min-width: 85px;
   text-align: center;
@@ -429,7 +381,6 @@
   color: rgba(255, 255, 255, 0.5);
 }
 
-/* Columna derecha: Barra de progreso */
 .tickets-progress-container {
   flex: 1.1;
   display: flex;
@@ -467,8 +418,40 @@
   border-radius: 999px;
 }
 
-/* --- RESPONSIVE PARA EL CONTADOR --- */
+/* --- MEDIA QUERIES (RESPONSIVE) --- */
 @media (max-width: 992px) {
+  .hero-section {
+    padding: 24px 16px;
+  }
+
+  .ConteinerHero {
+    flex-direction: column;
+    padding: 3rem 2rem;
+    gap: 2.5rem;
+    border-radius: 32px;
+  }
+
+  .hero-text-content {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .hero-title {
+    font-size: clamp(38px, 6vw, 64px);
+    line-height: 1.05;
+  }
+
+  .hero-description {
+    max-width: 100%;
+    font-size: 18px;
+  }
+
+  .hero-card-right {
+    width: 100%;
+    max-width: 100%;
+    padding: 2rem 1.5rem;
+  }
+
   .tickets-card {
     flex-direction: column;
     align-items: stretch;
@@ -479,9 +462,60 @@
   .countdown-boxes {
     justify-content: flex-start;
   }
+
+  .stats-card {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .stat-number {
+    font-size: 42px;
+  }
 }
 
 @media (max-width: 576px) {
+  .hero-section {
+    padding: 16px 12px;
+  }
+
+  .ConteinerHero {
+    padding: 2rem 1.25rem;
+    border-radius: 24px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+
+  .hero-title {
+    font-size: clamp(32px, 8vw, 42px);
+  }
+
+  .hero-description {
+    font-size: 16px;
+    margin-bottom: 2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .btn-comprar,
+  .btn-agenda {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hero-card-right {
+    border-radius: 20px;
+    gap: 1rem;
+  }
+
   .tickets-card {
     padding: 2rem 1.5rem;
   }
@@ -499,67 +533,7 @@
   .time-number {
     font-size: 32px;
   }
-}
 
-.stats-section {
-  background-color: #0b0f19;
-  display: flex;
-  justify-content: center;
-  padding: 0 16px;
-  cursor:auto;
-}
-
-.stats-card {
-  background-color: #0b0f14;
-  border-radius: 28px; /* Esquinas redondeadas acordes a la guía */
-  padding: 2.5rem 3rem;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  width: 100%;
-  max-width: 1312px;
-  margin: 0 auto;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.stat-item {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.stat-number {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 52px;
-  font-weight: 800;
-  color: #c00c18; /* Rojo corporativo */
-  line-height: 1.1;
-  margin-bottom: 0.35rem;
-}
-
-.stat-label {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 15px;
-  color: rgba(255, 255, 255, 0.7);
-  font-weight: 400;
-  line-height: 1.35;
-}
-
-/* --- RESPONSIVE PARA CONTADOR --- */
-@media (max-width: 992px) {
-  .stats-card {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    padding: 2rem;
-  }
-  
-  .stat-number {
-    font-size: 42px;
-  }
-}
-
-@media (max-width: 576px) {
   .stats-card {
     grid-template-columns: 1fr;
     gap: 1.5rem;
