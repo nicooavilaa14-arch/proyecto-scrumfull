@@ -510,6 +510,188 @@
 
     </div>
   </section>
+<!-- CONTENEDOR PRINCIPAL FINALIZA COMPRA -->
+<div class="checkout-wrapper mx-auto my-0 my-md-4" style="max-width: 1200px;">
+  
+  <!-- SECCIÓN FINALIZÁ TU COMPRA CON EL BORDE ROJO -->
+  <section id="checkout-section" class="py-4 py-md-5 rounded-4" style="background-color: #a81d24;">
+    <div class="container px-3 px-md-4">
+      <h2 class="text-white fw-bold mb-3 mb-md-4 fs-3 fs-md-2">Finalizá tu compra</h2>
+      
+      <div class="row g-4">
+        <!-- FORMULARIO (Izquierda) -->
+        <div class="col-12 col-lg-8">
+          <div class="bg-white p-3 p-sm-4 rounded-4 shadow-lg text-dark">
+            <form id="payment-form" novalidate>
+              
+              <!-- 1. Elegí tu entrada -->
+              <div class="mb-4">
+                <label class="fw-bold mb-2 d-block">
+                  <span class="badge bg-danger rounded-circle me-1">1</span> Elegí tu entrada
+                </label>
+                <div class="row g-2" id="ticket-options">
+                  <div class="col-12 col-sm-4">
+                    <div class="ticket-card p-3 border rounded-3 cursor-pointer selected" data-price="25000" data-name="Early Bird">
+                      <div class="fw-bold">Early Bird</div>
+                      <div class="text-muted">$25.000</div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-4">
+                    <div class="ticket-card p-3 border rounded-3 cursor-pointer" data-price="35000" data-name="General">
+                      <div class="fw-bold">General</div>
+                      <div class="text-muted">$35.000</div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-4">
+                    <div class="ticket-card p-3 border rounded-3 cursor-pointer" data-price="15000" data-name="Virtual">
+                      <div class="fw-bold">Virtual</div>
+                      <div class="text-muted">$15.000</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Cantidad -->
+                <div class="mt-3">
+                  <label class="form-label small fw-bold">Cantidad</label>
+                  <div class="d-flex align-items-center">
+                    <div class="input-group" style="width: 140px;">
+                      <button class="btn btn-outline-secondary" type="button" id="decrease-btn">-</button>
+                      <input type="number" class="form-control text-center fw-bold" id="ticket-qty" value="1" min="1" max="100" readonly>
+                      <button class="btn btn-outline-secondary" type="button" id="increase-btn">+</button>
+                    </div>
+                  </div>
+                  <small class="text-muted d-block mt-1" style="font-size: 0.75rem;">Máximo 100 entradas por compra.</small>
+                </div>
+              </div>
+
+              <hr class="my-4">
+
+              <!-- 2. Tus datos -->
+              <div class="mb-4">
+                <label class="fw-bold mb-2 d-block">
+                  <span class="badge bg-danger rounded-circle me-1">2</span> Tus datos
+                </label>
+                <div class="mb-3">
+                  <label class="form-label small text-muted">Nombre y apellido</label>
+                  <input type="text" class="form-control" id="full-name" placeholder="Como figura en tu documento" required>
+                  <div class="invalid-feedback">Ingresá solo letras (mínimo 3 caracteres).</div>
+                </div>
+                <div class="row g-3">
+                  <div class="col-12 col-md-6">
+                    <label class="form-label small text-muted">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="correo@ejemplo.com" required>
+                    <div class="invalid-feedback">Ingresá un email válido.</div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label class="form-label small text-muted">Teléfono</label>
+                    <input type="text" inputmode="numeric" class="form-control" id="phone" placeholder="3814000000" maxlength="15" required>
+                    <div class="invalid-feedback">Ingresá solo números (mínimo 8 dígitos).</div>
+                  </div>
+                </div>
+              </div>
+
+              <hr class="my-4">
+
+              <!-- 3. Medio de pago -->
+              <div class="mb-4">
+                <label class="fw-bold mb-3 d-block">
+                  <span class="badge bg-danger rounded-circle me-1">3</span> Medio de pago
+                </label>
+                
+                <!-- Tabs de pago -->
+                <div class="d-flex gap-2 mb-3 overflow-auto pb-1">
+                  <button type="button" class="btn btn-dark rounded-pill px-3 px-sm-4 text-nowrap payment-tab active" data-method="card">Tarjeta</button>
+                  <button type="button" class="btn btn-outline-dark rounded-pill px-3 px-sm-4 text-nowrap payment-tab" data-method="transfer">Transferencia</button>
+                  <button type="button" class="btn btn-outline-dark rounded-pill px-3 px-sm-4 text-nowrap payment-tab" data-method="wallet">Billetera virtual</button>
+                </div>
+
+                <!-- Campos de Tarjeta -->
+                <div id="card-fields">
+                  <div class="mb-3">
+                    <label class="form-label small text-muted">Número de tarjeta</label>
+                    <input type="text" inputmode="numeric" class="form-control" id="card-number" placeholder="DDDD DDDD DDDD DDDD" maxlength="19" required>
+                    <div class="invalid-feedback">Ingresá solo números (mínimo 13 dígitos).</div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label small text-muted">Titular</label>
+                    <input type="text" class="form-control" id="card-holder" placeholder="Como figura en la tarjeta" required>
+                    <div class="invalid-feedback">Ingresá solo letras.</div>
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-12 col-md-6">
+                      <label class="form-label small text-muted">Vencimiento</label>
+                      <input type="text" inputmode="numeric" class="form-control" id="card-expiry" placeholder="MM/AA" maxlength="5" required>
+                      <div class="invalid-feedback">Ingresá 4 números (MM/AA).</div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <label class="form-label small text-muted">Código de seguridad</label>
+                      <input type="password" inputmode="numeric" class="form-control" id="card-cvv" placeholder="123" maxlength="4" required>
+                      <div class="invalid-feedback">Ingresá de 3 a 4 números.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Botón Pagar -->
+              <button type="submit" class="btn btn-dark w-100 py-3 rounded-pill fw-bold text-white shadow" id="pay-btn">
+                🔒 Pagar $<span id="btn-total">26.250</span>
+              </button>
+
+              <p class="text-center text-muted mt-3 mb-0" style="font-size: 0.75rem;">
+                Pasarela de pago de ejemplo : no se procesan pagos ni se guardan datos.
+              </p>
+            </form>
+          </div>
+        </div>
+
+        <!-- RESUMEN DEL PEDIDO (Derecha) -->
+        <div class="col-12 col-lg-4">
+          <div class="bg-dark text-white p-3 p-sm-4 rounded-4 shadow-lg sticky-top" style="top: 20px; border: 1px solid rgba(255,255,255,0.1);">
+            <div class="text-danger fw-bold small mb-3 tracking-widest" style="letter-spacing: 1px;">RESUMEN DEL PEDIDO</div>
+            
+            <div class="fw-bold mb-1 fs-6 fs-md-5">¿Por dónde empiezo a programar?</div>
+            <div class="text-white-50 small mb-4">Jueves 19/11 · 18:00 hs · Rolling Code School</div>
+            
+            <hr style="border-color: rgba(255,255,255,0.15);">
+
+            <div class="d-flex justify-content-between small mb-2">
+              <span id="summary-ticket-name">Entrada Early Bird x <span id="summary-qty">1</span></span>
+              <span id="summary-subtotal">$25.000</span>
+            </div>
+            <div class="d-flex justify-content-between small mb-3 text-white-50">
+              <span>Cargo por servicio (5%)</span>
+              <span id="summary-fee">$1.250</span>
+            </div>
+
+            <hr style="border-color: rgba(255,255,255,0.15);">
+
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <span class="fw-bold fs-5">Total</span>
+              <span class="fw-bold fs-4 text-white" id="summary-total">$26.250</span>
+            </div>
+
+            <!-- ENLACES QUE REDIRIGEN A error404.html -->
+            <div class="d-flex flex-column gap-2">
+              <a href="error404.html" class="badge bg-secondary text-white py-2 px-3 rounded-pill fw-normal text-start text-decoration-none d-block">
+                🔒 Pago seguro
+              </a>
+              <a href="error404.html" class="badge bg-secondary text-white py-2 px-3 rounded-pill fw-normal text-start text-decoration-none d-block">
+                ✔ Entrada por email
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+
+
+    </div>
+  </div>
+</div>
 <!-- SECCIÓN CHECKOUT / FINALIZÁ TU COMPRA -->
 <section id="checkout" class="checkout-section py-5">
   <div class="container">
@@ -930,7 +1112,6 @@
 </section>
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/countdown.js"></script>
-  <script src="js/sponsorForm.js"></script>
+  <script src="countdown.js"></script>
 </body>
 </html>
