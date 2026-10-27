@@ -1,0 +1,163 @@
+/* --- ESTILOS PÁGINA 404 --- */
+.error-page-body {
+  background-color: #0b0b0c;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.min-vh-60 {
+  min-height: 60vh;
+}
+
+.error-red-card {
+  background: linear-gradient(135deg, #c00c18 0%, #99050f 100%);
+  border-radius: 40px;
+  padding: 4rem 3.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.error-top-tag {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.8);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Número 404 gigante en rojo oscuro/negro como el mockup */
+.error-number {
+  font-size: clamp(100px, 12vw, 160px);
+  font-weight: 800;
+  color: #1a0204;
+  line-height: 1;
+  margin-bottom: 1rem;
+  letter-spacing: -4px;
+}
+
+.error-title {
+  font-size: 40px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.error-desc {
+  font-size: 18px;
+  color: #d4d4d8;
+  margin-bottom: 2.5rem;
+  line-height: 1.5;
+  max-width: 500px;
+}
+
+.error-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Botón principal (Volver al inicio - Negro) */
+.btn-volver-inicio {
+  background-color: #0b0b0c;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.85rem 2rem;
+  font-size: 16px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-volver-inicio:hover {
+  background-color: #1c1c1f;
+  color: #ffffff;
+}
+
+/* Botón secundario (Comprar entrada - Outline rojo) */
+.btn-comprar-outline {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 999px;
+  padding: 0.85rem 2rem;
+  font-size: 16px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-comprar-outline:hover {
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+
+/* Caja lateral derecha (Quizás buscabas) */
+.error-sidebar-box {
+  background-color: #0b0b0c;
+  border-radius: 28px;
+  padding: 2.5rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.sidebar-tag {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #e0202a;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.sidebar-link-item {
+  background-color: #121215;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.sidebar-link-item:hover {
+  background-color: #1a1a1f;
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #e0202a;
+}
+
+.sidebar-link-item i {
+  color: #e0202a;
+  font-size: 16px;
+}
+
+@media (max-width: 992px) {
+  .error-red-card {
+    padding: 2.5rem 1.5rem;
+  }
+}
+

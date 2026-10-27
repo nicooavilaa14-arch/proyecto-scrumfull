@@ -19,9 +19,21 @@ Landing page responsive desarrollada como parte del Bootcamp de Scrum Profession
 ```text
 landing-workshop/
 ├── index.html
-├── css/
-│   └── styles.css
+├── error404.html
+├── css/                  # un archivo por sección (el orden de los <link> importa)
+│   ├── style.css         # base, speakers, agenda y precios
+│   ├── variables.css
+│   ├── hero.css
+│   ├── stats.css
+│   ├── entradas.css
+│   ├── responsive.css
+│   ├── checkout.css
+│   ├── error404.css
+│   ├── sponsors.css
+│   └── sponsor-form.css
+├── js/                   # funcionalidad
+│   ├── countdown.js
+│   └── sponsorForm.js
 ├── img/
-│   ├── logo-white.png
-│   └── speaker-1.jpg ... speaker-10.jpg
+│   └── speaker-1.jpg ... speaker-10.jpg
 └── README.md
