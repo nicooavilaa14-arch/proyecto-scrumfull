@@ -851,3 +851,316 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* --- ESTILOS SECCIÓN SPONSORS --- */
+.sponsors-section {
+  background-color: #0b0f19;
+  display: flex;
+  justify-content: center;
+  padding: 5rem 16px;
+}
+
+.sponsors-section .container {
+  max-width: 1312px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.sponsor-category {
+  margin-bottom: 4rem;
+}
+
+.sponsor-category:last-child {
+  margin-bottom: 0;
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.category-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.category-title-wrapper i {
+  color: #c00c18;
+  font-size: 18px;
+}
+
+.gold-icon { color: #f59e0b !important; }
+.bronze-icon { color: #d97706 !important; }
+
+.category-name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.tier-badge {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.tier-badge.diamante {
+  border-color: rgba(192, 12, 24, 0.4);
+  color: #ff6b72;
+}
+
+.tier-badge.oro {
+  border-color: rgba(245, 158, 11, 0.4);
+  color: #fcd34d;
+}
+
+.tier-badge.bronce {
+  border-color: rgba(217, 119, 6, 0.4);
+  color: #fbbf24;
+}
+
+.category-desc {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 2rem;
+}
+
+/* --- GRID MAIN PARTNERS --- */
+.main-partners-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.sponsor-card {
+  background-color: #0b0f14;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 28px;
+  transition: all 0.3s ease;
+}
+
+.sponsor-card:hover {
+   border: 1px solid rgba(245, 158, 11, 0.6);
+  box-shadow: 0 0 25px rgba(245, 158, 11, 0.1);
+}
+
+.sponsor-card.large {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 340px;
+}
+
+
+
+.card-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-tag {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.card-tag.gold {
+  color: #f59e0b;
+}
+
+.card-top-row i {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 18px;
+}
+
+.card-body-content {
+  margin: 1.5rem 0;
+}
+
+.sponsor-icon-box {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 1.25rem;
+  background-color: #141a23;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sponsor-icon-box.google { color: #ea4335; }
+.sponsor-icon-box.aws { color: #ff9900; }
+.sponsor-icon-box.ml { color: #f59e0b; }
+
+.sponsor-card.large h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.sponsor-card.large p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.card-footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+}
+
+.footer-item {
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.footer-highlight {
+  color: #ff6b72;
+  font-weight: 700;
+}
+
+.footer-highlight.gold {
+  color: #f59e0b;
+}
+
+/* --- GRID GOLD TIER --- */
+.gold-tier-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+}
+
+.sponsor-card.medium {
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.sponsor-icon-sm {
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.sponsor-card.medium h4 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+}
+
+.sponsor-card.medium p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 1.25rem;
+}
+
+.card-badge-bottom {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #f59e0b;
+  background-color: rgba(245, 158, 11, 0.08);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+/* --- GRID BRONZE TIER --- */
+.bronze-tier-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1rem;
+}
+
+.sponsor-card.small {
+  padding: 1.25rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sponsor-card.small i {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.5rem;
+}
+
+.sponsor-card.small h5 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.15rem;
+}
+
+.sponsor-card.small p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0;
+}
+
+/* --- RESPONSIVE SPONSORS --- */
+@media (max-width: 1200px) {
+  .gold-tier-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .bronze-tier-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .main-partners-grid {
+    grid-template-columns: 1fr;
+  }
+  .gold-tier-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bronze-tier-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .gold-tier-grid, .bronze-tier-grid {
+    grid-template-columns: 1fr;
+  }
+}
