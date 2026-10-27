@@ -1,0 +1,853 @@
+:root {
+  /* Rojos */
+  --rojo-rolling: #e0202a;   /* Botones, etiquetas, números, íconos */
+  --rojo-oscuro: #a50d14;    /* Medio del degradado */
+  --rojo-profundo: #6e070c;  /* Final del degradado */
+  /* Degradado principal */
+  --degradado-rojo: linear-gradient(160deg, #e0202a 0%, #a50d14 55%, #6e070c 100%);
+
+  /* Fondos y Superficies */
+  --negro-pagina: #0b0b0c;   /* Fondo del sitio y tarjetas negras */
+  --superficie: #111113;     /* Tarjetas y barra de datos */
+  --gris-fuerte: #26262a;    /* Chips y barras vacías */
+  --blanco: #ffffff;         /* Títulos, tarjeta del checkout */
+
+  /* Bordes y Líneas */
+  --borde-tarjeta: #2c2c31;  /* Bordes y líneas de 1px */
+  --borde-chip: #3a3a40;     /* Bordes de chips y botones */
+  --borde-input: #d4d4d8;    /* Campos del formulario */
+  --linea-menu: #1f1f23;     /* Debajo del menú */
+
+  /* Textos y Aclaraciones */
+  --gris-claro: #d4d4d8;     /* Párrafos sobre fondo oscuro */
+  --gris-medio: #a1a1aa;     /* Textos de apoyo */
+  --rosa-claro: #ffe9ea;     /* Texto sobre el rojo */
+  --gris-sobre-blanco: #52525b; /* Aclaraciones en checkout */
+}
+
+/* --- SECCIÓN HERO --- */
+.hero-section {
+  background-color: #0b0f19;
+  display: flex;
+  justify-content: center;
+  padding: 48px 24px;
+}
+
+.ConteinerHero {
+  max-width: 1312px;
+  width: 100%;
+  background: linear-gradient(135deg, #c00c18 0%, #a00610 100%);
+  border-radius: 40px;
+  padding: 5rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.hero-text-content {
+  flex: 1;
+  max-width: 620px;
+}
+
+/* --- ETIQUETA HERO --- */
+.hero-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+/* Light itálica · 300 solo en la palabra "WORKSHOP" */
+.workshop-word {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* --- TÍTULO PRINCIPAL (H1) --- */
+.hero-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(40px, 5.5vw, 88px);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -1.5px;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title .text-dark-title {
+  color: #0b0b0b;
+}
+
+/* --- PÁRRAFO DEL BLOQUE PRINCIPAL --- */
+.hero-description {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 520px;
+  margin-bottom: 2.5rem;
+}
+
+/* --- BOTONES HERO --- */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-comprar {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  padding: 0.75rem 2.25rem;
+  min-height: 52px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-comprar:hover {
+  background-color: #1a1a1a;
+  border-color: #1a1a1a;
+}
+
+.btn-agenda {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  padding: 0.75rem 2.25rem;
+  min-height: 52px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-agenda:hover {
+  background-color: #1a1a1a;
+  border-color: #1a1a1a;
+}
+
+/* --- TARJETA DERECHA (HERO) --- */
+.hero-card-right {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #0b0f14;
+  border-radius: 32px;
+  padding: 2.5rem 2.25rem;
+  width: 400px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding-bottom: 1.15rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-info-item:nth-child(3) {
+  border-bottom: none;
+}
+
+.info-icon {
+  color: #c00c18;
+  font-size: 1.6rem;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.info-title {
+  display: block;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1.15rem;
+  line-height: 1.2;
+}
+
+.flex-subtitle {
+  font-size: 1.5rem !important;
+  font-weight: 300 !important;
+}
+
+.info-sub {
+  display: block;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 2px;
+}
+
+/* --- CHIPS / ETIQUETAS --- */
+.card-tags {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  padding: 0.35rem 0.85rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.2s ease;
+}
+
+.tag:hover {
+  background-color: #e61c24;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+/* --- SECCIÓN STATS / CONTADOR DE LUGARES --- */
+.stats-section {
+  background-color: #0b0f19;
+  display: flex;
+  justify-content: center;
+  padding: 0 16px;
+  cursor: auto;
+}
+
+.stats-card {
+  background-color: #0b0f14;
+  border-radius: 28px;
+  padding: 2.5rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 1312px;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.stat-number {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 52px;
+  font-weight: 800;
+  color: #c00c18;
+  line-height: 1.1;
+  margin-bottom: 0.35rem;
+}
+
+.stat-label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+/* --- SECCIÓN SEGUNDO CONTADOR / ENTRADAS --- */
+.tickets-countdown-section {
+  background-color: #0b0f19;
+  display: flex;
+  justify-content: center;
+  padding: 4rem 16px;
+}
+
+.tickets-countdown-section .container {
+  max-width: 1312px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section-tag {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #c00c18;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(32px, 4vw, 56px);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.05;
+  letter-spacing: -1px;
+}
+
+.tickets-card {
+  background-color: #0b0f14;
+  border-radius: 32px;
+  padding: 3rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+  margin-top: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tickets-info {
+  flex: 1.2;
+}
+
+.early-bird-tag {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #c00c18;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.tickets-heading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.tickets-subtext {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.countdown-boxes {
+  display: flex;
+  gap: 1rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.time-box {
+  background-color: #141a23;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 1.25rem 1rem;
+  min-width: 85px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.time-number {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 38px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+
+.time-label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.tickets-progress-container {
+  flex: 1.1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.progress-left-text {
+  color: #ffffff;
+}
+
+.progress-right-text {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.progress-bar-bg {
+  width: 100%;
+  height: 8px;
+  background-color: #1a222d;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #c00c18;
+  border-radius: 999px;
+}
+
+/* --- MEDIA QUERIES (RESPONSIVE) --- */
+@media (max-width: 992px) {
+  .hero-section {
+    padding: 24px 16px;
+  }
+
+  .ConteinerHero {
+    flex-direction: column;
+    padding: 3rem 2rem;
+    gap: 2.5rem;
+    border-radius: 32px;
+  }
+
+  .hero-text-content {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .hero-title {
+    font-size: clamp(38px, 6vw, 64px);
+    line-height: 1.05;
+  }
+
+  .hero-description {
+    max-width: 100%;
+    font-size: 18px;
+  }
+
+  .hero-card-right {
+    width: 100%;
+    max-width: 100%;
+    padding: 2rem 1.5rem;
+  }
+
+  .tickets-card {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 2.5rem 2rem;
+    gap: 2rem;
+  }
+  
+  .countdown-boxes {
+    justify-content: flex-start;
+  }
+
+  .stats-card {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .stat-number {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    padding: 16px 12px;
+  }
+
+  .ConteinerHero {
+    padding: 2rem 1.25rem;
+    border-radius: 24px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+
+  .hero-title {
+    font-size: clamp(32px, 8vw, 42px);
+  }
+
+  .hero-description {
+    font-size: 16px;
+    margin-bottom: 2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .btn-comprar,
+  .btn-agenda {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hero-card-right {
+    border-radius: 20px;
+    gap: 1rem;
+  }
+
+  .tickets-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .countdown-boxes {
+    justify-content: space-between;
+  }
+
+  .time-box {
+    flex: 1;
+    min-width: unset;
+    padding: 1rem 0.5rem;
+  }
+
+  .time-number {
+    font-size: 32px;
+  }
+
+  .stats-card {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.75rem 1.5rem;
+  }
+  
+  .stat-number {
+    font-size: 36px;
+  }
+}
+
+/* --- ESTILOS SECCIÓN CHECKOUT --- */
+.checkout-section {
+  background-color: #0b0f19;
+  display: flex;
+  justify-content: center;
+  padding: 4rem 16px;
+}
+
+.checkout-section .container {
+  max-width: 1312px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.checkout-red-card {
+  background: linear-gradient(135deg, #c00c18 0%, #a00610 100%);
+  border-radius: 40px;
+  padding: 3.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.checkout-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.checkout-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.checkout-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+/* Indicador de pasos superior */
+.checkout-steps {
+  display: flex;
+  gap: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0.35rem;
+  border-radius: 999px;
+}
+
+.step-badge {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+}
+
+.step-badge:hover {
+  background-color: #0b0f14;
+  color: #ffffff;
+}
+
+/* Grid principal de dos columnas */
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* Caja blanca izquierda */
+.checkout-left-box {
+  background-color: #ffffff;
+  border-radius: 28px;
+  padding: 2.5rem;
+  color: #0b0f19;
+}
+
+.box-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: #0b0f19;
+}
+
+/* Opciones de tarjetas/entradas */
+.ticket-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.ticket-option {
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #0b0f19;
+  transition: all 0.2s ease;
+}
+
+/* Hover suave cuando se pasa el mouse por opciones no seleccionadas */
+.ticket-option:hover {
+  background-color: #0b0f19;
+  border-color: #0b0f19;
+  color: #ffffff;
+}
+
+/* Color fijo oscuro ÚNICAMENTE cuando la opción está seleccionada (.selected) */
+
+
+.ticket-option-info strong {
+  display: block;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.ticket-option-info small {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.ticket-option.selected .ticket-option-info small {
+  color: #94a3b8;
+}
+
+.ticket-price {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* Selector de cantidad */
+.quantity-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-top: 0.5rem;
+}
+
+.quantity-label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0b0f19;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.qty-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #e2e8f0;
+  background-color: transparent;
+  font-weight: 800;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.qty-btn:hover {
+  background-color: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+#quantity-value {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* Botón Continuar */
+.btn-continuar {
+  width: 100%;
+  background-color: #0b0f19;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 1rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-bottom: 1rem;
+}
+
+.btn-continuar:hover {
+  background-color: #1a222d;
+}
+
+.checkout-disclaimer {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  color: #64748b;
+  text-align: center;
+  margin: 0;
+}
+
+/* Caja oscura derecha (Tu pedido) */
+.checkout-right-box {
+  background-color: #0b0f14;
+  border-radius: 28px;
+  padding: 2.5rem;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.order-tag {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #c00c18;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.order-event-info h4 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+
+.order-event-info p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.order-calculation {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.calc-row {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.order-total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+.order-security-note {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* --- RESPONSIVE CHECKOUT --- */
+@media (max-width: 992px) {
+  .checkout-red-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+}
