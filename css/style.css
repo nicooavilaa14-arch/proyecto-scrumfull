@@ -574,6 +574,13 @@ ESTILOS DEL NAVBAR Y RESPONSIVIDAD */
     -webkit-overflow-scrolling: touch;
     padding-bottom: 1rem;
   }
+  /* fotos de los speakers en celular */
+  @media (max-width: 575.98px) {
+  .speaker-img {
+    height: 320px !important;
+    object-position: top center !important;
+  }
+}
 
   /* Ocultamos la barra de scroll fea pero permitimos el deslizamiento */
   #speakers .row::-webkit-scrollbar {
