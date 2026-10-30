@@ -297,3 +297,319 @@ document.addEventListener("DOMContentLoaded", function () {
       .bindPopup("<b>Rolling Code School</b><br>Gral. Paz 576, Entrepiso");
   }
 });
+document.addEventListener("DOMContentLoaded", function () {
+  let ticketPrice = 25000;
+  let ticketName = "Early Bird";
+  let quantity = 1;
+  const MAX_TICKETS = 200;
+
+  const ticketCards = document.querySelectorAll(".ticket-card");
+  const qtyInput = document.getElementById("ticket-qty");
+  const increaseBtn = document.getElementById("increase-btn");
+  const decreaseBtn = document.getElementById("decrease-btn");
+
+  const step1 = document.getElementById("step-1");
+  const step2 = document.getElementById("step-2");
+  const step3 = document.getElementById("step-3");
+  
+  const ind1 = document.getElementById("ind-step-1");
+  const ind2 = document.getElementById("ind-step-2");
+  const ind3 = document.getElementById("ind-step-3");
+  const ind4 = document.getElementById("ind-step-4");
+
+  const btnToStep2 = document.getElementById("btn-to-step-2");
+  const btnBackStep1 = document.getElementById("btn-back-to-step-1");
+  const btnToStep3 = document.getElementById("btn-to-step-3");
+  const btnBackStep2 = document.getElementById("btn-back-to-step-2");
+
+  const summaryQty = document.getElementById("summary-qty");
+  const summaryTicketName = document.getElementById("summary-ticket-name");
+  const summarySubtotal = document.getElementById("summary-subtotal");
+  const summaryFee = document.getElementById("summary-fee");
+  const summaryTotal = document.getElementById("summary-total");
+  const btnTotal = document.getElementById("btn-total");
+
+  const fullNameInput = document.getElementById("full-name");
+  const phoneInput = document.getElementById("phone");
+  const emailInput = document.getElementById("email");
+  const cardNumberInput = document.getElementById("card-number");
+  const cardHolderInput = document.getElementById("card-holder");
+  const cardExpiryInput = document.getElementById("card-expiry");
+  const cardCvvInput = document.getElementById("card-cvv");
+
+  // --- ACTUALIZAR INDICADORES SUPERIORES (4 PASOS) ---
+  function updateIndicators(activeStep) {
+    const indicators = [ind1, ind2, ind3, ind4];
+    indicators.forEach((ind, index) => {
+      if (index + 1 === activeStep) {
+        ind.className = "badge bg-white text-danger px-3 py-2 rounded-pill fw-bold shadow-sm";
+        ind.style.cssText = "font-size: 0.75rem; color: var(--rc-red, #a81d24) !important;";
+      } else {
+        ind.className = "badge px-3 py-2 rounded-pill fw-normal";
+        ind.style.cssText = "font-size: 0.75rem; background-color: var(--rc-black, #000000); color: rgba(255,255,255,0.6); border: 1px solid rgba(255,255,255,0.15);";
+      }
+    });
+  }
+
+  // --- NAVEGACIÓN ENTRE PASOS ---
+  if (btnToStep2) {
+    btnToStep2.addEventListener("click", () => {
+      step1.classList.add("d-none");
+      step2.classList.remove("d-none");
+      updateIndicators(2);
+      window.scrollTo({ top: document.getElementById("checkout-section").offsetTop - 20, behavior: 'smooth' });
+    });
+  }
+
+  if (btnBackStep1) {
+    btnBackStep1.addEventListener("click", () => {
+      step2.classList.add("d-none");
+      step1.classList.remove("d-none");
+      updateIndicators(1);
+    });
+  }
+
+  if (btnToStep3) {
+    btnToStep3.addEventListener("click", () => {
+      let dataValid = true;
+      fullNameInput.classList.remove("is-invalid");
+      emailInput.classList.remove("is-invalid");
+      phoneInput.classList.remove("is-invalid");
+
+      if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{3,}$/.test(fullNameInput.value.trim())) {
+        fullNameInput.classList.add("is-invalid");
+        dataValid = false;
+      }
+      if (!emailInput.checkValidity()) {
+        emailInput.classList.add("is-invalid");
+        dataValid = false;
+      }
+      if (!/^[0-9]{8,15}$/.test(phoneInput.value.trim())) {
+        phoneInput.classList.add("is-invalid");
+        dataValid = false;
+      }
+
+      if (dataValid) {
+        step2.classList.add("d-none");
+        step3.classList.remove("d-none");
+        updateIndicators(3);
+        window.scrollTo({ top: document.getElementById("checkout-section").offsetTop - 20, behavior: 'smooth' });
+      }
+    });
+  }
+
+  if (btnBackStep2) {
+    btnBackStep2.addEventListener("click", () => {
+      step3.classList.add("d-none");
+      step2.classList.remove("d-none");
+      updateIndicators(2);
+    });
+  }
+
+  // --- SELECCIÓN DE TARJETAS DE ENTRADA ---
+  ticketCards.forEach(card => {
+    card.addEventListener("click", function () {
+      ticketCards.forEach(c => c.classList.remove("selected"));
+      this.classList.add("selected");
+
+      ticketPrice = parseInt(this.getAttribute("data-price"));
+      ticketName = this.getAttribute("data-name");
+      updateTotals();
+    });
+  });
+
+  // --- CONTROL DE CANTIDAD (BOTONES Y TECLADO HASTA 200) ---
+  if (qtyInput) {
+    qtyInput.addEventListener("input", function () {
+      let val = parseInt(this.value.replace(/[^0-9]/g, ""), 10);
+      if (isNaN(val) || val < 1) {
+        quantity = 1;
+      } else if (val > MAX_TICKETS) {
+        quantity = MAX_TICKETS;
+        this.value = MAX_TICKETS;
+      } else {
+        quantity = val;
+      }
+      updateTotals();
+    });
+
+    qtyInput.addEventListener("blur", function () {
+      if (this.value === "" || parseInt(this.value, 10) < 1) {
+        this.value = 1;
+        quantity = 1;
+        updateTotals();
+      }
+    });
+  }
+
+  if (increaseBtn && decreaseBtn) {
+    increaseBtn.addEventListener("click", () => {
+      if (quantity < MAX_TICKETS) {
+        quantity++;
+        qtyInput.value = quantity;
+        updateTotals();
+      }
+    });
+
+    decreaseBtn.addEventListener("click", () => {
+      if (quantity > 1) {
+        quantity--;
+        qtyInput.value = quantity;
+        updateTotals();
+      }
+    });
+  }
+
+  function updateTotals() {
+    let subtotal = ticketPrice * quantity;
+    let fee = subtotal * 0.05;
+    let total = subtotal + fee;
+
+    let fSub = "$" + subtotal.toLocaleString("es-AR");
+    let fFee = "$" + fee.toLocaleString("es-AR");
+    let fTot = "$" + total.toLocaleString("es-AR");
+
+    if (summaryQty) summaryQty.textContent = quantity;
+    if (summaryTicketName) summaryTicketName.textContent = `${quantity} entrada${quantity > 1 ? 's' : ''} ${ticketName}`;
+    if (summarySubtotal) summarySubtotal.textContent = fSub;
+    if (summaryFee) summaryFee.textContent = fFee;
+    if (summaryTotal) summaryTotal.textContent = fTot;
+    if (btnTotal) btnTotal.textContent = total.toLocaleString("es-AR");
+
+    const modalSummaryTicket = document.getElementById("modal-summary-ticket");
+    const modalSummarySubtotal = document.getElementById("modal-summary-subtotal");
+    const modalSummaryFee = document.getElementById("modal-summary-fee");
+    const modalSummaryTotal = document.getElementById("modal-summary-total");
+
+    if (modalSummaryTicket) modalSummaryTicket.textContent = `${quantity} entrada${quantity > 1 ? 's' : ''} ${ticketName}`;
+    if (modalSummarySubtotal) modalSummarySubtotal.textContent = fSub;
+    if (modalSummaryFee) modalSummaryFee.textContent = fFee;
+    if (modalSummaryTotal) modalSummaryTotal.textContent = fTot;
+  }
+
+  // --- RESTRICCIONES Y VALIDACIÓN DE TARJETA VIGENTE ---
+  function enforceLettersOnly(input) {
+    if (input) input.addEventListener("input", function() { this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, ""); });
+  }
+  function enforceNumbersOnly(input) {
+    if (input) input.addEventListener("input", function() { this.value = this.value.replace(/[^0-9]/g, ""); });
+  }
+
+  enforceLettersOnly(fullNameInput);
+  enforceLettersOnly(cardHolderInput);
+  enforceNumbersOnly(phoneInput);
+  enforceNumbersOnly(cardCvvInput);
+
+  if (cardNumberInput) {
+    cardNumberInput.addEventListener("input", function () {
+      let raw = this.value.replace(/[^0-9]/g, "");
+      if (raw.length > 16) raw = raw.substring(0, 16);
+      this.value = raw.match(/.{1,4}/g)?.join(" ") || "";
+    });
+  }
+
+  if (cardExpiryInput) {
+    cardExpiryInput.addEventListener("input", function () {
+      let raw = this.value.replace(/[^0-9]/g, "");
+      if (raw.length > 4) raw = raw.substring(0, 4);
+      if (raw.length >= 3) {
+        this.value = raw.substring(0, 2) + "/" + raw.substring(2);
+      } else {
+        this.value = raw;
+      }
+    });
+  }
+
+  function validateCardExpiry(expiryStr) {
+    const parts = expiryStr.split("/");
+    if (parts.length !== 2) return false;
+    const month = parseInt(parts[0], 10);
+    const year = parseInt("20" + parts[1], 10);
+    if (isNaN(month) || isNaN(year) || month < 1 || month > 12) return false;
+
+    const now = new Date();
+    const currentYear = now.getFullYear();
+    const currentMonth = now.getMonth() + 1;
+
+    if (year > currentYear) return true;
+    if (year === currentYear && month >= currentMonth) return true;
+    return false;
+  }
+
+  const form = document.getElementById("payment-form");
+  const cardMethodActive = () => {
+    const activeTab = document.querySelector(".payment-tab.active");
+    return activeTab && activeTab.getAttribute("data-method") === "card";
+  };
+
+  if (form) {
+    form.addEventListener("submit", function (event) {
+      // FRENAR INMEDIATAMENTE CUALQUIER ENVÍO AUTOMÁTICO
+      event.preventDefault();
+      event.stopImmediatePropagation();
+
+      let isValid = true;
+
+      if (cardMethodActive()) {
+        cardNumberInput.classList.remove("is-invalid");
+        cardHolderInput.classList.remove("is-invalid");
+        cardExpiryInput.classList.remove("is-invalid");
+        cardCvvInput.classList.remove("is-invalid");
+
+        const rawCardNum = cardNumberInput.value.replace(/\s/g, "");
+        if (!/^[0-9]{13,16}$/.test(rawCardNum)) { 
+          cardNumberInput.classList.add("is-invalid"); 
+          isValid = false; 
+        }
+
+        if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{3,}$/.test(cardHolderInput.value.trim())) { 
+          cardHolderInput.classList.add("is-invalid"); 
+          isValid = false; 
+        }
+        
+        const expiryVal = cardExpiryInput.value.trim();
+        if (!/^[0-9]{2}\/[0-9]{2}$/.test(expiryVal) || !validateCardExpiry(expiryVal)) {
+          cardExpiryInput.classList.add("is-invalid");
+          isValid = false;
+        }
+
+        if (!/^[0-9]{3,4}$/.test(cardCvvInput.value.trim())) { 
+          cardCvvInput.classList.add("is-invalid"); 
+          isValid = false; 
+        }
+      }
+
+      // SI HAY ALÚN ERROR EN LOS DATOS DE LA TARJETA, SE DETIENE ACÁ Y NUNCA ABRE EL MODAL
+      if (!isValid) {
+        updateIndicators(3); 
+        return; 
+      }
+
+      // SÓLO SI TODO ES VÁLIDO, AVANZA AL PASO 4 Y MUESTRA EL ERROR DE PAGO SIMULADO
+      updateIndicators(4); 
+      const errorModal = new bootstrap.Modal(document.getElementById('errorPaymentModal'));
+      errorModal.show();
+    });
+  }
+
+  const tabs = document.querySelectorAll(".payment-tab");
+  const cardFields = document.getElementById("card-fields");
+  tabs.forEach(tab => {
+    tab.addEventListener("click", function () {
+      tabs.forEach(t => { 
+        t.classList.remove("active"); 
+        t.style.backgroundColor = "transparent";
+        t.style.color = "#212529";
+        t.classList.add("btn-outline-dark");
+      });
+      this.classList.add("active");
+      this.classList.remove("btn-outline-dark");
+      this.style.backgroundColor = "var(--rc-black, #000000)";
+      this.style.color = "#ffffff";
+      
+      if (cardFields) {
+        cardFields.style.display = (this.getAttribute("data-method") === "card") ? "block" : "none";
+      }
+    });
+  });
+});
