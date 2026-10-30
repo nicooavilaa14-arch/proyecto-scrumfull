@@ -615,3 +615,32 @@ ESTILOS DEL NAVBAR Y RESPONSIVIDAD */
   /* aspect-ratio: 1 / 1; */
   object-position: center 20% !important;
 }
+/* --- ESTILOS DE LAS TARJETAS DE ENTRADA --- */
+.ticket-card {
+  background-color: #ffffff !important;
+  color: #212529 !important;
+  border: 2px solid #dee2e6 !important;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover: Borde rojo al pasar el cursor por encima */
+.ticket-card:hover {
+  border-color: var(--rc-red, #a81d24) !important;
+}
+
+/* Tarjeta seleccionada al hacer clic (Negro RC con texto blanco) */
+.ticket-card.selected {
+  background-color: var(--rc-black, #000000) !important;
+  color: #ffffff !important;
+  border: 2px solid var(--rc-black, #000000) !important;
+}
+
+.ticket-card.selected .ticket-title,
+.ticket-card.selected .ticket-price {
+  color: #ffffff !important;
+}
+
+.ticket-card.selected .ticket-sub {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
