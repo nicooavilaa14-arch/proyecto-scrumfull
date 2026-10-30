@@ -484,49 +484,76 @@ body{
     height: 320px;
   }
 }
-ESTILOS DEL NAVBAR Y RESPONSIVIDAD */
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--rc-black);
+    color: var(--rc-white);
+    margin: 0;
+    padding: 0;
+}
+
+/* ==========================================
+   ESTILOS DEL NAVBAR
+   ========================================== */
 .navbar-section {
     background-color: var(--rc-black);
-    border-bottom: 1px solid var(--rc-border);
-    padding: 12px 0;
+    border-bottom: 1px solid #1f1f23;
 }
 
+/* Tamaño controlado del logo para que no se deforme en ninguna pantalla */
+.logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Enlaces del menú */
 .navbar-nav .nav-link {
-    font-size: 15px;
+    color: #ffffff !important;
     font-weight: 600;
+    font-size: 15px;
     transition: color 0.3s ease;
+    padding: 8px 0 !important;
 }
 
-.navbar-nav .nav-link:hover {
+.navbar-nav .nav-link:hover{
+  color: #e0202a !important;
+}
+.navbar-nav .nav-link.active {
     color: var(--rc-red) !important;
 }
 
-
-/* Botón Comprar Entrada */
+/* Botón de acción (Comprar entrada) */
 .btn-comprar {
     background-color: var(--rc-red);
-    font-size: 15px;
-    padding: 10px 24px;
-    border-radius: 50px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: var(--rc-white);
+    font-weight: 700;
+    font-size: 14px;
+    padding: 2px 20px;
+    border-radius: 50px; /* Bordes totalmente redondeados / ovalados */
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: 2px solid var(--rc-red);
 }
 
 .btn-comprar:hover {
-    background-color: var(--rc-red-deep);
-    transform: translateY(-1px);
+    background-color: transparent;
+    color: var(--rc-red);
+    border-color: var(--rc-red);
 }
 
-/* responsive para celulares */
+/* Ajustes responsivos para celulares y tablets */
 @media (max-width: 991.98px) {
     .navbar-collapse {
-        background-color: var(--rc-black);
-        padding: 15px;
-        border-radius: 8px;
-        margin-top: 10px;
-        border: 1px solid var(--rc-border);
-    }
-    .active-speaker {
-        border-bottom: none !important;
+        background-color: rgba(11, 11, 12, 0.98);
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 15px;
+        border: 1px solid #1f1f23;
     }
 }
 /* inicio footer */
