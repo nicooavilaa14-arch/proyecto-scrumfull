@@ -612,7 +612,7 @@ ESTILOS DEL NAVBAR Y RESPONSIVIDAD */
 }
 .img-fluid{
   object-fit: cover !important;
-  /* aspect-ratio: 1 / 1; */
+  aspect-ratio: 1 / 1;
   object-position: center 20% !important;
 }
 /* --- ESTILOS DE LAS TARJETAS DE ENTRADA --- */
@@ -624,23 +624,23 @@ ESTILOS DEL NAVBAR Y RESPONSIVIDAD */
   transition: all 0.2s ease-in-out;
 }
 
-/* Hover: Borde rojo al pasar el cursor por encima */
+
 .ticket-card:hover {
-  border-color: var(--rc-red, #a81d24) !important;
+  border-color: var(--rc-red, #a81d24) ;
 }
 
-/* Tarjeta seleccionada al hacer clic (Negro RC con texto blanco) */
+
 .ticket-card.selected {
-  background-color: var(--rc-black, #000000) !important;
+  background-color: var(--rc-black, #000000) ;
   color: #ffffff !important;
-  border: 2px solid var(--rc-black, #000000) !important;
+  border: 2px solid var(--rc-black, #000000);
 }
 
 .ticket-card.selected .ticket-title,
 .ticket-card.selected .ticket-price {
-  color: #ffffff !important;
+  color: #ffffff !important ;
 }
 
 .ticket-card.selected .ticket-sub {
-  color: rgba(255, 255, 255, 0.7) !important;
+  color: rgba(255, 255, 255, 0.7) !important ;
 }
