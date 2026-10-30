@@ -1,6 +1,6 @@
 /* --- ESTILOS SECCIÓN SPONSORS --- */
 .sponsors-section {
-  background-color: #0b0f19;
+  background-color: var(--rc-black, #0b0b0c);
   display: flex;
   justify-content: center;
   padding: 5rem 16px;
@@ -91,14 +91,14 @@
 }
 
 .sponsor-card {
-  background-color: #0b0f14;
+  background-color: var(--rc-black, #0b0b0c);
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 28px;
   transition: all 0.3s ease;
 }
 
 .sponsor-card:hover {
-   border: 1px solid rgba(245, 158, 11, 0.6);
+  border: 1px solid rgba(245, 158, 11, 0.6);
   box-shadow: 0 0 25px rgba(245, 158, 11, 0.1);
 }
 
@@ -108,9 +108,14 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 340px;
+  align-items: center;
+  text-align: center;
 }
 
-
+.sponsor-card.large .card-top-row,
+.sponsor-card.large .card-footer-row {
+  width: 100%;
+}
 
 .card-top-row {
   display: flex;
@@ -123,11 +128,23 @@
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 1px;
-  color: rgba(255, 255, 255, 0.6);
+  color: #ff6b72;
+  background-color: rgba(255, 107, 114, 0.08);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 107, 114, 0.2);
+}
+
+.card-tag.aws-tag {
+  color: #ff9900;
+  background-color: rgba(255, 153, 0, 0.08);
+  border-color: rgba(255, 153, 0, 0.2);
 }
 
 .card-tag.gold {
   color: #f59e0b;
+  background-color: rgba(245, 158, 11, 0.08);
+  border-color: rgba(245, 158, 11, 0.2);
 }
 
 .card-top-row i {
@@ -137,24 +154,31 @@
 
 .card-body-content {
   margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* --- CAJAS E IMÁGENES: MAIN PARTNERS --- */
 .sponsor-icon-box {
-  width: 54px;
-  height: 54px;
-  border-radius: 16px;
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
   margin-bottom: 1.25rem;
-  background-color: #141a23;
+  background-color: #13161c;
   border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
 }
 
-.sponsor-icon-box.google { color: #ea4335; }
-.sponsor-icon-box.aws { color: #ff9900; }
-.sponsor-icon-box.ml { color: #f59e0b; }
+.sponsor-icon-box img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+  display: block;
+}
 
 .sponsor-card.large h3 {
   font-family: 'Plus Jakarta Sans', sans-serif;
@@ -214,10 +238,25 @@
   position: relative;
 }
 
+/* --- CAJAS E IMÁGENES: GOLD TIER --- */
 .sponsor-icon-sm {
-  font-size: 24px;
-  color: #ffffff;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 1rem;
+  background-color: #13161c;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.sponsor-icon-sm img {
+  width: 65%;
+  height: 65%;
+  object-fit: contain;
+  display: block;
 }
 
 .sponsor-card.medium h4 {
@@ -262,10 +301,17 @@
   align-items: center;
 }
 
-.sponsor-card.small i {
-  font-size: 20px;
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 0.5rem;
+/* --- CAJAS E IMÁGENES: BRONZE TIER (Creamos contenedor visual uniforme) --- */
+.sponsor-card.small img {
+  width: 44px !important;
+  height: 44px !important;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 0.75rem auto;
+  background-color: #13161c;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 6px; /* Deja un margen interno perfecto para que el logo respire */
 }
 
 .sponsor-card.small h5 {
@@ -310,6 +356,3 @@
     grid-template-columns: 1fr;
   }
 }
-
-
-
