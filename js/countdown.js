@@ -351,7 +351,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // --- NAVEGACIÓN ENTRE PASOS ---
+ 
   if (btnToStep2) {
     btnToStep2.addEventListener("click", () => {
       step1.classList.add("d-none");
@@ -406,7 +406,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // --- SELECCIÓN DE TARJETAS DE ENTRADA ---
+  
   ticketCards.forEach(card => {
     card.addEventListener("click", function () {
       ticketCards.forEach(c => c.classList.remove("selected"));
@@ -418,7 +418,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // --- CONTROL DE CANTIDAD (BOTONES Y TECLADO HASTA 200) ---
+  
   if (qtyInput) {
     qtyInput.addEventListener("input", function () {
       let val = parseInt(this.value.replace(/[^0-9]/g, ""), 10);
@@ -487,7 +487,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (modalSummaryTotal) modalSummaryTotal.textContent = fTot;
   }
 
-  // --- RESTRICCIONES Y VALIDACIÓN DE TARJETA VIGENTE ---
+
   function enforceLettersOnly(input) {
     if (input) input.addEventListener("input", function() { this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, ""); });
   }
@@ -544,7 +544,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (form) {
     form.addEventListener("submit", function (event) {
-      // FRENAR INMEDIATAMENTE CUALQUIER ENVÍO AUTOMÁTICO
+    
       event.preventDefault();
       event.stopImmediatePropagation();
 
@@ -579,13 +579,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
 
-      // SI HAY ALÚN ERROR EN LOS DATOS DE LA TARJETA, SE DETIENE ACÁ Y NUNCA ABRE EL MODAL
+      
       if (!isValid) {
         updateIndicators(3); 
         return; 
       }
 
-      // SÓLO SI TODO ES VÁLIDO, AVANZA AL PASO 4 Y MUESTRA EL ERROR DE PAGO SIMULADO
+  
       updateIndicators(4); 
       const errorModal = new bootstrap.Modal(document.getElementById('errorPaymentModal'));
       errorModal.show();
