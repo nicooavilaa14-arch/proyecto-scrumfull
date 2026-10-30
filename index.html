@@ -1007,8 +1007,8 @@
                 <div id="card-fields">
                   <div class="mb-3">
                     <label class="form-label small text-muted">Número de tarjeta</label>
-                    <input type="text" inputmode="numeric" class="form-control" id="card-number" placeholder="DDDD DDDD DDDD DDDD" maxlength="19" required>
-                    <div class="invalid-feedback">Ingresá solo números (mínimo 13 dígitos).</div>
+                    <input type="text" inputmode="numeric" class="form-control" id="card-number" placeholder="DDDD DDDD DDDD DDDD" minlength="12" maxlength="19" required>
+                    <div class="invalid-feedback">Ingresá solo números (mínimo 12 dígitos).</div>
                   </div>
                   <div class="mb-3">
                     <label class="form-label small text-muted">Titular</label>
@@ -1071,7 +1071,7 @@
           </div>
 
           <div class="text-white-50 small" style="font-size: 0.75rem;">
-            🔒 Pago protegido. Recibis la entrada por email.
+            🔒 Pago protegido. Recibis la entrada acontinuacion.
           </div>
         </div>
       </div>
@@ -1080,106 +1080,95 @@
   </section>
 </div>
 
-<!-- MODAL DE ERROR DE PAGO -->
+<!-- MODAL DE ENTRADA Y CÓDIGO QR EXITOSO (CON TODOS LOS SPONSORS) -->
 <div class="modal fade" id="errorPaymentModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered px-3" style="max-width: 450px;">
+  <div class="modal-dialog modal-dialog-centered px-3" style="max-width: 520px;">
     <div class="modal-content text-white p-3 p-sm-4 rounded-4 border-0 shadow-lg position-relative" style="background-color: var(--rc-black, #000000);">
       <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 m-sm-4" data-bs-dismiss="modal" aria-label="Close"></button>
       
-      <div class="mb-3">
-        <div class="d-flex align-items-center justify-content-center rounded-circle shadow-lg" style="width: 55px; height: 55px; background-color: var(--rc-red, #a81d24); box-shadow: 0 0 20px rgba(168, 29, 36, 0.6) !important;">
-          <span class="fw-bold fs-3 text-white">!</span>
+      <!-- Encabezado de éxito -->
+      <div class="text-center mb-3">
+        <div class="d-inline-flex align-items-center justify-content-center rounded-circle shadow-lg mb-2" style="width: 50px; height: 50px; background-color: #198754; box-shadow: 0 0 15px rgba(25, 135, 84, 0.4) !important;">
+          <span class="fw-bold fs-4 text-white">✓</span>
         </div>
+        <h3 class="fw-bold fs-4 text-white mb-0">¡Entrada Generada con Éxito!</h3>
       </div>
 
-      <h3 class="fw-bold mb-2 fs-4 text-white">No pudimos procesar tu pago</h3>
-      <p class="text-white-50 small mb-4">No se hizo ningún cobro. Podés volver a intentarlo:</p>
+      <!-- TARJETA DIGITAL TIPO TICKET CON SPONSORS -->
+      <div class="p-3 p-sm-4 rounded-4 mb-3 text-dark bg-white shadow-sm position-relative overflow-hidden">
+        
+        <!-- Franja superior de marca (Rolling Code / School) -->
+        <div class="d-flex justify-content-between align-items-center border-bottom pb-2 mb-3">
+          <div>
+            <div class="fw-bold text-uppercase" style="color: var(--rc-red, #a81d24); font-size: 0.85rem; letter-spacing: 1.5px; line-height: 1.1;">
+              Rolling Code
+            </div>
+            <div class="fw-bold text-dark" style="font-size: 0.65rem; letter-spacing: 3px;">
+              SCHOOL
+            </div>
+          </div>
+          <!-- Badge dinámico con el tipo de entrada elegida -->
+          <span class="badge rounded-pill px-3 py-1 text-white shadow-sm" id="ticket-badge-type" style="background-color: var(--rc-red, #a81d24); font-size: 0.75rem;">
+            Early Bird
+          </span>
+        </div>
 
-      <ul class="list-unstyled small mb-4 text-white-50 d-flex flex-column gap-2 gap-sm-3">
-        <li class="d-flex align-items-start gap-2">
-          <span class="fw-bold" style="color: var(--rc-red, #a81d24);">✓</span> Revisá que los datos de la tarjeta estén bien escritos.
-        </li>
-        <li class="d-flex align-items-start gap-2">
-          <span class="fw-bold" style="color: var(--rc-red, #a81d24);">✓</span> Confirmá que la tarjeta tenga saldo o límite disponible.
-        </li>
-        <li class="d-flex align-items-start gap-2">
-          <span class="fw-bold" style="color: var(--rc-red, #a81d24);">✓</span> Probá con otro medio de pago: transferencia o billetera virtual.
-        </li>
-      </ul>
+        <!-- Título principal del ticket -->
+        <div class="text-center mb-2">
+          <div class="text-muted small" style="font-size: 0.65rem; letter-spacing: 1px;">TICKET DE ACCESO OFICIAL</div>
+          <h4 class="fw-bold text-dark fs-6 mb-0" id="qr-ticket-title">1 entrada Early Bird</h4>
+        </div>
+        
+        <!-- Contenedor del Código QR -->
+        <div class="text-center my-2">
+          <div class="bg-light p-2 rounded-3 d-inline-block border shadow-sm">
+            <img id="dynamic-qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=RollingCode-Entrada-Oficial" alt="Código QR de la entrada" class="img-fluid rounded" style="width: 125px; height: 125px;">
+          </div>
+        </div>
 
-      <div class="p-3 rounded-3 mb-4 border border-secondary" style="background-color: #121212; border-color: rgba(255,255,255,0.1) !important;">
-        <div class="fw-bold small mb-2" style="font-size: 0.7rem; letter-spacing: 1px; color: var(--rc-red, #a81d24);">RESUMEN DEL PEDIDO</div>
-        <div class="d-flex justify-content-between small mb-1 text-white">
-          <span id="modal-summary-ticket">1 entrada Early Bird</span>
-          <span id="modal-summary-subtotal">$25.000</span>
+        <!-- Datos del titular y evento -->
+        <div class="bg-light p-2 rounded-3 text-start small mb-3 border">
+          <div class="d-flex justify-content-between mb-1">
+            <span class="text-muted" style="font-size: 0.7rem;">Titular:</span>
+            <span class="fw-bold text-dark text-truncate ms-2" id="qr-holder-name" style="max-width: 180px;">Juan Pérez</span>
+          </div>
+          <div class="d-flex justify-content-between">
+            <span class="text-muted" style="font-size: 0.7rem;">Lugar / Fecha:</span>
+            <span class="fw-bold text-dark text-end" style="font-size: 0.7rem;">Gral. Paz 576 · Tucumán</span>
+          </div>
         </div>
-        <div class="d-flex justify-content-between small mb-2 text-white-50" style="font-size: 0.8rem;">
-          <span>Cargo por servicio (5%)</span>
-          <span id="modal-summary-fee">$1.250</span>
+
+        <!-- FRANJA DE SPONSORS / ALIADOS TECNOLÓGICOS (TODOS INCLUIDOS) -->
+        <div class="border-top pt-2 mt-2">
+          <div class="text-uppercase text-muted fw-bold mb-1 text-center" style="font-size: 0.52rem; letter-spacing: 1px;">
+            Aliados y Sponsors Oficiales
+          </div>
+          <!-- Listado completo organizado -->
+          <div class="d-flex flex-wrap justify-content-center align-items-center gap-1 text-secondary" style="font-size: 0.52rem; opacity: 0.85; line-height: 1.3;">
+            <span class="fw-bold text-dark">Google Cloud</span> • 
+            <span>AWS</span> • 
+            <span class="fw-bold text-dark">Mercado Libre</span> • 
+            <span>Microsoft</span> • 
+            <span>GitHub</span> • 
+            <span class="fw-bold text-dark">Globant</span> • 
+            <span>Vercel</span> • 
+            <span>Supabase</span> • 
+            <span>DigitalOcean</span> • 
+            <span>Cloudflare</span> • 
+            <span>MongoDB</span> • 
+            <span>Docker</span> • 
+            <span>Auth0</span> • 
+            <span>Stripe</span> • 
+            <span>Postman</span>
+          </div>
         </div>
-        <hr class="my-2 border-secondary">
-        <div class="d-flex justify-content-between align-items-center text-white">
-          <span class="fw-bold">Total</span>
-          <span class="fw-bold fs-5 text-white" id="modal-summary-total">$26.250</span>
-        </div>
+
       </div>
 
-      <a href="error404.html" class="btn w-100 py-3 rounded-pill fw-bold text-white shadow text-decoration-none text-center" id="try-again-btn" style="background-color: var(--rc-red, #a81d24);">
-        Intentar de nuevo
-      </a>
-    </div>
-  </div>
-</div>
-
-<!-- MODAL DE ERROR DE PAGO -->
-<div class="modal fade" id="errorPaymentModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered px-3" style="max-width: 450px;">
-    <div class="modal-content bg-dark text-white p-3 p-sm-4 rounded-4 border-0 shadow-lg position-relative">
-      
-      <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 m-sm-4" data-bs-dismiss="modal" aria-label="Close"></button>
-      
-      <div class="mb-3">
-        <div class="d-flex align-items-center justify-content-center bg-danger rounded-circle shadow-lg" style="width: 55px; height: 55px; box-shadow: 0 0 20px rgba(230, 57, 70, 0.6) !important;">
-          <span class="fw-bold fs-3 text-white">!</span>
-        </div>
-      </div>
-
-      <h3 class="fw-bold mb-2 fs-4">No pudimos procesar tu pago</h3>
-      <p class="text-white-50 small mb-4">No se hizo ningún cobro. Podés volver a intentarlo:</p>
-
-      <ul class="list-unstyled small mb-4 text-white-50 d-flex flex-column gap-2 gap-sm-3">
-        <li class="d-flex align-items-start gap-2">
-          <span class="text-danger fw-bold">✓</span> Revisá que los datos de la tarjeta estén bien escritos.
-        </li>
-        <li class="d-flex align-items-start gap-2">
-          <span class="text-danger fw-bold">✓</span> Confirmá que la tarjeta tenga saldo o límite disponible.
-        </li>
-        <li class="d-flex align-items-start gap-2">
-          <span class="text-danger fw-bold">✓</span> Probá con otro medio de pago: transferencia o billetera virtual.
-        </li>
-      </ul>
-
-      <div class="bg-black p-3 rounded-3 mb-4 border border-secondary" style="border-color: rgba(255,255,255,0.1) !important;">
-        <div class="text-danger fw-bold small mb-2" style="font-size: 0.7rem; letter-spacing: 1px;">RESUMEN DEL PEDIDO</div>
-        <div class="d-flex justify-content-between small mb-1">
-          <span id="modal-summary-ticket">Entrada Early Bird x 1</span>
-          <span id="modal-summary-subtotal">$25.000</span>
-        </div>
-        <div class="d-flex justify-content-between small mb-2 text-white-50" style="font-size: 0.8rem;">
-          <span>Cargo por servicio (5%)</span>
-          <span id="modal-summary-fee">$1.250</span>
-        </div>
-        <hr class="my-2 border-secondary">
-        <div class="d-flex justify-content-between align-items-center">
-          <span class="fw-bold">Total</span>
-          <span class="fw-bold fs-5 text-white" id="modal-summary-total">$26.250</span>
-        </div>
-      </div>
-
-      <a href="error404.html" class="btn btn-danger w-100 py-3 rounded-pill fw-bold text-white shadow text-decoration-none" id="try-again-btn">
-        Intentar de nuevo
-      </a>
-
+      <!-- Botón de acción -->
+      <button type="button" class="btn w-100 py-3 rounded-pill fw-bold text-white shadow" data-bs-dismiss="modal" style="background-color: var(--rc-red, #a81d24);">
+        ¡Listo, cerrar y guardar entrada!
+      </button>
     </div>
   </div>
 </div>
@@ -1622,6 +1611,7 @@
     </div>
 </footer>
 <!-- Fin del Footer -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./js/countdown.js"></script>
 </body>

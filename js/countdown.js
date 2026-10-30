@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // --- VALIDACIÓN AL HACER CLIC EN PAGAR ---
-  const form = document.getElementById("payment-form");
+  const form = document.getElementById("checkout-section");
   const cardMethodActive = () => {
     const activeTab = document.querySelector(".payment-tab.active");
     return activeTab && activeTab.getAttribute("data-method") === "card";
@@ -612,4 +612,41 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector("form");
+  const fullNameInput = document.getElementById("full-name");
+
+  if (form) {
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+
+      // Capturar el nombre del input y pasarlo al ticket digital
+      const userName = fullNameInput ? (fullNameInput.value.trim() || "Participante") : "Participante";
+      const holderElement = document.getElementById("qr-holder-name");
+      
+      if (holderElement) {
+        holderElement.textContent = userName;
+      }
+
+      // Mostrar el modal de éxito de Bootstrap
+      const modalElement = document.getElementById('errorPaymentModal');
+      if (modalElement) {
+        const successModal = new bootstrap.Modal(modalElement);
+        successModal.show();
+      }
+    });
+  }
+});
+// Forzar la actualización del nombre en tiempo real apenas hacés clic en el botón de pago
+document.addEventListener("click", function (e) {
+  if (e.target && e.target.type === "submit" || e.target.closest("button[type='submit']")) {
+    const inputNombre = document.getElementById("full-name");
+    const spanHolder = document.getElementById("qr-holder-name");
+    
+    if (inputNombre && spanHolder && inputNombre.value.trim() !== "") {
+      spanHolder.textContent = inputNombre.value.trim();
+    }
+  }
 });
