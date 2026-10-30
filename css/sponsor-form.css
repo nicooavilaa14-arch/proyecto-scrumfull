@@ -1,6 +1,6 @@
 /* --- ESTILOS SECCIÓN FORMULARIO SPONSOR --- */
 .sponsor-form-section {
-  background-color: #0b0f19;
+  background-color:var(--negro-pagina);
   display: flex;
   justify-content: center;
   padding: 5rem 16px;
@@ -226,6 +226,11 @@
   color: rgba(255, 255, 255, 0.4);
   text-align: center;
   margin: 0;
+}
+
+.dropZone.drag-over {
+  border-color: #f59e0b !important;
+  background-color: rgba(245, 158, 11, 0.05);
 }
 
 @media (max-width: 576px) {
