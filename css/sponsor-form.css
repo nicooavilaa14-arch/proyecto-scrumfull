@@ -1,4 +1,4 @@
-/* --- ESTILOS SECCIÓN FORMULARIO SPONSOR --- */
+
 .sponsor-form-section {
   background-color:var(--negro-pagina);
   display: flex;
@@ -84,7 +84,6 @@
   resize: vertical;
 }
 
-/* Zona de Carga de Archivos / Drag and Drop */
 .drop-zone {
   border: 2px dashed rgba(255, 255, 255, 0.15);
   border-radius: 16px;
@@ -167,7 +166,6 @@
   padding: 0;
 }
 
-/* Botón Enviar */
 .btn-submit-sponsor {
   width: 100%;
   background-color: #e53e3e; /* Color rojo coral/fuego del mockup */
@@ -190,7 +188,6 @@
   transform: translateY(-1px);
 }
 
-/* Mensajes de validación */
 .invalid-feedback-custom {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 12px;
@@ -200,14 +197,14 @@
 }
 
 .is-invalid {
-  border-color: #e53e3e !important;
+  border-color: #e53e3e;
 }
 
 .is-invalid + .invalid-feedback-custom {
   display: block;
 }
 
-/* Alerta de Éxito */
+
 .alert-success-custom {
   background-color: rgba(72, 187, 120, 0.15);
   border: 1px solid #48bb78;
@@ -229,8 +226,8 @@
 }
 
 .dropZone.drag-over {
-  border-color: #f59e0b !important;
-  background-color: rgba(245, 158, 11, 0.05);
+  border-color: #f59e0b;
+  background-color: rgba(245, 158, 11, 0.05)
 }
 
 @media (max-width: 576px) {

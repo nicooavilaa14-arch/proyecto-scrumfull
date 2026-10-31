@@ -11,21 +11,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!form) return;
 
-  // --- 1. GESTIÓN DE DRAG & DROP Y SELECCIÓN DE LOGO ---
   if (dropZone && logoInput) {
     dropZone.addEventListener("click", () => {
       logoInput.click();
     });
 
     ["dragenter", "dragover", "dragleave", "drop"].forEach(eventName => {
-      dropZone.addEventListener(eventName, (e) => {
-        e.preventDefault();
-        e.stopPropagation();
+      dropZone.addEventListener(eventName, (event) => {
+        event.preventDefault();
+        event.stopPropagation();
       }, false);
     });
 
-    dropZone.addEventListener("drop", (e) => {
-      const files = e.dataTransfer.files;
+    ["dragenter", "dragover"].forEach(eventName => {
+      dropZone.addEventListener(eventName, (event) => {
+        dropZone.classList.add("dragover");
+      }, false);
+    });
+
+    ["dragleave", "drop"].forEach(eventName => {
+      dropZone.addEventListener(eventName, (event) => {
+        dropZone.classList.remove("dragover");
+      }, false);
+    });
+
+    dropZone.addEventListener("drop", (event) => {
+      const files = event.dataTransfer.files;
       if (files.length > 0) {
         logoInput.files = files;
         handleFile(files[0]);
@@ -40,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function handleFile(file) {
-    const maxSize = 5 * 1024 * 1024; // 5MB
+    const maxSize = 5 * 1024 * 1024;
     if (file.size > maxSize) {
       alert("El archivo es demasiado pesado. El tamaño máximo es 5MB.");
       logoInput.value = "";
@@ -50,8 +61,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (fileNameSpan) fileNameSpan.textContent = file.name;
 
     const reader = new FileReader();
-    reader.onload = function(e) {
-      if (previewImg) previewImg.src = e.target.result;
+    reader.onload = function(event) {
+      if (previewImg) previewImg.src = event.target.result;
       if (dropZoneContent) dropZoneContent.classList.add("d-none");
       if (filePreview) filePreview.classList.remove("d-none");
     }
@@ -59,8 +70,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (btnRemoveFile) {
-    btnRemoveFile.addEventListener("click", (e) => {
-      e.stopPropagation();
+    btnRemoveFile.addEventListener("click", (event) => {
+      event.stopPropagation();
       logoInput.value = "";
       if (previewImg) previewImg.src = "";
       if (filePreview) filePreview.classList.add("d-none");
@@ -68,12 +79,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-  // --- 2. VALIDACIÓN EXCLUSIVA DEL FORMULARIO DE SPONSORS ---
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    // Buscamos los campos estrictamente DENTRO de este formulario
     const nombre = form.querySelector("#nombre");
     const apellido = form.querySelector("#apellido");
     const empresa = form.querySelector("#empresa");
@@ -96,7 +104,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    // Validar campos obligatorios de este formulario
     setError(nombre, !nombre || !nombre.value.trim());
     setError(apellido, !apellido || !apellido.value.trim());
     setError(empresa, !empresa || !empresa.value.trim());
@@ -107,7 +114,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setError(tipoSponsor, !tipoSponsor || !tipoSponsor.value || tipoSponsor.value === "");
 
-    // Si hay algún error, hacemos foco exclusivamente en este formulario
     if (!formIsValid) {
       primerCampoConError.focus();
       const labelText = primerCampoConError.previousElementSibling ? primerCampoConError.previousElementSibling.textContent.replace("*", "").trim() : "Campo obligatorio";
@@ -115,7 +121,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // --- TODO CORRECTO ---
     if (successAlert) {
       successAlert.innerHTML = `<i class="bi bi-check-circle-fill me-2"></i> Sponsor enviado. Recibirá una respuesta a la brevedad.`;
       successAlert.classList.remove("d-none");
@@ -123,7 +128,6 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Sponsor enviado. Recibirá una respuesta a la brevedad.");
     }
 
-    // Limpiar formulario y vista previa
     form.reset();
     if (filePreview && dropZoneContent) {
       filePreview.classList.add("d-none");
@@ -135,7 +139,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (input) input.classList.remove("is-invalid");
     });
 
-    // Ocultar la alerta de éxito a los 6 segundos
     setTimeout(() => {
       if (successAlert) {
         successAlert.classList.add("d-none");
