@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // --- VALIDACIÓN AL HACER CLIC EN PAGAR ---
-  const form = document.getElementById("payment-form");
+  const form = document.getElementById("checkout-section");
   const cardMethodActive = () => {
     const activeTab = document.querySelector(".payment-tab.active");
     return activeTab && activeTab.getAttribute("data-method") === "card";
@@ -612,4 +612,87 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector("form");
+  const fullNameInput = document.getElementById("full-name");
+
+  if (form) {
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+
+      // Capturar el nombre del input y pasarlo al ticket digital
+      const userName = fullNameInput ? (fullNameInput.value.trim() || "Participante") : "Participante";
+      const holderElement = document.getElementById("qr-holder-name");
+      
+      if (holderElement) {
+        holderElement.textContent = userName;
+      }
+
+      // Mostrar el modal de éxito de Bootstrap
+      const modalElement = document.getElementById('errorPaymentModal');
+      if (modalElement) {
+        const successModal = new bootstrap.Modal(modalElement);
+        successModal.show();
+      }
+    });
+  }
+});
+// Forzar la actualización del nombre en tiempo real apenas hacés clic en el botón de pago
+document.addEventListener("click", function (e) {
+  if (e.target && e.target.type === "submit" || e.target.closest("button[type='submit']")) {
+    const inputNombre = document.getElementById("full-name");
+    const spanHolder = document.getElementById("qr-holder-name");
+    
+    if (inputNombre && spanHolder && inputNombre.value.trim() !== "") {
+      spanHolder.textContent = inputNombre.value.trim();
+    }
+  }
+});
+document.addEventListener("DOMContentLoaded", function () {
+  
+  // 1. Actualiza el nombre en el ticket en tiempo real al hacer clic en pagar/enviar
+  document.addEventListener("click", function (e) {
+    if (e.target && e.target.type === "submit" || e.target.closest("button[type='submit']")) {
+      const inputNombre = document.getElementById("full-name");
+      const spanHolder = document.getElementById("qr-holder-name");
+      
+      if (inputNombre && spanHolder && inputNombre.value.trim() !== "") {
+        spanHolder.textContent = inputNombre.value.trim();
+      }
+    }
+  });
+
+  // 2. Descarga definitiva del ticket en JPG listo para usar
+  const btnGuardar = document.getElementById("btn-guardar-entrada");
+
+  if (btnGuardar) {
+    btnGuardar.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      // Selector exacto del contenedor de tu ticket
+      const ticketElement = document.querySelector(".bg-light.p-2.rounded-3");
+
+      if (ticketElement) {
+        html2canvas(ticketElement, { 
+          scale: 3,             // Máxima nitidez para que se lea impecable
+          backgroundColor: "#ffffff", // Fondo blanco sólido (evita transparencia o negro)
+          useCORS: true
+        }).then(canvas => {
+          // Convertimos estrictamente a formato JPEG con calidad alta
+          const imageURL = canvas.toDataURL("image/jpeg", 0.95);
+
+          const downloadLink = document.createElement("a");
+          downloadLink.href = imageURL;
+          downloadLink.download = "Entrada-RollingCode.jpg";
+          
+          document.body.appendChild(downloadLink);
+          downloadLink.click();
+          document.body.removeChild(downloadLink);
+        });
+      }
+    });
+  }
+
 });

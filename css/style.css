@@ -615,7 +615,6 @@ ESTILOS DEL NAVBAR Y RESPONSIVIDAD */
   aspect-ratio: 1 / 1;
   object-position: center 20% !important;
 }
-/* --- ESTILOS DE LAS TARJETAS DE ENTRADA --- */
 .ticket-card {
   background-color: #ffffff !important;
   color: #212529 !important;
@@ -626,21 +625,21 @@ ESTILOS DEL NAVBAR Y RESPONSIVIDAD */
 
 
 .ticket-card:hover {
-  border-color: var(--rc-red, #a81d24) ;
+  border-color: var(--rc-red, #a81d24) !important;
 }
 
 
 .ticket-card.selected {
-  background-color: var(--rc-black, #000000) ;
+  background-color: var(--rc-black, #000000) !important;
   color: #ffffff !important;
-  border: 2px solid var(--rc-black, #000000);
+  border: 2px solid var(--rc-black, #000000) !important;
 }
 
 .ticket-card.selected .ticket-title,
 .ticket-card.selected .ticket-price {
-  color: #ffffff !important ;
+  color: #ffffff !important;
 }
 
 .ticket-card.selected .ticket-sub {
-  color: rgba(255, 255, 255, 0.7) !important ;
+  color: rgba(255, 255, 255, 0.7) !important;
 }
